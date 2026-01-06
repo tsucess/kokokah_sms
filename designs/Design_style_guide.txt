@@ -1,0 +1,38 @@
+Primary Color: #004A53;
+Accent Color: #FDAF22;
+Secondary Color: #F56824;
+linear-gradient(90deg, #004A53 5.74%, #004A53 31.44%, #366049 60.58%, #FDAF22 83.97%, #FDAF22 100%);
+linear-gradient(98.5deg, #925FE2 53.12%, #DFCFF7 155.43%);
+
+
+pink: #DA108B;
+light purple: #BF2AB8;
+green: #00C10D;
+Accent Green: var(--Accents-Green, #34C759);
+light green: #93FD22;
+red: #FD2231;
+blue: #2251FD;
+ash: #999CA3;
+
+
+
+
+text styles
+font-family: Fredoka;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+
+
+Heading
+font-family: Fredoka One;
+font-weight: 400;
+font-style: Regular;
+
+Heading 2, 3
+font-family: Fredoka;
+font-weight: 500;
+font-style: Medium;
+
+
+
