@@ -2,346 +2,128 @@
 
 @section('title', 'Schools')
 @section('page-title', 'Schools')
-@section('page-description', 'Manage all schools on the platform')
+@section('page-description', 'Manage and oversee your school management platform')
 
 @section('header-actions')
-    <button class="px-4 py-2 bg-accent text-primary rounded-lg font-medium hover:bg-accent/90 transition-colors">
+    <button class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-medium hover:bg-yellow-500 transition-colors flex items-center">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
         Add New School
     </button>
 @endsection
 
 @section('content')
 <div class="p-8 space-y-6">
-    <!-- Filter Tabs -->
-    <div class="bg-white rounded-lg border border-gray-200 p-2">
-        <div class="flex space-x-2">
-            <button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium">
-                All Schools (234)
+    <!-- Filter Tabs and Search -->
+    <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <button class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-medium text-sm">
+                All
             </button>
-            <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium">
-                Active (187)
+            <button class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50">
+                Active
             </button>
-            <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium">
-                Inactive (47)
-            </button>
-            <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium">
-                Trial (23)
-            </button>
-            <button class="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg text-sm font-medium">
-                Suspended (12)
+            <button class="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium text-sm hover:bg-gray-50">
+                Inactive
             </button>
         </div>
     </div>
 
-    <!-- Search and Filter -->
-    <div class="flex items-center justify-between">
-        <div class="flex-1 max-w-md">
-            <div class="relative">
-                <input type="text" placeholder="Search schools..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </div>
-        </div>
-        <div class="flex items-center space-x-3">
-            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                <option>All Plans</option>
-                <option>Basic</option>
-                <option>Standard</option>
-                <option>Premium</option>
-            </select>
-            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
-                <option>Sort by: Newest</option>
-                <option>Sort by: Oldest</option>
-                <option>Sort by: Name A-Z</option>
-                <option>Sort by: Name Z-A</option>
-            </select>
-        </div>
+    <!-- Search Bar -->
+    <div class="relative">
+        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input type="text" placeholder="Search schools..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
     </div>
 
     <!-- Schools Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- School Card 1 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-blue-500 to-purple-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Lagos International School</h3>
-                        <p class="text-sm text-gray-500">lagos-intl.edu.ng</p>
+        @for ($i = 0; $i < 9; $i++)
+        <!-- School Card -->
+        <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <!-- Header -->
+            <div class="flex items-start justify-between mb-4">
+                <div class="flex items-start space-x-3">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                        <span class="text-xl font-bold text-orange-600">G</span>
                     </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
-                </div>
-                
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Premium</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">1,234</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">87</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Jan 15, 2024</span>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Greenwood Academy</h3>
+                        <div class="flex items-center text-sm text-gray-600 mt-1">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Lagos, Nigeria</span>
+                        </div>
                     </div>
                 </div>
+                <button class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </button>
+            </div>
 
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            <!-- School Type Badges -->
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    View School
+                </span>
+                <span class="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-green-50 text-green-700 border border-green-200">
+                    <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    Public School
+                </span>
+            </div>
+
+            <!-- Stats -->
+            <div class="space-y-3 mb-4">
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
-                    </button>
+                        <span>Students:</span>
+                    </div>
+                    <span class="font-semibold text-gray-900">3,200</span>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Teachers:</span>
+                    </div>
+                    <span class="font-semibold text-gray-900">245</span>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>Joined:</span>
+                    </div>
+                    <span class="font-semibold text-gray-900">20/04/2025</span>
                 </div>
             </div>
-        </div>
 
-        <!-- School Card 2 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-green-500 to-teal-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Abuja Academy</h3>
-                        <p class="text-sm text-gray-500">abuja-academy.edu.ng</p>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
-                </div>
-                
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Standard</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">856</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">62</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Feb 3, 2024</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                        </svg>
-                    </button>
-                </div>
+            <!-- Footer -->
+            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                <button class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-medium text-sm hover:bg-yellow-500">
+                    {{ $i % 3 === 0 ? 'active' : ($i % 3 === 1 ? 'Inactive' : 'active') }}
+                </button>
+                <span class="text-sm font-medium text-gray-700">{{ $i % 3 === 0 ? 'Standard' : 'Premium' }}</span>
             </div>
         </div>
-
-        <!-- School Card 3 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-orange-500 to-red-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Port Harcourt High</h3>
-                        <p class="text-sm text-gray-500">ph-high.edu.ng</p>
-                    </div>
-                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">Trial</span>
-                </div>
-
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Basic</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">423</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">34</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Mar 12, 2024</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- School Card 4 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-pink-500 to-rose-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Ibadan Grammar School</h3>
-                        <p class="text-sm text-gray-500">ibadan-grammar.edu.ng</p>
-                    </div>
-                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">Active</span>
-                </div>
-
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Premium</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">1,567</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">94</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Dec 8, 2023</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- School Card 5 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-indigo-500 to-blue-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Enugu Academy</h3>
-                        <p class="text-sm text-gray-500">enugu-academy.edu.ng</p>
-                    </div>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-medium rounded-full">Inactive</span>
-                </div>
-
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Standard</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">678</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">45</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Nov 20, 2023</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- School Card 6 -->
-        <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-            <div class="h-32 bg-gradient-to-br from-yellow-500 to-orange-600"></div>
-            <div class="p-6">
-                <div class="flex items-start justify-between mb-4">
-                    <div class="flex-1">
-                        <h3 class="text-lg font-medium text-gray-900 mb-1">Kano International</h3>
-                        <p class="text-sm text-gray-500">kano-intl.edu.ng</p>
-                    </div>
-                    <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-medium rounded-full">Suspended</span>
-                </div>
-
-                <div class="space-y-2 mb-4">
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Plan:</span>
-                        <span class="font-medium text-gray-900">Basic</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Students:</span>
-                        <span class="font-medium text-gray-900">345</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Teachers:</span>
-                        <span class="font-medium text-gray-900">28</span>
-                    </div>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-gray-600">Joined:</span>
-                        <span class="font-medium text-gray-900">Oct 5, 2023</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-2">
-                    <button class="flex-1 px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90">
-                        View Details
-                    </button>
-                    <button class="px-4 py-2 border border-gray-300 text-gray-700 text-sm rounded-lg hover:bg-gray-50">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Pagination -->
-    <div class="flex items-center justify-between">
-        <p class="text-sm text-gray-600">Showing 1-6 of 234 schools</p>
-        <div class="flex items-center space-x-2">
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 disabled:opacity-50" disabled>
-                Previous
-            </button>
-            <button class="px-4 py-2 bg-primary text-white rounded-lg">1</button>
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">2</button>
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">3</button>
-            <span class="px-2">...</span>
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">39</button>
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
-                Next
-            </button>
-        </div>
+        @endfor
     </div>
 </div>
 @endsection

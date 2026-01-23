@@ -1,6 +1,6 @@
 @props(['active' => ''])
 
-<aside class="w-64 bg-white border-r border-gray-200 min-h-screen flex flex-col">
+<aside class="w-64 bg-white border-r border-gray-200 min-h-screen flex flex-col font-fredoka">
     <!-- Logo -->
     <div class="p-6">
         <a href="{{ route('superadmin.dashboard') }}" class="flex items-center">
@@ -15,21 +15,23 @@
     <nav class="flex-1 px-4 space-y-1">
         <!-- Dashboard -->
         <a href="{{ route('superadmin.dashboard') }}"
-           class="flex items-center font-sitka px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+
+           class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-gauge  {{ $active === 'dashboard' ? 'text-black' : 'text-primary' }}"></i>
             Dashboard
         </a>
 
         <!-- Schools -->
         <a href="{{ route('superadmin.schools') }}"
-           class="flex items-center font-sitka px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'schools' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+
+           class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'schools' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
            <i class="fa-solid fa-school {{ $active === 'schools' ? 'text-black' : 'text-primary' }}"></i>
             Schools
         </a>
 
         <!-- Users Management -->
         <a href="{{ route('superadmin.users') }}"
-           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'users' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'users' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-book-open {{ $active === 'users' ? 'text-black' : 'text-primary' }}"></i>
             Users Management
         </a>
