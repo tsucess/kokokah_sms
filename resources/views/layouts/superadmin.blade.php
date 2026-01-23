@@ -30,9 +30,9 @@
             <!-- Top Header -->
             <header class="bg-white border-b border-gray-200 px-8 py-6">
                 <div class="flex items-center justify-between">
-                    <div>
-                        <h1 class="text-2xl font-fredoka-one text-gray-900">@yield('page-title')</h1>
-                        <p class="text-sm text-gray-600 mt-1">@yield('page-description')</p>
+                    <div class="flex flex-col gap-2">
+                        <h1 class=" font-fredoka text-h6 text-primary">@yield('page-title')</h1>
+                        <p class="text-body4 text-primary ">@yield('page-description')</p>
                     </div>
                     <div class="flex items-center space-x-4">
                         @yield('header-actions')
