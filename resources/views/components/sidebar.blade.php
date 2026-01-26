@@ -1,6 +1,6 @@
 @props(['active' => ''])
 
-<aside class="w-64 bg-white border-r border-gray-200 min-h-screen flex flex-col font-fredoka">
+<aside class="w-56 shrink-0 bg-white border-r border-gray-200 min-h-screen flex flex-col font-sitka">
     <!-- Logo -->
     <div class="p-6">
         <a href="{{ route('superadmin.dashboard') }}" class="flex items-center">
@@ -15,51 +15,51 @@
     <nav class="flex-1 px-4 space-y-1">
         <!-- Dashboard -->
         <a href="{{ route('superadmin.dashboard') }}"
-           class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center px-4 py-3 gap-4 font-medium text-sm  rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-gauge  {{ $active === 'dashboard' ? 'text-black' : 'text-primary' }}"></i>
             Dashboard
         </a>
 
         <!-- Schools -->
         <a href="{{ route('superadmin.schools') }}"
-           class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'schools' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center px-4 py-3 gap-4 font-medium text-sm  rounded-lg transition-colors {{ $active === 'schools' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
            <i class="fa-solid fa-school {{ $active === 'schools' ? 'text-black' : 'text-primary' }}"></i>
             Schools
         </a>
 
         <!-- Users Management -->
         <a href="{{ route('superadmin.users') }}"
-           class="flex items-center px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'users' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'users' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-book-open {{ $active === 'users' ? 'text-black' : 'text-primary' }}"></i>
             Users Management
         </a>
 
         <!-- Analytics -->
         <a href="{{ route('superadmin.analytics') }}"
-           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'analytics' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'analytics' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-chart-area {{ $active === 'analytics' ? 'text-black' : 'text-primary' }}"></i>
             Analytics
         </a>
 
         <!-- Subscription -->
         <a href="{{ route('superadmin.subscription') }}"
-           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'subscription' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100'}}">
+           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'subscription' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100'}}">
             <i class="fa-solid fa-money-bill-transfer {{ $active === 'subscription' ? 'text-black' : 'text-primary' }}"></i>
             Subscription
         </a>
 
         <!-- Communication -->
         <a href="{{ route('superadmin.communication') }}"
-           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'communication' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'communication' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-comments {{ $active === 'communication' ? 'text-black' : 'text-primary' }}"></i>
             Communication
         </a>
 
         <!-- Modules & Configuration -->
         <a href="{{ route('superadmin.modules') }}"
-           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-semibold rounded-lg transition-colors {{ $active === 'modules' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'modules' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-sliders {{ $active === 'modules' ? 'text-black' : 'text-primary' }}"></i>
-            Modules & Configuration
+            Modules
         </a>
     </nav>
 

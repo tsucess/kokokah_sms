@@ -20,7 +20,7 @@
 
     @stack('styles')
 </head>
-<body class="font-fredoka antialiased bg-background">
+<body class="font-fredoka antialiased bg-background overflow-x-hidden">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <x-sidebar :active="$active ?? ''" />
@@ -41,7 +41,7 @@
             </header>
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-y-auto">
+            <main class="flex-1 overflow-y-auto bg-superadmin-bg">
                 @yield('content')
             </main>
 
