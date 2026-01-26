@@ -15,7 +15,6 @@
     <nav class="flex-1 px-4 space-y-1">
         <!-- Dashboard -->
         <a href="{{ route('superadmin.dashboard') }}"
-
            class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
             <i class="fa-solid fa-gauge  {{ $active === 'dashboard' ? 'text-black' : 'text-primary' }}"></i>
             Dashboard
@@ -23,7 +22,6 @@
 
         <!-- Schools -->
         <a href="{{ route('superadmin.schools') }}"
-
            class="flex items-center px-4 py-3 gap-4 font-semibold text-sm  rounded-lg transition-colors {{ $active === 'schools' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
            <i class="fa-solid fa-school {{ $active === 'schools' ? 'text-black' : 'text-primary' }}"></i>
             Schools
