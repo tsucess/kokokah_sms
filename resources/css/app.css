@@ -9,11 +9,6 @@
 @source '../**/*.js';
 
 @theme {
-<<<<<<< HEAD
-    --font-sans: 'Fredoka One', 'Fredoka', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
-=======
     --font-sitka:
         Sitka, "Sitka Text", "Sitka Small", "Sitka Subheading", "Segoe UI",
         sans-serif;
@@ -69,4 +64,3 @@
     --text-body4: 14px;
     --text-body5: 12px;
 }
->>>>>>> 69343b5da6d6a0204eb233e9b2fd135c2635c26a
