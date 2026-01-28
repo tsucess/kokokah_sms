@@ -41,6 +41,13 @@
             Analytics
         </a>
 
+        <!-- Starboard -->
+        <a href="{{ route('superadmin.starboard') }}"
+           class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'starboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
+            <i class="fa-regular fa-star {{ $active === 'starboard' ? 'text-black' : 'text-primary' }}"></i>
+            Starboard
+        </a>
+
         <!-- Subscription -->
         <a href="{{ route('superadmin.subscription') }}"
            class="flex items-center font-sitka px-4 py-3 text-sm gap-4 font-medium rounded-lg transition-colors {{ $active === 'subscription' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100'}}">
