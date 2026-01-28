@@ -11,12 +11,21 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <style>
+        @font-face {
+            font-family: 'Sitka';
+            src: local('Sitka Text'), local('Sitka Display'), local('Sitka Heading'), local('Sitka Subheading'), local('Sitka Small'), local('Sitka Banner');
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
+
     @stack('styles')
 </head>
-<body class="font-sans antialiased bg-gray-50">
+<body class="antialiased bg-gray-50" style="font-family: 'Sitka', Georgia, serif;">
     <div class="min-h-screen">
         @include('layouts.navigation')
 

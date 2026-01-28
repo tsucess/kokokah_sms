@@ -56,6 +56,7 @@ export default {
       fontFamily: {
         fredoka: ['Fredoka', 'sans-serif'],
         'fredoka-one': ['Fredoka One', 'cursive'],
+        sitka: ['Sitka', 'Georgia', 'serif'],
       },
     },
   },

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BroadsheetController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -87,9 +88,7 @@ Route::prefix('school')->name('school.')->group(function () {
         return view('school.timetable');
     })->name('timetable');
 
-    Route::get('/broadsheet', function () {
-        return view('school.broadsheet');
-    })->name('broadsheet');
+    Route::get('/broadsheet', [BroadsheetController::class, 'index'])->name('broadsheet');
 
     Route::get('/lesson-plan', function () {
         return view('school.lesson-plan');

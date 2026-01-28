@@ -21,5 +21,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Seed school management data
+        $this->call([
+            AcademicSessionSeeder::class,
+            SchoolClassSeeder::class,
+            SubjectSeeder::class,
+            StudentSeeder::class,
+            GradeSeeder::class,
+        ]);
     }
 }

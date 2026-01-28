@@ -12,12 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
 
+    <style>
+        @font-face {
+            font-family: 'Sitka';
+            src: local('Sitka Text'), local('Sitka Display'), local('Sitka Heading'), local('Sitka Subheading'), local('Sitka Small'), local('Sitka Banner');
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
     @stack('styles')
 </head>
-<body class="font-fredoka antialiased bg-background">
+<body class="font-sitka antialiased bg-background">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
         <x-sidebar :active="$active ?? ''" />
