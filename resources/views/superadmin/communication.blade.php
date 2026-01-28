@@ -90,7 +90,7 @@
                     <h3 class="text-lg font-semibold mb-1" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">Messages</h3>
                     <p class="text-sm text-gray-600" style="font-family: 'Sitka', Georgia, serif;">Send and manage messages to schools and users</p>
                 </div>
-                <button class="px-4 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                <button onclick="openModal('composeMessageModal')" class="px-4 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
                     + New Message
                 </button>
             </div>
@@ -243,7 +243,7 @@
                     <h3 class="text-lg font-semibold mb-1" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">Announcements</h3>
                     <p class="text-sm text-gray-600" style="font-family: 'Sitka', Georgia, serif;">Create and manage platform-wide announcements</p>
                 </div>
-                <button class="px-4 py-2 rounded-lg font-medium transition-colors flex items-center" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                <button onclick="openModal('createAnnouncementModal')" class="px-4 py-2 rounded-lg font-medium transition-colors flex items-center" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
@@ -606,6 +606,143 @@
     </div>
 </div>
 
+<!-- Compose New Message Modal -->
+<div id="composeMessageModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Compose New Message</h3>
+            <button onclick="closeModal('composeMessageModal')" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Recipients -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Recipients</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                    <option>All Users</option>
+                    <option>All Schools</option>
+                    <option>All Teachers</option>
+                    <option>All Students</option>
+                    <option>All Parents</option>
+                </select>
+            </div>
+
+            <!-- Subject -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Subject</label>
+                <input type="text" placeholder="Enter subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+            </div>
+
+            <!-- Message -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Message</label>
+                <textarea rows="6" placeholder="Type your message here..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;"></textarea>
+            </div>
+
+            <!-- Schedule (Optional) -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Schedule (Optional)</label>
+                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
+            <button onclick="closeModal('composeMessageModal')" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Send Message
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Create New Announcement Modal -->
+<div id="createAnnouncementModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Create New Announcement</h3>
+            <button onclick="closeModal('createAnnouncementModal')" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Title -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Title</label>
+                <input type="text" placeholder="Enter announcement title" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+            </div>
+
+            <!-- Category and Priority Row -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Category</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                        <option>General</option>
+                        <option>Academic</option>
+                        <option>Events</option>
+                        <option>Updates</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Priority</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                        <option>Medium</option>
+                        <option>Low</option>
+                        <option>High</option>
+                        <option>Urgent</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Content</label>
+                <textarea rows="6" placeholder="Type announcement content here..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;"></textarea>
+            </div>
+
+            <!-- Target Audience and Expiry Date Row -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Target Audience</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                        <option>All Schools</option>
+                        <option>Specific Schools</option>
+                        <option>All Teachers</option>
+                        <option>All Students</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Expiry Date</label>
+                    <input type="text" placeholder="dd/mm/yyyy" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
+            <button onclick="closeModal('createAnnouncementModal')" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Publish Announcement
+            </button>
+        </div>
+    </div>
+</div>
+
 @push('scripts')
 <script>
 function showTab(tabName) {
@@ -636,6 +773,34 @@ function showTab(tabName) {
         activeTab.style.color = '#000';
     }
 }
+
+// Modal functions
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('bg-opacity-50')) {
+        const modals = document.querySelectorAll('[id$="Modal"]');
+        modals.forEach(modal => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+    }
+});
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {

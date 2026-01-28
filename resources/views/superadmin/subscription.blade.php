@@ -5,7 +5,7 @@
 @section('page-description', 'Manage and oversee your school management platform')
 
 @section('header-actions')
-    <button class="px-4 py-2 bg-accent text-primary rounded-lg font-medium hover:bg-accent-hover transition-colors">
+    <button onclick="openSubscriptionModal()" class="px-4 py-2 bg-accent text-primary rounded-lg font-medium hover:bg-accent-hover transition-colors">
         + Add New Subscription
     </button>
 @endsection
@@ -432,4 +432,108 @@
         </div>
     </div>
 </div>
+
+<!-- Add/Edit Subscription Modal -->
+<div id="subscriptionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Edit Subscription - Kokokah SMS Subscription</h3>
+            <button onclick="closeSubscriptionModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Subscription Title -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Subscription Title</label>
+                <input type="text" placeholder="Enter subscription title" value="Kokokah SMS Subscription" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+            </div>
+
+            <!-- Subscription Description -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Subscription Description</label>
+                <textarea rows="4" placeholder="Enter subscription description" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;">Kokokah SMS Subscription</textarea>
+            </div>
+
+            <!-- Price and Product Row -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Price</label>
+                    <input type="text" placeholder="Enter price" value="₦10,000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Select Product</label>
+                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                        <option>Monthly</option>
+                        <option>Quarterly</option>
+                        <option>Yearly</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Packages -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Packages</label>
+                <div class="border border-gray-300 rounded-lg p-4 space-y-3">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="package1" checked class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
+                        <label for="package1" class="ml-3 text-sm" style="color: #004A53;">Basic Package - Student Management</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="package2" class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
+                        <label for="package2" class="ml-3 text-sm" style="color: #004A53;">Standard Package - Full Features</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="package3" class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
+                        <label for="package3" class="ml-3 text-sm" style="color: #004A53;">Premium Package - Advanced Analytics</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 sticky bottom-0 bg-white">
+            <button onclick="closeSubscriptionModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Modal functions
+function openSubscriptionModal() {
+    const modal = document.getElementById('subscriptionModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeSubscriptionModal() {
+    const modal = document.getElementById('subscriptionModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'subscriptionModal') {
+        closeSubscriptionModal();
+    }
+});
+</script>
+@endpush
+
 @endsection

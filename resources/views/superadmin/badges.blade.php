@@ -5,7 +5,7 @@
 @section('page-description', 'Manage badges and achievements across all schools')
 
 @section('header-actions')
-    <button class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-medium hover:bg-yellow-500 transition-colors">
+    <button onclick="openBadgeModal()" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-medium hover:bg-yellow-500 transition-colors">
         Create New Badge
     </button>
 @endsection
@@ -302,6 +302,99 @@
         </div>
     </div>
 </div>
+
+<!-- Add New Badge Modal -->
+<div id="badgeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Add New Badge</h3>
+            <button onclick="closeBadgeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Badge ID and Badge Name Row -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Badge ID</label>
+                    <input type="text" placeholder="Enter badge ID" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Badge Name</label>
+                    <input type="text" placeholder="Enter badge name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+                </div>
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Category</label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
+                    <option>Academic</option>
+                    <option>Sports</option>
+                    <option>Arts</option>
+                    <option>Leadership</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Description</label>
+                <textarea rows="4" placeholder="Enter badge description" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;"></textarea>
+            </div>
+
+            <!-- Requirement -->
+            <div>
+                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Requirement</label>
+                <textarea rows="4" placeholder="Enter badge requirements" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;"></textarea>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
+            <button onclick="closeBadgeModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Modal functions
+function openBadgeModal() {
+    const modal = document.getElementById('badgeModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeBadgeModal() {
+    const modal = document.getElementById('badgeModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'badgeModal') {
+        closeBadgeModal();
+    }
+});
+</script>
+@endpush
+
 @endsection
 
 
