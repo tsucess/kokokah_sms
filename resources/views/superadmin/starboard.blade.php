@@ -6,7 +6,7 @@
 
 @section('header-actions')
     <button class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
-        View Budgets
+        View Badges
     </button>
 @endsection
 
@@ -15,16 +15,16 @@
         <!-- Stats Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             <!-- Total Budgets -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="text-sm font-medium text-gray-600">Total Budgets</p>
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-lg border border-school-btn flex flex-col gap-5 p-6">
+                <div class="flex items-center justify-between ">
+                    <p class="text-sm font-medium text-primary font-fredoka">Total Budgets</p>
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </div>
-                <p class="text-3xl font-bold text-gray-900" style="font-family: 'Fredoka One', cursive;">1,247</p>
-                <div class="flex items-center mt-2">
+                <p class="text-3xl font-bold text-primary font-fredoka" >1,247</p>
+                <div class="flex items-center ">
                     <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -34,16 +34,16 @@
             </div>
 
             <!-- Total Stores -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="text-sm font-medium text-gray-600">Total Stores</p>
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-lg border border-school-btn flex flex-col gap-5 p-6">
+                <div class="flex items-center justify-between ">
+                    <p class="text-sm font-medium text-primary font-fredoka">Total Stores</p>
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                 </div>
-                <p class="text-3xl font-bold text-gray-900" style="font-family: 'Fredoka One', cursive;">834</p>
-                <div class="flex items-center mt-2">
+                <p class="text-3xl font-bold text-primary font-fredoka" >834</p>
+                <div class="flex items-center ">
                     <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -53,16 +53,16 @@
             </div>
 
             <!-- Active Schools -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="text-sm font-medium text-gray-600">Active Schools</p>
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-lg border border-school-btn flex flex-col gap-5 p-6">
+                <div class="flex items-center justify-between ">
+                    <p class="text-sm font-medium text-primary font-fredoka">Active Schools</p>
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                 </div>
-                <p class="text-3xl font-bold text-gray-900" style="font-family: 'Fredoka One', cursive;">23</p>
-                <div class="flex items-center mt-2">
+                <p class="text-3xl font-bold text-primary font-fredoka" >23</p>
+                <div class="flex items-center ">
                     <svg class="w-4 h-4 text-red-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -72,16 +72,16 @@
             </div>
 
             <!-- Total Students -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="text-sm font-medium text-gray-600">Total Students</p>
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-lg border border-school-btn flex flex-col gap-5 p-6">
+                <div class="flex items-center justify-between ">
+                    <p class="text-sm font-medium text-primary font-fredoka">Total Students</p>
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                 </div>
-                <p class="text-3xl font-bold text-gray-900" style="font-family: 'Fredoka One', cursive;">3,421</p>
-                <div class="flex items-center mt-2">
+                <p class="text-3xl font-bold text-primary font-fredoka" >3,421</p>
+                <div class="flex items-center ">
                     <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -91,16 +91,16 @@
             </div>
 
             <!-- Store Rate -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="flex items-center justify-between mb-2">
-                    <p class="text-sm font-medium text-gray-600">Store Rate</p>
-                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="bg-white rounded-lg border border-school-btn flex flex-col gap-5 p-6">
+                <div class="flex items-center justify-between ">
+                    <p class="text-sm font-medium text-primary font-fredoka">Store Rate</p>
+                    <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                 </div>
-                <p class="text-3xl font-bold text-gray-900" style="font-family: 'Fredoka One', cursive;">67%</p>
-                <div class="flex items-center mt-2">
+                <p class="text-3xl font-bold text-primary font-fredoka" >67%</p>
+                <div class="flex items-center ">
                     <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M5 10l7-7m0 0l7 7m-7-7v18" />
@@ -112,10 +112,10 @@
 
         <!-- Charts and Stats Row -->
         <!-- Monthly Trends Chart -->
-        <div class=" bg-white rounded-lg border border-gray-200 p-6">
+        <div class=" bg-white rounded-lg border border-school-btn p-6">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-bold text-gray-800">Monthly Trends</h2>
-                <button class="text-sm text-gray-600 hover:text-gray-800">MORE</button>
+                <h2 class="text-sm font-bold text-black font-inter">Monthly Trends</h2>
+                {{-- <button class="text-sm text-primary font-fredoka hover:text-gray-800">MORE</button> --}}
             </div>
             <div class="h-80">
                 <canvas id="monthlyTrendsChart"></canvas>
@@ -123,25 +123,27 @@
         </div>
 
         <!-- Badge Distribution -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="mb-4">
-                <h2 class="text-lg font-bold text-gray-800">Badge Distribution</h2>
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="mb-4 flex items-center gap-3 justify-between">
+                <h2 class="text-sm font-bold text-black font-inter">Badge Distribution</h2>
+                <button class="text-xs uppercase text-gray-300 font-fredoka hover:text-gray-800">MORE</button>
             </div>
             <div class="flex items-center justify-center h-64">
                 <canvas id="badgeDistributionChart"></canvas>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
             <!-- Shares by Platform -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="mb-4">
-                    <h2 class="text-lg font-bold text-gray-800">Shares by Platform</h2>
+            <div class="bg-white rounded-lg border border-school-btn p-6 lg:col-span-2">
+                <div class="mb-4 flex flex-col gap-1">
+                    <h2 class="text-lg font-bold text-black font-inter">Shares by Platform</h2>
+                    <p class="text-grey100 text-sm">Badge shared</p>
                 </div>
                 <div class="space-y-4">
                     <!-- WhatsApp -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center justify-between">
                             <div class="flex items-center">
                                 <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
                                     <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
@@ -151,17 +153,21 @@
                                 </div>
                                 <span class="text-sm font-medium text-gray-700">WhatsApp</span>
                             </div>
-                            <span class="text-sm font-bold text-gray-900">433</span>
+                            <div class="flex gap-1 items-center">
+                                 <span class="text-sm font-bold text-primary">433</span>
+                                 <p class="text-xs text-gray-500 mt-1">(57%)</p>
+                            </div>
+
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div class="bg-green-500 h-2 rounded-full" style="width: 57%"></div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">57%</p>
+
                     </div>
 
                     <!-- Facebook -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div  class="flex flex-col gap-2">
+                        <div class="flex items-center justify-between ">
                             <div class="flex items-center">
                                 <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                     <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
@@ -171,17 +177,19 @@
                                 </div>
                                 <span class="text-sm font-medium text-gray-700">Facebook</span>
                             </div>
-                            <span class="text-sm font-bold text-gray-900">341</span>
+                            <div class="flex gap-1 items-center">
+                                 <span class="text-sm font-bold text-primary">433</span>
+                                 <p class="text-xs text-gray-500 mt-1">(57%)</p>
+                            </div>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div class="bg-blue-500 h-2 rounded-full" style="width: 38.1%"></div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">38.1%</p>
                     </div>
 
                     <!-- Instagram -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div  class="flex flex-col gap-2">
+                        <div class="flex items-center justify-between ">
                             <div class="flex items-center">
                                 <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
                                     <svg class="w-5 h-5 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
@@ -191,17 +199,19 @@
                                 </div>
                                 <span class="text-sm font-medium text-gray-700">Instagram</span>
                             </div>
-                            <span class="text-sm font-bold text-gray-900">133</span>
+                            <div class="flex gap-1 items-center">
+                                 <span class="text-sm font-bold text-primary">433</span>
+                                 <p class="text-xs text-gray-500 mt-1">(57%)</p>
+                            </div>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div class="bg-pink-500 h-2 rounded-full" style="width: 29%"></div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">29%</p>
                     </div>
 
                     <!-- LinkedIn -->
-                    <div>
-                        <div class="flex items-center justify-between mb-2">
+                    <div  class="flex flex-col gap-2">
+                        <div class="flex items-center justify-between ">
                             <div class="flex items-center">
                                 <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                     <svg class="w-5 h-5 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
@@ -211,56 +221,103 @@
                                 </div>
                                 <span class="text-sm font-medium text-gray-700">LinkedIn</span>
                             </div>
-                            <span class="text-sm font-bold text-gray-900">34</span>
+                            <div class="flex gap-1 items-center">
+                                 <span class="text-sm font-bold text-primary">433</span>
+                                 <p class="text-xs text-gray-500 mt-1">(57%)</p>
+                            </div>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div class="bg-blue-700 h-2 rounded-full" style="width: 9%"></div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">9%</p>
                     </div>
                 </div>
             </div>
 
             <!-- Top Performing Schools -->
-            <div class="bg-white rounded-lg border border-gray-200 p-6">
-                <div class="mb-4">
-                    <h2 class="text-lg font-bold text-gray-800">Top performing Schools</h2>
+            <div class="bg-white rounded-lg border border-school-btn p-6 lg:col-span-3">
+                <div class="mb-4 flex flex-col gap-1">
+                    <h2 class="text-lg font-bold text-black font-inter">Top performing Schools</h2>
+                    <p class="text-grey100 text-sm">Top schools</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-100">
-                        <div class="flex items-center">
-                            <span class="text-lg font-bold text-gray-400 mr-3">1</span>
-                            <div>
-                                <p class="text-sm font-medium text-gray-900">Lagos International School</p>
-                                <p class="text-xs text-gray-500">324 Budgets • 187 classes</p>
+                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
+                                 <span class="text-h4 font-bold text-secondary font-sitka">1</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
+                                <div class="flex items-center gap-1">
+                                    <p class="text-xs text-grey100">324 Budgets </p>
+                                    <p class="text-xs text-grey100">.</p>
+                                    <p class="text-xs text-grey100">187 classes</p>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-100">
-                        <div class="flex items-center">
-                            <span class="text-lg font-bold text-gray-400 mr-3">2</span>
-                            <div>
-                                <p class="text-sm font-medium text-gray-900">Abuja Academy</p>
-                                <p class="text-xs text-gray-500">324 Budgets • 187 classes</p>
-                            </div>
+                        <div class="border border-grey200 rounded-full px-7.5 py-2">
+                            <p class="text-primary text-sm font-sitka">84% engagement</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-100">
-                        <div class="flex items-center">
-                            <span class="text-lg font-bold text-gray-400 mr-3">3</span>
-                            <div>
-                                <p class="text-sm font-medium text-gray-900">Port Harcourt High</p>
-                                <p class="text-xs text-gray-500">324 Budgets • 187 classes</p>
+                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
+                                 <span class="text-h4 font-bold text-secondary font-sitka">1</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
+                                <div class="flex items-center gap-1">
+                                    <p class="text-xs text-grey100">324 Budgets </p>
+                                    <p class="text-xs text-grey100">.</p>
+                                    <p class="text-xs text-grey100">187 classes</p>
+                                </div>
+
                             </div>
                         </div>
+                        <div class="border border-grey200 rounded-full px-7.5 py-2">
+                            <p class="text-primary text-sm font-sitka">84% engagement</p>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <span class="text-lg font-bold text-gray-400 mr-3">4</span>
-                            <div>
-                                <p class="text-sm font-medium text-gray-900">Ibadan High</p>
-                                <p class="text-xs text-gray-500">324 Budgets • 187 classes</p>
+                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
+                                 <span class="text-h4 font-bold text-secondary font-sitka">1</span>
                             </div>
+
+                            <div class="flex flex-col gap-1">
+                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
+                                <div class="flex items-center gap-1">
+                                    <p class="text-xs text-grey100">324 Budgets </p>
+                                    <p class="text-xs text-grey100">.</p>
+                                    <p class="text-xs text-grey100">187 classes</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="border border-grey200 rounded-full px-7.5 py-2">
+                            <p class="text-primary text-sm font-sitka">84% engagement</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
+                                 <span class="text-h4 font-bold text-secondary font-sitka">1</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1">
+                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
+                                <div class="flex items-center gap-1">
+                                    <p class="text-xs text-grey100">324 Budgets </p>
+                                    <p class="text-xs text-grey100">.</p>
+                                    <p class="text-xs text-grey100">187 classes</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="border border-grey200 rounded-full px-7.5 py-2">
+                            <p class="text-primary text-sm font-sitka">84% engagement</p>
                         </div>
                     </div>
                 </div>
@@ -270,44 +327,40 @@
 
 
         <!-- Recent System Activity -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
             <div class="mb-4">
-                <h2 class="text-lg font-bold text-gray-800">Recent System Activity</h2>
+                <h2 class="text-lg font-bold text-black font-inter">Recent System Activity</h2>
             </div>
             <div class="space-y-4">
-                <div class="flex items-start">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3"></div>
-                    <div>
-                        <p class="text-sm text-gray-900">New school registered</p>
-                        <p class="text-xs text-gray-500">2 minutes ago</p>
+                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-10">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full shrink"></div>
+                    <div class="flex items-center justify-between flex-1">
+                        <p class="text-sm text-black"> <span class='text-blue100'>Lagos International School</span> awarded 23 badges today</p>
+                        <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
-                <div class="flex items-start">
-                    <div class="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3"></div>
-                    <div>
-                        <p class="text-sm text-gray-900">Payment received</p>
-                        <p class="text-xs text-gray-500">15 minutes ago</p>
+
+                <div class="flex items-center gap-3 rounded-lg bg-purple50 py-6 px-10">
+                    <div class="w-2 h-2 bg-purple200 rounded-full shrink"></div>
+                    <div class="flex items-center justify-between flex-1">
+                        <p class="text-sm text-black"> <span class='text-purple100'>Lagos International School</span> awarded 23 badges today</p>
+                        <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
-                <div class="flex items-start">
-                    <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3"></div>
-                    <div>
-                        <p class="text-sm text-gray-900">Subscription expiring soon</p>
-                        <p class="text-xs text-gray-500">1 hour ago</p>
+
+                <div class="flex items-center gap-3 rounded-lg bg-green50 py-6 px-10">
+                    <div class="w-2 h-2 bg-green100 rounded-full shrink"></div>
+                    <div class="flex items-center justify-between flex-1">
+                        <p class="text-sm text-black"> <span class='text-green200'>Lagos International School</span> awarded 23 badges today</p>
+                        <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
-                <div class="flex items-start">
-                    <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3"></div>
-                    <div>
-                        <p class="text-sm text-gray-900">New user added</p>
-                        <p class="text-xs text-gray-500">2 hours ago</p>
-                    </div>
-                </div>
-                <div class="flex items-start">
-                    <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
-                    <div>
-                        <p class="text-sm text-gray-900">System maintenance scheduled</p>
-                        <p class="text-xs text-gray-500">3 hours ago</p>
+
+                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-10">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full shrink"></div>
+                    <div class="flex items-center justify-between flex-1">
+                        <p class="text-sm text-black"> <span class='text-blue100'>Lagos International School</span> awarded 23 badges today</p>
+                        <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
 
