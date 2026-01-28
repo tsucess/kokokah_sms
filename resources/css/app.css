@@ -1,4 +1,7 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -6,6 +9,64 @@
 @source '../**/*.js';
 
 @theme {
+<<<<<<< HEAD
     --font-sans: 'Fredoka One', 'Fredoka', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+=======
+    --font-sitka:
+        Sitka, "Sitka Text", "Sitka Small", "Sitka Subheading", "Segoe UI",
+        sans-serif;
+
+    --color-primary: #004a53;
+    --color-secondary: #f56824;
+    --color-accent: #fdaf22;
+    --color-black: #000f11;
+    --color-more: #00000080;
+    --color-active:#1AAE50;
+    --color-pageColor: #CBCCCD;
+    --color-accent-hover:#FECA6C;
+    --color-search: #8E8D93;
+    --color-school-badge:#FDE1D3;
+    --color-school-text:#000F11;
+    --color-school-btn:#CCDBDD;
+    --color-superadmin-bg:#F7F7FA;
+    --color-user-date:#808191;
+    --color-messageBg:#DBEAFE;
+    --color-annoucementBg:#D6FFE6;
+    --color-recipentBg:#FFEDD4;
+
+    --font-fredoka: "Fredoka", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    --text-h1: 56px;
+    --text-h1--line-height: 61.1px;
+    --text-h1--font-weight: 600;
+
+    --text-h2: 48px;
+    --text-h2--line-height: 52.8px;
+    --text-h2--font-weight: 600;
+
+    --text-h3: 40px;
+    --text-h3--line-height: 44px;
+    --text-h3--font-weight: 600;
+
+    --text-h4: 32px;
+    --text-h4--line-height: 35.2px;
+    --text-h4--font-weight: 600;
+
+    --text-h5: 24px;
+    --text-h5--line-height: 26.4px;
+    --text-h5--font-weight: 600;
+
+    --text-h6: 20px;
+    --text-h6--line-height: 22px;
+    --text-h6--font-weight: 600;
+
+    --text-body1: 20px;
+    --text-body2: 18px;
+    --text-body3: 16px;
+    --text-body4: 14px;
+    --text-body5: 12px;
+}
+>>>>>>> 69343b5da6d6a0204eb233e9b2fd135c2635c26a

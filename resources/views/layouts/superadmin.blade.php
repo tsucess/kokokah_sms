@@ -7,6 +7,9 @@
 
     <title>@yield('title', 'Dashboard') - Kokokah SMS</title>
 
+    {{-- font awesome cdn --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +26,7 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
+
     @stack('styles')
 </head>
 <body class="font-sitka antialiased bg-background">
@@ -36,9 +39,9 @@
             <!-- Top Header -->
             <header class="bg-white border-b border-gray-200 px-8 py-6">
                 <div class="flex items-center justify-between">
-                    <div>
-                        <h1 class="text-2xl font-fredoka-one text-gray-900">@yield('page-title')</h1>
-                        <p class="text-sm text-gray-600 mt-1">@yield('page-description')</p>
+                    <div class="flex flex-col gap-2">
+                        <h1 class=" font-fredoka text-h6 text-primary">@yield('page-title')</h1>
+                        <p class="text-body4 text-primary ">@yield('page-description')</p>
                     </div>
                     <div class="flex items-center space-x-4">
                         @yield('header-actions')
@@ -47,7 +50,7 @@
             </header>
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-y-auto">
+            <main class="flex-1 overflow-y-auto bg-superadmin-bg">
                 @yield('content')
             </main>
 
