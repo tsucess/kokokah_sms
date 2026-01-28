@@ -35,7 +35,7 @@
         <x-sidebar :active="$active ?? ''" />
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col">
+        <div class="flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
             <!-- Top Header -->
             <header class="bg-white border-b border-gray-200 px-8 py-6">
                 <div class="flex items-center justify-between">
@@ -50,7 +50,7 @@
             </header>
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-y-auto bg-superadmin-bg">
+            <main class="flex-1  bg-superadmin-bg">
                 @yield('content')
             </main>
 

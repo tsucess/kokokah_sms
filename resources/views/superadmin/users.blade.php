@@ -96,7 +96,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-black text-white font-fredoka rounded-full">Active</span>
+                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">
@@ -140,7 +140,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
+                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">
@@ -186,7 +186,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-black text-white font-fredoka rounded-full">Active</span>
+                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">
@@ -232,7 +232,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
+                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">
@@ -278,7 +278,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-black text-white font-fredoka rounded-full">Active</span>
+                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">
@@ -324,7 +324,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
+                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black rounded-full">Inactive</span>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
                                 <button class="text-gray-600 hover:text-primary">

@@ -9,15 +9,15 @@
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Average Response Time -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-center justify-between mb-2">
-                <p class="text-sm font-medium text-gray-600">Average Response Time</p>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="flex items-center justify-between mb-6">
+                <p class="text-sm font-medium text-primary font-fredoka">Average Response Time</p>
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </div>
-            <p class="text-3xl font-bold text-gray-900">245ms</p>
-            <div class="flex items-center mt-2">
+            <p class="text-3xl font-bold text-primary font-fredoka">245ms</p>
+            <div class="flex items-center mt-5">
                 <svg class="w-4 h-4 text-red-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -26,15 +26,15 @@
         </div>
 
         <!-- System Uptime -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-center justify-between mb-2">
-                <p class="text-sm font-medium text-gray-600">System Uptime</p>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="flex items-center justify-between mb-6">
+                <p class="text-sm font-medium text-primary font-fredoka">System Uptime</p>
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
             </div>
-            <p class="text-3xl font-bold text-gray-900">99.98%</p>
-            <div class="flex items-center mt-2">
+            <p class="text-3xl font-bold text-primary font-fredoka">99.98%</p>
+            <div class="flex items-center mt-5">
                 <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
@@ -43,15 +43,15 @@
         </div>
 
         <!-- Average Daily Users -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-center justify-between mb-2">
-                <p class="text-sm font-medium text-gray-600">Average Daily Users</p>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="flex items-center justify-between mb-6">
+                <p class="text-sm font-medium text-primary font-fredoka">Average Daily Users</p>
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
             </div>
-            <p class="text-3xl font-bold text-gray-900">52,340</p>
-            <div class="flex items-center mt-2">
+            <p class="text-3xl font-bold text-primary font-fredoka">52,340</p>
+            <div class="flex items-center mt-5">
                 <svg class="w-4 h-4 text-red-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
@@ -60,15 +60,15 @@
         </div>
 
         <!-- Engagement Rate -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-center justify-between mb-2">
-                <p class="text-sm font-medium text-gray-600">Engagement Rate</p>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="flex items-center justify-between mb-6">
+                <p class="text-sm font-medium text-primary font-fredoka">Engagement Rate</p>
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
             </div>
-            <p class="text-3xl font-bold text-gray-900">87%</p>
-            <div class="flex items-center mt-2">
+            <p class="text-3xl font-bold text-primary font-fredoka">87%</p>
+            <div class="flex items-center mt-5">
                 <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
@@ -80,9 +80,9 @@
     <!-- Charts Row -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Platform Growth -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
             <div class="mb-4">
-                <h2 class="text-lg font-semibold text-gray-900">Platform Growth (Monthly growth across key metrics)</h2>
+                <h2 class="text-lg font-semibold text-black font-inter text-body2">Platform Growth (Monthly growth across key metrics)</h2>
             </div>
             <div class="h-64">
                 <canvas id="platformGrowthChart"></canvas>
@@ -90,9 +90,9 @@
         </div>
 
         <!-- Weekly Engagement -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="bg-white rounded-lg border border-school-btn p-6">
             <div class="mb-4">
-                <h2 class="text-lg font-semibold text-gray-900">Weekly Engagement (Daily login activity and active time)</h2>
+                <h2 class="text-lg font-semibold text-black font-inter text-body2">Weekly Engagement (Daily login activity and active time)</h2>
             </div>
             <div class="h-64">
                 <canvas id="weeklyEngagementChart"></canvas>
@@ -101,9 +101,9 @@
     </div>
 
     <!-- Subscription Plan Performance -->
-    <div class="bg-white rounded-lg border border-gray-200 p-6">
+    <div class="bg-white rounded-lg border border-school-btn p-6">
         <div class="mb-4">
-            <h2 class="text-lg font-semibold text-gray-900">Subscription Plan Performance</h2>
+            <h2 class="text-lg font-semibold text-black font-inter text-body4">Subscription Plan Performance</h2>
         </div>
         <div class="h-80">
             <canvas id="subscriptionPerformanceChart"></canvas>
@@ -111,17 +111,17 @@
     </div>
 
     <!-- Feature Usage Statistics -->
-    <div class="bg-white rounded-lg border border-gray-200 p-6">
+    <div class="bg-white rounded-lg border border-school-btn p-6">
         <div class="mb-6">
-            <h2 class="text-lg font-semibold text-gray-900">Feature Usage Statistics</h2>
-            <p class="text-sm text-gray-600">Adoption rate of platform features</p>
+            <h2 class="text-lg font-semibold text-primary font-fredoka">Feature Usage Statistics</h2>
+            <p class="text-sm text-primary font-fredoka">Adoption rate of platform features</p>
         </div>
         <div class="space-y-6">
             <!-- Attendance -->
             <div>
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-medium text-gray-700">Attendance</span>
-                    <span class="text-sm font-semibold text-gray-900">93%</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">Attendance</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">93%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                     <div class="bg-indigo-600 h-2 rounded-full" style="width: 93%"></div>
@@ -131,8 +131,8 @@
             <!-- Gradebook -->
             <div>
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-medium text-gray-700">Gradebook</span>
-                    <span class="text-sm font-semibold text-gray-900">92%</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">Gradebook</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">92%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                     <div class="bg-indigo-600 h-2 rounded-full" style="width: 92%"></div>
@@ -142,8 +142,8 @@
             <!-- Communication -->
             <div>
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-medium text-gray-700">Communication</span>
-                    <span class="text-sm font-semibold text-gray-900">92%</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">Communication</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">92%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                     <div class="bg-indigo-600 h-2 rounded-full" style="width: 92%"></div>
@@ -153,8 +153,8 @@
             <!-- Reports -->
             <div>
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-sm font-medium text-gray-700">Reports</span>
-                    <span class="text-sm font-semibold text-gray-900">94%</span>
+                    <span class="text-body-3 font-sitka font-semibold text-black">Reports</span>
+                    <span class="text-body3 font-sitka font-semibold text-black">94%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                     <div class="bg-indigo-600 h-2 rounded-full" style="width: 94%"></div>
@@ -164,9 +164,9 @@
     </div>
 
     <!-- Student Enrollment Trend -->
-    <div class="bg-white rounded-lg border border-gray-200 p-6">
+    <div class="bg-white rounded-lg border border-school-btn p-6">
         <div class="mb-4">
-            <h2 class="text-lg font-semibold text-gray-900">Student Enrollment Trend (Detailed student growth over 6 months)</h2>
+            <h2 class="text-lg font-semibold text-black font-inter text-body4">Student Enrollment Trend (Detailed student growth over 6 months)</h2>
         </div>
         <div class="h-80">
             <canvas id="studentEnrollmentChart"></canvas>
