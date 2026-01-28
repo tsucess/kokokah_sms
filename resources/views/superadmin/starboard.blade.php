@@ -1,12 +1,12 @@
-@extends('layouts.superadmin', ['active' => 'dashboard'])
+@extends('layouts.superadmin', ['active' => 'starboard'])
 
-@section('title', 'Dashboard')
-@section('page-title', 'Dashboard')
+@section('title', 'Kokokah Starboard Badges')
+@section('page-title', 'Kokokah Starboard Badges')
 @section('page-description', 'Manage and oversee your school management platform')
 
 @section('header-actions')
-    <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="background-color: #FDAF22; color: #000;">
-        View Budgets
+    <button onclick="openBadgeModal()" class="px-6 py-2 rounded-lg font-medium transition-colors" style="background-color: #FDAF22; color: #000;">
+        + Add New Badge
     </button>
 @endsection
 
