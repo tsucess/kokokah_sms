@@ -5,33 +5,47 @@
 @section('page-description', 'Manage system-wide features, templates, and settings')
 
 @section('header-actions')
+<style>
+    .active {
+            background-color: #fdaf22;
+            color: #004A53;
+            border-color: #fdaf22;
+        }
+        .active:hover {
+            background-color: #feca6c;
+        }
+</style>
 <div class="flex items-center gap-3">
-    <button class="px-4 py-2 bg-white text-body3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors flex items-center">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-        Export PDF
-    </button>
-    <button class="px-4 py-2 bg-white text-body3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors flex items-center">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-        Export Excel
-    </button>
+    <button class="group px-4 py-2 bg-white border border-primary text-primary rounded-lg font-medium
+hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
+
+    <i class="fa-solid fa-download text-primary group-hover:text-white transition-colors"></i>
+    Export PDF
+
+</button>
+
+    <button class="group px-4 py-2 bg-white border border-primary text-primary rounded-lg font-medium
+hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
+
+    <i class="fa-solid fa-download text-primary group-hover:text-white transition-colors"></i>
+    Export Excel
+
+</button>
+
 </div>
 @endsection
 
 @section('content')
 <div class="p-8 space-y-6">
     <!-- Tabs -->
-    <div class="flex gap-2">
-        <button class="px-6 py-2 bg-accent text-black rounded-lg font-medium text-body3 transition-colors tab-btn active" data-tab="academicSetup">
+    <div class="flex">
+        <button class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-l-lg hover:bg-gray-200 transition-colors tab-btn active" data-tab="academicSetup">
             Academic Setup
         </button>
-        <button class="px-6 py-2 bg-white text-primary border border-gray-200 rounded-lg font-medium text-body3 hover:bg-gray-50 transition-colors tab-btn" data-tab="systemSettings">
+        <button class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors tab-btn" data-tab="systemSettings">
             System Settings
         </button>
-        <button class="px-6 py-2 bg-white text-primary border border-gray-200 rounded-lg font-medium text-body3 hover:bg-gray-50 transition-colors tab-btn" data-tab="gradingSystem">
+        <button class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-r-lg hover:bg-gray-200 transition-colors tab-btn" data-tab="gradingSystem">
             Grading System
         </button>
     </div>
@@ -237,29 +251,29 @@
                 <p class="text-body4 text-primary">Configure basic system settings</p>
             </div>
             <div class="p-6">
-                <form class="space-y-6">
+                <form class="space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <!-- Site Name -->
-                    <div>
-                        <label class="block text-body3 font-medium text-primary mb-2">Site Name</label>
-                        <input type="text" value="Kokokah" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <div class="border border-primary rounded-2xl px-3 py-2 relative">
+                        <label class="font-medium text-primary bg-white px-1 py-0.5 absolute -top-3 left-5 text-sm">Site Name</label>
+                        <input type="text" placeholder="kokokah" class="px-3 py-2 outline-none text-primary text-sm">
                     </div>
 
                     <!-- Site URL -->
-                    <div>
-                        <label class="block text-body3 font-medium text-primary mb-2">Site URL</label>
-                        <input type="text" value="https://kokokah.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <div class="border border-primary rounded-2xl px-3 py-2 relative">
+                        <label class="font-medium text-primary bg-white px-1 py-0.5 absolute -top-3 left-5 text-sm">Site URL</label>
+                        <input type="text" placeholder="https://kokokah.com" class="px-3 py-2 outline-none text-primary text-sm">
                     </div>
 
                     <!-- Admin Email -->
-                    <div>
-                        <label class="block text-body3 font-medium text-primary mb-2">Admin Email</label>
-                        <input type="email" value="admin@kokokah@gmail.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <div class="border border-primary rounded-2xl px-3 py-2 relative">
+                        <label class="font-medium text-primary bg-white px-1 py-0.5 absolute -top-3 left-5 text-sm">Admin Email</label>
+                        <input type="text" placeholder="admin@kokokah@gmail.com" class="px-3 py-2 outline-none text-primary text-sm">
                     </div>
 
                     <!-- Timezone -->
-                    <div>
-                        <label class="block text-body3 font-medium text-primary mb-2">Timezone</label>
-                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <div class="border border-primary rounded-2xl px-3 py-2 relative">
+                        <label class="font-medium text-primary bg-white px-1 py-0.5 absolute -top-3 left-5 text-sm">Timezone</label>
+                        <select class="px-3 py-2 outline-none text-primary text-sm w-full">
                             <option>West Africa Time (WAT)</option>
                             <option>East Africa Time (EAT)</option>
                             <option>Central Africa Time (CAT)</option>
@@ -267,9 +281,9 @@
                     </div>
 
                     <!-- Default Language -->
-                    <div>
-                        <label class="block text-body3 font-medium text-primary mb-2">Default Language</label>
-                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent">
+                    <div class="border border-primary rounded-2xl px-3 py-2 relative">
+                        <label class="font-medium text-primary bg-white px-1 py-0.5 absolute -top-3 left-5 text-sm">Default Language</label>
+                        <select class="px-3 py-2 outline-none text-primary text-sm w-full">
                             <option>English</option>
                             <option>French</option>
                             <option>Spanish</option>
@@ -289,8 +303,8 @@
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex gap-3 pt-4">
-                        <button type="button" class="px-6 py-2 border border-gray-300 text-primary rounded-lg font-medium text-body3 hover:bg-gray-50 transition-colors">
+                    <div class="flex gap-3">
+                        <button type="button" class="px-6 py-2 border border-primary text-primary rounded-lg font-medium text-body3 hover:bg-primary hover:text-white transition-colors">
                             Cancel
                         </button>
                         <button type="submit" class="px-6 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors">
