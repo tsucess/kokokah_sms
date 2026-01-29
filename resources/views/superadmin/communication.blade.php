@@ -57,7 +57,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
             z-index: 50;
             align-items: center;
             justify-content: center;
@@ -77,23 +76,23 @@
             position: relative;
         }
 
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.2s;
-        }
+        /* .modal-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background-color 0.2s;
+            }
 
-        .modal-close:hover {
-            background-color: #f3f4f6;
-        }
+            .modal-close:hover {
+                background-color: #f3f4f6;
+            } */
     </style>
     <div class="p-8 space-y-6">
         <!-- Stats Grid -->
@@ -563,7 +562,8 @@
                             <p class="text-sm text-primary font-fredoka">Send emails to all users at once</p>
                         </div>
 
-                        <button class="w-full px-4 py-2 rounded-lg font-bold font-sitka text-black bg-accent hover:bg-accent-hover transition-colors">
+                        <button
+                            class="w-full px-4 py-2 rounded-lg font-bold font-sitka text-black bg-accent hover:bg-accent-hover transition-colors">
                             Send Bulk Email
                         </button>
                     </div>
@@ -581,7 +581,8 @@
                             <p class="text-sm text-primary font-fredoka">Send emails to all users at once</p>
                         </div>
 
-                        <button class="w-full px-4 py-2 rounded-lg font-bold font-sitka text-black bg-accent hover:bg-accent-hover transition-colors">
+                        <button
+                            class="w-full px-4 py-2 rounded-lg font-bold font-sitka text-black bg-accent hover:bg-accent-hover transition-colors">
                             Send Bulk SMS
                         </button>
                     </div>
@@ -758,70 +759,75 @@
         </div>
 
         <!-- Compose New Message Modal -->
-        <div id="messageModal" class="modal-overlay">
+        <div id="messageModal" class="modal-overlay bg-primary/50 mb-0">
             <div class="modal-content p-8">
-                <button onclick="closeMessageModal()" class="modal-close">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
 
-                <div class="mb-6">
-                    <h2 class="text-xl font-semibold text-primary font-fredoka mb-1">Compose New Message</h2>
-                    <p class="text-sm text-gray-600 font-fredoka">Send a message to schools, teachers, students or parents</p>
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex flex-col gap-1">
+                        <h2 class="text-xl font-semibold text-primary font-fredoka">Compose New Message</h2>
+                        <p class="text-sm text-gray-600 font-fredoka">Send a message to schools, teachers, students or
+                            parents</p>
+                    </div>
+                    <button onclick="closeMessageModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
+                        <i class="fa-regular fa-circle-xmark fa-lg"></i>
+                    </button>
                 </div>
 
-                <form id="messageForm" class="space-y-6">
+
+
+                <form id="messageForm" class="space-y-6 flex flex-col">
                     <!-- Recipients -->
-                    <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Recipients</label>
-                        <select
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
-                            <option>All Users</option>
-                            <option>All Schools</option>
-                            <option>All Teachers</option>
-                            <option>All Students</option>
-                            <option>All Parents</option>
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Recipients</label>
+                        <select class="w-full outline-none text-primary text-sm">
+                            <option>All users</option>
+                            <option>All teachers</option>
                         </select>
                     </div>
 
                     <!-- Subject -->
-                    <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Subject</label>
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Subject</label>
                         <input type="text" placeholder="Enter message subject"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
+                            class="w-full outline-none text-primary text-sm">
                     </div>
 
                     <!-- Message -->
-                    <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Message</label>
-                        <textarea rows="5" placeholder="Type your message here..."
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600 resize-none"></textarea>
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Message</label>
+                        <textarea rows="4" placeholder="Type your message here...."
+                            class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
                     </div>
 
                     <!-- Schedule (Optional) -->
                     <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Schedule (Optional)</label>
-                        <div class="relative">
-                            <input type="text" placeholder="dd/mm/yyyy --:--"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
-                            <svg class="w-5 h-5 text-gray-400 absolute right-4 top-3.5" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Schedule
+                                (Optional)</label>
+                            <div class="relative">
+                                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
+                                <svg class="w-5 h-5 text-gray-400 absolute right-4 top-1" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1 font-fredoka">Leave empty to send immediately</p>
+                        <p class="text-xs text-gray-500 mt-1 font-sitka">Leave empty to send immediately</p>
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex gap-3 pt-4">
+                    <div class="flex items-center justify-end gap-3 py-4">
                         <button type="button" onclick="closeMessageModal()"
-                            class="flex-1 px-6 py-3 border border-gray-300 text-primary rounded-lg font-medium hover:bg-gray-50 transition-colors font-fredoka">
+                            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="flex-1 px-6 py-3 bg-accent text-black rounded-lg font-medium hover:bg-accent-hover transition-colors font-fredoka">
+                            class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
                             Send Message
                         </button>
                     </div>
@@ -830,43 +836,46 @@
         </div>
 
         <!-- Create New Announcement Modal -->
-        <div id="announcementModal" class="modal-overlay">
+        <div id="announcementModal" class="modal-overlay bg-primary/50 h-full">
             <div class="modal-content p-8">
-                <button onclick="closeAnnouncementModal()" class="modal-close">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-
-                <div class="mb-6">
-                    <h2 class="text-xl font-semibold text-primary font-fredoka mb-1">Create New Announcement</h2>
-                    <p class="text-sm text-gray-600 font-fredoka">Publish an announcement visible to all users</p>
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex flex-col gap-1">
+                        <h2 class="text-xl font-semibold text-primary font-fredoka">Create New Announcement</h2>
+                        <p class="text-sm text-gray-600 font-fredoka">Publish an announcement visible to all users</p>
+                    </div>
+                    <button onclick="closeAnnouncementModal()"
+                        class="text-gray-700 hover:text-gray-900 transition-colors">
+                        <i class="fa-regular fa-circle-xmark fa-lg"></i>
+                    </button>
                 </div>
 
                 <form id="announcementForm" class="space-y-6">
                     <!-- Title -->
-                    <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Title</label>
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Title</label>
                         <input type="text" placeholder="Enter announcement title"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
+                            class="w-full outline-none text-primary text-sm">
                     </div>
 
                     <!-- Category and Priority -->
                     <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Category</label>
-                            <select
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
+
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Category</label>
+                            <select class="w-full outline-none text-primary text-sm">
                                 <option>General</option>
                                 <option>Academic</option>
                                 <option>Administrative</option>
                                 <option>Emergency</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Priority</label>
-                            <select
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
+
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Priority</label>
+                            <select class="w-full outline-none text-primary text-sm">
                                 <option>Medium</option>
                                 <option>Low</option>
                                 <option>High</option>
@@ -876,31 +885,30 @@
                     </div>
 
                     <!-- Content -->
-                    <div>
-                        <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Content</label>
-                        <textarea rows="5" placeholder="Write your announcement here..."
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600 resize-none"></textarea>
-                    </div>
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Content</label>
+                <textarea rows="4" placeholder="Write your announcement here..." class="w-full outline-none text-primary text-sm resize-none h-full" ></textarea>
+            </div>
 
                     <!-- Target Audience and Expiry Date -->
                     <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Target Audience</label>
-                            <select
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
-                                <option>All Schools</option>
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Target Audience</label>
+                            <select class="w-full outline-none text-primary text-sm">
+                               <option>All Schools</option>
                                 <option>Specific Schools</option>
                                 <option>All Teachers</option>
                                 <option>All Students</option>
                                 <option>All Parents</option>
                             </select>
                         </div>
-                        <div>
-                            <label class="block text-sm font-medium text-primary mb-2 font-fredoka">Expiry Date</label>
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Expiry Date</label>
                             <div class="relative">
-                                <input type="text" placeholder="dd/mm/yyyy"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent font-sitka text-gray-600">
-                                <svg class="w-5 h-5 text-gray-400 absolute right-4 top-3.5" fill="none"
+                                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
+                                <svg class="w-5 h-5 text-gray-400 absolute right-4 top-1" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -910,13 +918,13 @@
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex gap-3 pt-4">
+                    <div class="flex items-center justify-end gap-3 py-4">
                         <button type="button" onclick="closeAnnouncementModal()"
-                            class="flex-1 px-6 py-3 border border-gray-300 text-primary rounded-lg font-medium hover:bg-gray-50 transition-colors font-fredoka">
+                            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="flex-1 px-6 py-3 bg-accent text-black rounded-lg font-medium hover:bg-accent-hover transition-colors font-fredoka">
+                            class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
                             Publish Announcement
                         </button>
                     </div>
