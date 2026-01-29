@@ -82,6 +82,146 @@ Route::prefix('superadmin')->name('superadmin.')->group(function () {
     })->name('settings');
  });
 
+// Admin Routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('dashboard');
+
+    Route::get('/students', function () {
+        return view('admin.students.index');
+    })->name('students');
+
+    Route::get('/students/bio-data', function () {
+        return view('admin.students.bio-data');
+    })->name('students.bio-data');
+
+    Route::get('/students/profile', function () {
+        return view('admin.students.profile');
+    })->name('students.profile');
+
+    Route::get('/staff', function () {
+        return view('admin.staff.index');
+    })->name('staff');
+
+    Route::get('/staff/bio-data', function () {
+        return view('admin.staff.bio-data');
+    })->name('staff.bio-data');
+
+    Route::get('/parents', function () {
+        return view('admin.parents.index');
+    })->name('parents');
+
+    Route::get('/parents/add', function () {
+        return view('admin.parents.add-parent');
+    })->name('parents.add');
+
+    Route::get('/parents/profile', function () {
+        return view('admin.parents.profile');
+    })->name('parents.profile');
+
+    Route::get('/fees', function () {
+        return view('admin.fees.index');
+    })->name('fees');
+
+    Route::get('/classes', function () {
+        return view('admin.classes.index');
+    })->name('classes');
+
+    Route::get('/classes/attendance', function () {
+        return view('admin.classes.attendance');
+    })->name('classes.attendance');
+
+    Route::get('/classes/subjects', function () {
+        return view('admin.classes.subjects');
+    })->name('classes.subjects');
+
+    Route::get('/messaging', function () {
+        return view('admin.messaging');
+    })->name('messaging');
+
+    Route::get('/timetable', function () {
+        return view('admin.timetable.index');
+    })->name('timetable');
+
+    Route::get('/broadsheet', function () {
+        return view('admin.broadsheet.index');
+    })->name('broadsheet');
+
+    Route::get('/lesson-plan', function () {
+        return view('admin.lesson-plan.index');
+    })->name('lesson-plan');
+
+    Route::get('/expenses', function () {
+        return view('admin.expenses.index');
+    })->name('expenses');
+
+    Route::get('/expenses/create', function () {
+        return view('admin.expenses.create');
+    })->name('expenses.create');
+
+    Route::get('/inventory', function () {
+        return view('admin.inventory.index');
+    })->name('inventory');
+
+    Route::get('/login-history', function () {
+        return view('admin.login-history');
+    })->name('login-history');
+
+    Route::get('/starboard', function () {
+        return view('admin.starboard');
+    })->name('starboard');
+
+    Route::get('/messaging/inbox', function () {
+        return view('admin.messaging.inbox');
+    })->name('messaging.inbox');
+
+    Route::get('/messaging/messages', function () {
+        return view('admin.messaging.messages');
+    })->name('messaging.messages');
+
+    Route::get('/classes/members', function () {
+        return view('admin.classes.members');
+    })->name('classes.members');
+
+    Route::get('/students/payment-history', function () {
+        return view('admin.students.payment-history');
+    })->name('students.payment-history');
+
+    Route::get('/students/next-of-kin', function () {
+        return view('admin.students.next-of-kin');
+    })->name('students.next-of-kin');
+
+    Route::get('/parents/management', function () {
+        return view('admin.parents.management');
+    })->name('parents.management');
+
+    Route::get('/parents/link-children', function () {
+        return view('admin.parents.link-children');
+    })->name('parents.link-children');
+
+    Route::get('/settings', function () {
+        return view('admin.settings');
+    })->name('settings');
+
+    // Configuration Routes
+    Route::get('/configuration', function () {
+        return view('admin.configuration.index');
+    })->name('configuration');
+
+    Route::get('/configuration/sessions', function () {
+        return view('admin.configuration.sessions');
+    })->name('configuration.sessions');
+
+    Route::get('/configuration/academic-sessions', function () {
+        return view('admin.configuration.academic-sessions');
+    })->name('configuration.academic-sessions');
+
+    Route::get('/configuration/class-arms', function () {
+        return view('admin.configuration.class-arms');
+    })->name('configuration.class-arms');
+});
+
 // School Admin Routes
 // Route::prefix('school')->name('school.')->middleware('auth')->group(function () {
 Route::prefix('school')->name('school.')->group(function () {
