@@ -39,7 +39,7 @@ Route::get('/dashboard', function () {
 })->middleware('auth')->name('dashboard');
 
 // Super Admin Routes
-Route::prefix('superadmin')->name('superadmin.')->group(function () { 
+Route::prefix('superadmin')->name('superadmin.')->group(function () {
 // Route::prefix('superadmin')->name('superadmin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('superadmin.dashboard');
@@ -68,10 +68,6 @@ Route::prefix('superadmin')->name('superadmin.')->group(function () {
     Route::get('/badges', function () {
         return view('superadmin.badges');
     })->name('badges');
-
-    Route::get('/view-badges', function () {
-        return view('superadmin.view-badges');
-    })->name('view-badges');
 
     Route::get('/analytics', function () {
         return view('superadmin.analytics');
