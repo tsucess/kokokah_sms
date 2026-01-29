@@ -22,6 +22,10 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register', [RegisterController::class, 'store']);
 
+    // Progressive Registration
+    Route::get('/register-progressive', [RegisterController::class, 'createProgressive'])->name('register.progressive');
+    Route::post('/register-progressive', [RegisterController::class, 'storeProgressive']);
+
     // Password Reset
     Route::get('/forgot-password', [PasswordResetController::class, 'create'])->name('password.request');
     Route::post('/forgot-password', [PasswordResetController::class, 'store'])->name('password.email');

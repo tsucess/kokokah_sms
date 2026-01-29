@@ -45,8 +45,7 @@
                 <p class="text-3xl font-bold text-primary font-fredoka" >834</p>
                 <div class="flex items-center ">
                     <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                     </svg>
                     <span class="text-sm font-medium text-green-600">7% this month</span>
                 </div>

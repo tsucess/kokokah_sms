@@ -109,5 +109,93 @@ class RegisterController extends Controller
 
         return redirect()->route('dashboard');
     }
+
+    /**
+     * Display the progressive registration view.
+     */
+    public function createProgressive()
+    {
+        return view('auth.register-progressive');
+    }
+
+    /**
+     * Handle progressive registration request.
+     */
+    public function storeProgressive(Request $request)
+    {
+        $request->validate([
+            // Step 1: User Information
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'string', 'max:20'],
+            'gender' => ['required', 'string', 'in:male,female,other'],
+            'role' => ['required', 'string', 'in:admin,teacher,parent,student'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'terms' => ['required', 'accepted'],
+
+            // Step 2: School Information
+            'school_name' => ['required', 'string', 'max:255'],
+            'school_code' => ['required', 'string', 'max:50', 'unique:schools,code'],
+            'country' => ['required', 'string', 'max:100'],
+            'state' => ['required', 'string', 'max:100'],
+            'website' => ['nullable', 'url', 'max:255'],
+
+            // Step 3: Class Levels
+            'class_levels' => ['nullable', 'array'],
+            'class_levels.*' => ['string', 'in:nursery,primary,grade,junior_secondary,senior_secondary'],
+
+            // Step 4: Class Arms
+            'has_arms' => ['nullable', 'string', 'in:yes,no'],
+            'arm_types' => ['nullable', 'array'],
+            'arm_types.*' => ['string', 'in:letter,number,color,program'],
+
+            // Step 5: Academic Session
+            'academic_session' => ['nullable', 'string', 'max:20'],
+            'current_term' => ['nullable', 'string', 'in:first,second,third'],
+            'term_start' => ['nullable', 'date'],
+            'term_end' => ['nullable', 'date', 'after:term_start'],
+        ]);
+
+        // Create school
+        $school = School::create([
+            'name' => $request->school_name,
+            'code' => $request->school_code,
+            'country' => $request->country,
+            'state' => $request->state,
+            'website' => $request->website,
+            'subdomain' => Str::slug($request->school_code),
+            'status' => 'active',
+        ]);
+
+        // Create user
+        $user = User::create([
+            'name' => $request->first_name . ' ' . $request->last_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone' => $request->phone,
+            'gender' => $request->gender,
+            'role' => $request->role,
+            'school_id' => $school->id,
+        ]);
+
+        // Store additional configuration data in session or database
+        // You can create additional models/tables for class_levels, arms, and sessions
+        $request->session()->put('onboarding_data', [
+            'class_levels' => $request->class_levels ?? [],
+            'has_arms' => $request->has_arms,
+            'arm_types' => $request->arm_types ?? [],
+            'academic_session' => $request->academic_session,
+            'current_term' => $request->current_term,
+            'term_start' => $request->term_start,
+            'term_end' => $request->term_end,
+        ]);
+
+        event(new Registered($user));
+
+        Auth::login($user);
+
+        return redirect()->route('dashboard')->with('success', 'Registration completed successfully! Welcome to Kokokah SMS.');
+    }
 }
 
