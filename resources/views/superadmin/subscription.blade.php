@@ -434,74 +434,61 @@
 </div>
 
 <!-- Add/Edit Subscription Modal -->
-<div id="subscriptionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
-    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+<div id="subscriptionModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-xl mx-4 max-h-[90vh] overflow-y-auto">
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
-            <h3 class="text-lg font-semibold" style="color: #004A53;">Edit Subscription - Kokokah SMS Subscription</h3>
-            <button onclick="closeSubscriptionModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+        <div class="flex items-center justify-between px-6 py-4 ">
+            <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold font-fredoka text-primary" >Subscription</h3>
+                <p class="text-sm font-fredoka text-primary">Kokokah SMS Subscription</p>
+            </div>
+            <button onclick="closeSubscriptionModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
+                <i class="fa-regular fa-circle-xmark fa-lg"></i>
             </button>
         </div>
 
         <!-- Modal Body -->
-        <div class="px-6 py-6 space-y-4">
+        <div class="px-6 py-6 space-y-4 flex flex-col gap-5">
             <!-- Subscription Title -->
-            <div>
-                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Subscription Title</label>
-                <input type="text" placeholder="Enter subscription title" value="Kokokah SMS Subscription" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
-            </div>
+            <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                    <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3" >Subscription Tittle</label>
+                    <input type="text" placeholder="Enter Subscription Tittle" class="w-full outline-none text-primary text-sm" >
+                </div>
 
             <!-- Subscription Description -->
-            <div>
-                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Subscription Description</label>
-                <textarea rows="4" placeholder="Enter subscription description" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent resize-none" style="font-family: 'Sitka', Georgia, serif;">Kokokah SMS Subscription</textarea>
+            <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Subscription Description</label>
+                <textarea rows="4" placeholder="Enter Subscription description" class="w-full outline-none text-primary text-sm resize-none h-full" ></textarea>
             </div>
 
             <!-- Price and Product Row -->
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Price</label>
-                    <input type="text" placeholder="Enter price" value="₦10,000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif;">
+            <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                    <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3" >Subscription Price</label>
+                    <input type="number" placeholder="40.00" class="w-full outline-none text-primary text-sm" >
                 </div>
-                <div>
-                    <label class="block text-sm font-medium mb-2" style="color: #004A53;">Select Product</label>
-                    <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" style="font-family: 'Sitka', Georgia, serif; color: #004A53;">
-                        <option>Monthly</option>
-                        <option>Quarterly</option>
-                        <option>Yearly</option>
-                    </select>
-                </div>
+
+
+                <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3" >Select Duration</label>
+                <select class="w-full outline-none text-primary text-sm">
+                    <option>Monthly</option>
+                    <option>Daily</option>
+                </select>
             </div>
 
             <!-- Packages -->
-            <div>
-                <label class="block text-sm font-medium mb-2" style="color: #004A53;">Packages</label>
-                <div class="border border-gray-300 rounded-lg p-4 space-y-3">
-                    <div class="flex items-center">
-                        <input type="checkbox" id="package1" checked class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
-                        <label for="package1" class="ml-3 text-sm" style="color: #004A53;">Basic Package - Student Management</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input type="checkbox" id="package2" class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
-                        <label for="package2" class="ml-3 text-sm" style="color: #004A53;">Standard Package - Full Features</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input type="checkbox" id="package3" class="w-4 h-4 rounded border-gray-300 text-accent focus:ring-accent">
-                        <label for="package3" class="ml-3 text-sm" style="color: #004A53;">Premium Package - Advanced Analytics</label>
-                    </div>
-                </div>
+            <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Packages (separate each item with a comma)</label>
+                <textarea rows="4" placeholder="Up to 500 students, Basic reporting....." class="w-full outline-none text-primary text-sm resize-none h-full" ></textarea>
             </div>
         </div>
 
         <!-- Modal Footer -->
-        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 sticky bottom-0 bg-white">
-            <button onclick="closeSubscriptionModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+        <div class="flex items-center justify-end gap-3 px-6 py-4">
+            <button onclick="closeSubscriptionModal()" class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                 Cancel
             </button>
-            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+            <button class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors" >
                 Save
             </button>
         </div>
