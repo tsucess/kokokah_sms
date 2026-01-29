@@ -93,35 +93,35 @@
 
             <ul class="space-y-5 mb-6">
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Up to 100 students
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Basic reporting
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Email support
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Parent portal
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Advanced analytics
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     API access
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Custom branding
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Priority support
                 </li>
             </ul>
@@ -165,35 +165,35 @@
 
             <ul class="space-y-5 mb-6">
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Up to 1000 students
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Advanced reporting
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Priority Email support
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Parent portal & teacher portals
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Advanced analytics
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     API access
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Custom branding
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     24/7 phone support
                 </li>
             </ul>
@@ -236,35 +236,35 @@
 
             <ul class="space-y-5 mb-6">
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Unlimited students
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Custom reporting
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     24/7 phone support
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Full platform access
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Advanced analytics
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Full API access
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Custom branding
                 </li>
                 <li class="flex items-start text-sm text-black">
-                    <i class="fa-solid fa-user-graduate mr-2 flex-shrink-0 text-black"></i>
+                    <i class="fa-solid fa-user-graduate mr-2 shrink-0 text-black"></i>
                     Dedicated account manager
                 </li>
             </ul>

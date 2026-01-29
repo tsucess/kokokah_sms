@@ -1,4 +1,4 @@
-@extends('layouts.superadmin', ['active' => 'badges'])
+{{-- @extends('layouts.superadmin', ['active' => 'badges']) --}}
 
 @section('title', 'Starboard Badges')
 @section('page-title', 'Starboard Badges')

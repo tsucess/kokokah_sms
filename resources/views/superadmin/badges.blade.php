@@ -310,32 +310,32 @@
     </div>
 </div>
 
-@push('scripts')
-<script>
-// Modal functions
-function openBadgeModal() {
-    const modal = document.getElementById('badgeModal');
-    if (modal) {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+    @push('scripts')
+    <script>
+    // Modal functions
+    function openBadgeModal() {
+        const modal = document.getElementById('badgeModal');
+        if (modal) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
     }
-}
 
-function closeBadgeModal() {
-    const modal = document.getElementById('badgeModal');
-    if (modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+    function closeBadgeModal() {
+        const modal = document.getElementById('badgeModal');
+        if (modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
     }
-}
 
-// Close modal when clicking outside
-document.addEventListener('click', function(event) {
-    if (event.target.id === 'badgeModal') {
-        closeBadgeModal();
-    }
-});
-</script>
-@endpush
+    // Close modal when clicking outside
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'badgeModal') {
+            closeBadgeModal();
+        }
+    });
+    </script>
+    @endpush
 
 @endsection
