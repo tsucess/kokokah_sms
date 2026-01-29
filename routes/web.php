@@ -2,17 +2,41 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BroadsheetController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\PasswordResetController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Authentication Routes
+Route::middleware('guest')->group(function () {
+    // Login
+    Route::get('/login', [LoginController::class, 'create'])->name('login');
+    Route::post('/login', [LoginController::class, 'store']);
+
+    // Registration
+    Route::get('/register/school', [RegisterController::class, 'createSchool'])->name('register.school');
+    Route::post('/register/school', [RegisterController::class, 'storeSchool']);
+    Route::get('/register', [RegisterController::class, 'create'])->name('register');
+    Route::post('/register', [RegisterController::class, 'store']);
+
+    // Password Reset
+    Route::get('/forgot-password', [PasswordResetController::class, 'create'])->name('password.request');
+    Route::post('/forgot-password', [PasswordResetController::class, 'store'])->name('password.email');
+});
+
+// Logout
+Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->middleware('auth')->name('dashboard');
 
 // Super Admin Routes
-Route::prefix('superadmin')->name('superadmin.')->group(function () {
+Route::prefix('superadmin')->name('superadmin.')->group(function () { 
+// Route::prefix('superadmin')->name('superadmin.')->middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('superadmin.dashboard');
     })->name('dashboard');
@@ -41,6 +65,10 @@ Route::prefix('superadmin')->name('superadmin.')->group(function () {
         return view('superadmin.badges');
     })->name('badges');
 
+    Route::get('/view-badges', function () {
+        return view('superadmin.view-badges');
+    })->name('view-badges');
+
     Route::get('/analytics', function () {
         return view('superadmin.analytics');
     })->name('analytics');
@@ -55,6 +83,7 @@ Route::prefix('superadmin')->name('superadmin.')->group(function () {
  });
 
 // School Admin Routes
+// Route::prefix('school')->name('school.')->middleware('auth')->group(function () {
 Route::prefix('school')->name('school.')->group(function () {
     Route::get('/dashboard', function () {
         return view('school.dashboard');
