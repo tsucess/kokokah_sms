@@ -159,7 +159,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">12/12/2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button onclick="openInventoryItemModal()" class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
                                     View
                                 </button>
                                 <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
@@ -289,4 +289,156 @@
         </div>
     </div>
 </div>
+
+<!-- Inventory Item Modal -->
+<div id="inventoryItemModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Inventory Item</h3>
+            <button onclick="closeInventoryItemModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Item Name -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Item Name
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="exercise-books" selected>Exercise Books</option>
+                    <option value="chairs">Chairs</option>
+                    <option value="projector">Projector</option>
+                    <option value="desks">Desks</option>
+                </select>
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Category
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="stationery" selected>Stationary</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="sports">Sports Equipment</option>
+                </select>
+            </div>
+
+            <!-- Quantity -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Quantity
+                </label>
+                <input type="text" value="200 pcs" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+            </div>
+
+            <!-- Unit Price -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Unit Price
+                </label>
+                <input type="text" value="₦500" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+            </div>
+
+            <!-- Total Value -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Total Value
+                </label>
+                <input type="text" value="₦60,000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+            </div>
+
+            <!-- Status -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Status
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="in-stock" selected>In Stock</option>
+                    <option value="low-stock">Low Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+            </div>
+
+            <!-- Date Added -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Date Added
+                </label>
+                <input type="text" value="10 Nov. 2025" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                </label>
+                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" placeholder="Enter item description..."></textarea>
+            </div>
+
+            <!-- Attach File -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Attach File
+                </label>
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-orange-400 transition-colors cursor-pointer">
+                    <svg class="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p class="text-sm text-gray-600">Click to upload or drag and drop</p>
+                    <p class="text-xs text-gray-500 mt-1">PDF, DOC, DOCX, JPG, PNG (max. 5MB)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 sticky bottom-0 bg-white">
+            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Delete Item
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Edit Item
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Inventory Item Modal functions
+function openInventoryItemModal() {
+    const modal = document.getElementById('inventoryItemModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeInventoryItemModal() {
+    const modal = document.getElementById('inventoryItemModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'inventoryItemModal') {
+        closeInventoryItemModal();
+    }
+});
+</script>
+@endpush
+
 @endsection

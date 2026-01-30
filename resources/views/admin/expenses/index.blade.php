@@ -159,7 +159,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Admin</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
                                     View
                                 </button>
                                 <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
@@ -260,5 +260,151 @@
         </div>
     </div>
 </div>
+
+<!-- Expense Details Modal -->
+<div id="expenseDetailsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Expense Details</h3>
+            <button onclick="closeExpenseDetailsModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Expense Title -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Expense Title
+                </label>
+                <input type="text" value="Generate Repair" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Category
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="maintenance" selected>Maintenance</option>
+                    <option value="salary">Salary</option>
+                    <option value="stationery">Stationery</option>
+                    <option value="utilities">Utilities</option>
+                </select>
+            </div>
+
+            <!-- Amount -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Amount
+                </label>
+                <input type="text" value="₦30,000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+            </div>
+
+            <!-- Payment Method -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Payment Method
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="cash" selected>Cash</option>
+                    <option value="pos">POS</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="cheque">Cheque</option>
+                </select>
+            </div>
+
+            <!-- Date -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Date
+                </label>
+                <input type="text" value="03 Oct. 2025" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+            </div>
+
+            <!-- Status -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Status
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="pending" selected>Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </div>
+
+            <!-- Added By -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Added By
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select...</option>
+                    <option value="bursar" selected>Bursar</option>
+                    <option value="admin">Admin</option>
+                    <option value="accountant">Accountant</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                </label>
+                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" placeholder="Enter expense description..."></textarea>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 sticky bottom-0 bg-white">
+            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Delete
+            </button>
+            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Reject
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Approve
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Expense Details Modal functions
+function openExpenseDetailsModal() {
+    const modal = document.getElementById('expenseDetailsModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeExpenseDetailsModal() {
+    const modal = document.getElementById('expenseDetailsModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'expenseDetailsModal') {
+        closeExpenseDetailsModal();
+    }
+});
+</script>
+@endpush
+
 @endsection
 

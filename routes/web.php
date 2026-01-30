@@ -220,6 +220,54 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/configuration/class-arms', function () {
         return view('admin.configuration.class-arms');
     })->name('configuration.class-arms');
+
+    Route::get('/configuration/assign-classes', function () {
+        return view('admin.configuration.assign-classes');
+    })->name('configuration.assign-classes');
+
+    Route::get('/configuration/term-definitions', function () {
+        return view('admin.configuration.term-definitions');
+    })->name('configuration.term-definitions');
+
+    Route::get('/configuration/school-information', function () {
+        return view('admin.configuration.school-information');
+    })->name('configuration.school-information');
+
+    Route::get('/configuration/sessions-levels', function () {
+        return view('admin.configuration.sessions-levels');
+    })->name('configuration.sessions-levels');
+
+    Route::get('/configuration/class-arm-activities', function () {
+        return view('admin.configuration.class-arm-activities');
+    })->name('configuration.class-arm-activities');
+
+    Route::get('/staff/management', function () {
+        return view('admin.staff.management');
+    })->name('staff.management');
+
+    Route::get('/staff/overview', function () {
+        return view('admin.staff.overview');
+    })->name('staff.overview');
+
+    Route::get('/students/management', function () {
+        return view('admin.students.management');
+    })->name('students.management');
+
+    Route::get('/students/profile-fees', function () {
+        return view('admin.students.profile-fees');
+    })->name('students.profile-fees');
+
+    Route::get('/students/profile-documents', function () {
+        return view('admin.students.profile-documents');
+    })->name('students.profile-documents');
+
+    Route::get('/dashboard-new', function () {
+        return view('admin.dashboard-new');
+    })->name('dashboard-new');
+
+    Route::get('/staff/profile-next-of-kin', function () {
+        return view('admin.staff.profile-next-of-kin');
+    })->name('staff.profile-next-of-kin');
 });
 
 // School Admin Routes
@@ -286,4 +334,32 @@ Route::prefix('school')->name('school.')->group(function () {
     Route::get('/settings', function () {
         return view('school.settings');
     })->name('settings');
+
+    Route::get('/broadsheet-detail', function () {
+        return view('school.broadsheet-detail');
+    })->name('broadsheet-detail');
+
+    Route::get('/messaging-inbox-unread', function () {
+        return view('school.messaging-inbox-unread');
+    })->name('messaging-inbox-unread');
+
+    Route::get('/timetable-overview', function () {
+        return view('school.timetable-overview');
+    })->name('timetable-overview');
+
+    Route::get('/timetable-detail', function () {
+        return view('school.timetable-detail');
+    })->name('timetable-detail');
+
+    Route::get('/class-subjects', function () {
+        return view('school.class-subjects');
+    })->name('class-subjects');
+
+    Route::get('/subjects-management', function () {
+        return view('school.subjects-management');
+    })->name('subjects-management');
+
+    Route::get('/class-members-cards', function () {
+        return view('school.class-members-cards');
+    })->name('class-members-cards');
 });
