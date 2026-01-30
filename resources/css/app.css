@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 @import "tailwindcss";
 
@@ -16,6 +17,7 @@
     --color-primary: #004a53;
     --color-secondary: #f56824;
     --color-accent: #fdaf22;
+    --color-primary2:#366049;
     --color-black: #000f11;
     --color-more: #00000080;
     --color-active:#1AAE50;
@@ -48,10 +50,14 @@
     --color-grey300:#E0E0E0;
     --color-grey400:#969696;
     --color-grey500:#AEBACA;
+    --color-purple300:#ECEBF1;
+    --color-black50:#2F2F2F;
+    --color-red50:#FF0004;
 
 
     --font-fredoka: "Fredoka", sans-serif;
     --font-inter: "Inter", sans-serif;
+    --font-mulish: "Mulish", sans-serif;
 
     --text-h1: 56px;
     --text-h1--line-height: 61.1px;
@@ -85,3 +91,11 @@
 
     --shadow-auth: 6px 6px 54px 0 #00000026 ;
 }
+
+.donut-chart {
+  background: conic-gradient(
+    #F97316 0% 50%,     /* female */
+    #0B3C49 50% 100%    /* male */
+  );
+}
+
