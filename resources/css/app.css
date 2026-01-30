@@ -46,6 +46,8 @@
     --color-green100:#009689;
     --color-green200:#00762B;
     --color-grey300:#E0E0E0;
+    --color-grey400:#969696;
+    --color-grey500:#AEBACA;
 
 
     --font-fredoka: "Fredoka", sans-serif;
@@ -80,4 +82,6 @@
     --text-body3: 16px;
     --text-body4: 14px;
     --text-body5: 12px;
+
+    --shadow-auth: 6px 6px 54px 0 #00000026 ;
 }

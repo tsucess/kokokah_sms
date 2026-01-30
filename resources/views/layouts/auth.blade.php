@@ -29,13 +29,15 @@
 <body class="font-sitka antialiased">
     <div class="min-h-screen flex flex-col" style="background: linear-gradient(to bottom, white 0%, white 48%, #FDAF22 48%, #FDAF22 100%);">
         <!-- Logo and Header -->
-        <div class="w-full flex justify-center pt-8 pb-6">
+        <div class="w-full flex justify-center pt-8 pb-8">
             <div class="text-center">
-                <img src="{{ asset('images/logo.svg') }}" alt="Kokokah" class="h-24 mx-auto mb-4">
-                <h1 class="text-2xl font-bold text-teal-800" style="font-family: 'Fredoka One', sans-serif;">
+                <img src="{{ asset('images/logo.svg') }}" alt="Kokokah" class="h-24 mx-auto mb-6">
+                <div class="flex flex-col gap-1">
+                <h1 class="text-h3 font-bold text-primary font-fredoka">
                     Kokokah School Management System
                 </h1>
-                <p class="text-gray-600 mt-2">@yield('subtitle', 'Learning without Limits. Skills for tomorrow')</p>
+                <p class="text-grey400 text-xs">@yield('subtitle', 'Learning without Limits. Skills for tomorrow')</p>
+</div>
             </div>
         </div>
 
