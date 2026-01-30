@@ -11,7 +11,7 @@
             <h2 class="text-2xl font-bold text-teal-900 mb-1">Kokokah Starboard Badges</h2>
             <p class="text-sm text-gray-600">Manage and oversee your school management platform</p>
         </div>
-        <button class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <button onclick="openAddBadgeModal()" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -210,4 +210,105 @@
         </div>
     </div>
 </div>
+
+<!-- Add New Badge Modal -->
+<div id="addBadgeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Add New Badge - Kokokah Starboard</h3>
+            <button onclick="closeAddBadgeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Badge ID -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Badge ID
+                </label>
+                <input type="text" placeholder="Enter badge ID" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+            </div>
+
+            <!-- Badge Name -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Badge Name
+                </label>
+                <input type="text" placeholder="Enter badge name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Category
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select category...</option>
+                    <option value="academic" selected>Academic</option>
+                    <option value="non-academic">Non-Academic</option>
+                </select>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                </label>
+                <textarea rows="3" placeholder="Enter description" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700"></textarea>
+            </div>
+
+            <!-- Requirement -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Requirement
+                </label>
+                <textarea rows="3" placeholder="Enter requirement" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700"></textarea>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
+            <button onclick="closeAddBadgeModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Modal functions
+function openAddBadgeModal() {
+    const modal = document.getElementById('addBadgeModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeAddBadgeModal() {
+    const modal = document.getElementById('addBadgeModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'addBadgeModal') {
+        closeAddBadgeModal();
+    }
+});
+</script>
+@endpush
+
 @endsection

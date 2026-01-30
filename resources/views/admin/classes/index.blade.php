@@ -80,7 +80,7 @@
                 <button class="flex-1 px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors text-sm font-medium">
                     View Class
                 </button>
-                <button class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                <button onclick="openAssignTeacherModal()" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
                     Assign Teacher
                 </button>
             </div>
@@ -120,5 +120,90 @@
         </div>
     </div>
 </div>
+
+<!-- Assign Teacher Modal -->
+<div id="assignTeacherModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+            <h3 class="text-lg font-semibold" style="color: #004A53;">Assign Teacher</h3>
+            <button onclick="closeAssignTeacherModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-4">
+            <!-- Select Teacher -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Select From Teacher
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select teacher...</option>
+                    <option>Adewale Adebayo</option>
+                    <option>Chioma Okafor</option>
+                    <option>Ibrahim Musa</option>
+                    <option>Fatima Hassan</option>
+                </select>
+            </div>
+
+            <!-- Select Assistant Teacher -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                    Select Assistant From Teacher
+                </label>
+                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                    <option value="">Select assistant teacher...</option>
+                    <option>Adewale Adebayo</option>
+                    <option>Chioma Okafor</option>
+                    <option>Ibrahim Musa</option>
+                    <option>Fatima Hassan</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
+            <button onclick="closeAssignTeacherModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+
+@push('scripts')
+<script>
+// Modal functions
+function openAssignTeacherModal() {
+    const modal = document.getElementById('assignTeacherModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+function closeAssignTeacherModal() {
+    const modal = document.getElementById('assignTeacherModal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.id === 'assignTeacherModal') {
+        closeAssignTeacherModal();
+    }
+});
+</script>
+@endpush
+
 @endsection
 
