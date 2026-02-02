@@ -7,49 +7,57 @@
 <div class="p-8">
     <!-- Back Button -->
     <div class="mb-6">
-        <a href="{{ route('admin.classes') }}" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-900">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
+        <div class="flex justify-between items-center gap-3">
+             <a href="{{ route('admin.classes') }}" class="inline-flex items-center gap-2 text-sm text-black hover:text-gray-700">
+            <i class="fa-solid fa-arrow-left fa-black"></i>
             Back | Nur
         </a>
+            <div class="flex align-items-center">
+                    <button
+                        class="px-4 py-2 bg-white text-body3 border border-primary text-primary rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                        Bulk Upload Student
+                    </button>
+                    <button
+                        class="px-4 py-2 bg-accent text-body3 text-black rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors flex items-center">
+                        + Add New Class Member
+                    </button>
+                </div>
+        </div>
+
     </div>
 
     <!-- Class Info Card -->
-    <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg p-6 mb-6">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-4">
-                <div class="w-20 h-20 bg-white rounded-lg flex items-center justify-center">
-                    <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                    </svg>
-                </div>
-                <div class="text-white">
-                    <h2 class="text-2xl font-bold">Nursery 1 - t-A</h2>
-                    <p class="text-sm opacity-90 mb-2">First Term | 2023-2025</p>
-                    <div class="flex items-center gap-4 text-sm">
-                        <span>Teacher: -----</span>
-                        <span>Asst. Teacher: -----</span>
+    <div class="border-4 border-orange50 rounded-2xl p-5 mb-6">
+        <div class="flex flex-col gap-2">
+            <div class="flex justify-between items-center space-x-4">
+
+                <div class="flex flex-col gap-2">
+                    <h2 class="text-2xl font-bold font-sitka text-primary">Nursery 1 - t-A</h2>
+                    <p class="text-sm font-sitka text-primary">First Term | 2023-2025</p>
+                    <div class="flex flex-col gap-1">
+                        <span class="text-primary font-sitka text-xs font-semibold">Teacher: -----</span>
+                        <span class="text-primary font-sitka text-xs font-semibold">Asst. Teacher: -----</span>
                     </div>
                 </div>
-            </div>
-            <div class="text-right text-white">
-                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center ml-auto mb-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
+                <div>
+                    <img src="/images/education_cap.png" alt="">
                 </div>
-                <p class="text-sm">Enrollment</p>
-                <div class="w-32 h-2 bg-white bg-opacity-30 rounded-full mt-2">
-                    <div class="w-3/4 h-full bg-white rounded-full"></div>
+            </div>
+            <div class="flex flex-col gap-1">
+                <div class="flex items-center justify-between">
+<p class="text-sm font-semibold font-sitka text-primary">Enrollment</p>
+<p class="text-sm font-semibold font-sitka text-primary">40/100%</p>
+                </div>
+
+                <div class="w-full h-2 bg-grey800 rounded-full">
+                    <div class="w-3/4 h-2 bg-secondary rounded-full"></div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Tabs -->
-    <div class="bg-white rounded-lg border border-gray-200">
+    <div class="">
         <!-- Tab Headers -->
         <div class="border-b border-gray-200">
             <nav class="flex space-x-8 px-6" aria-label="Tabs">
