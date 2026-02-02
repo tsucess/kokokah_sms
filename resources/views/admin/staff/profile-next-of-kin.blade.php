@@ -29,13 +29,13 @@
                 <div class="w-20 h-20 bg-teal-800 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                     SM
                 </div>
-                
+
                 <!-- Staff Details -->
                 <div>
                     <h3 class="text-2xl font-bold text-teal-900 mb-1">Samuel Musa Ali</h3>
                     <p class="text-sm text-gray-600 mb-2">Admin • samuelmusa@gmail.com • Super Admin</p>
                     <p class="text-sm text-gray-600 mb-3">10 staff Resource allocated • <span class="text-orange-500">Upload staff Signature</span></p>
-                    
+
                     <!-- Role Assignment -->
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="text-sm font-medium text-gray-700">Role:</span>
@@ -56,7 +56,7 @@
                     <span class="text-sm text-gray-700">Active</span>
                     <label class="relative inline-flex items-center cursor-pointer">
                         <input type="checkbox" class="sr-only peer" checked>
-                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
                     </label>
                 </div>
                 <button class="px-6 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
