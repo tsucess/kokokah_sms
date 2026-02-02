@@ -42,7 +42,7 @@
 
                         <!-- User Profile -->
                         <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
                                 <span class="text-white font-semibold text-sm">WI</span>
                             </div>
                             <div class="text-left">

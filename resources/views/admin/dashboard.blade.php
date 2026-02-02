@@ -237,9 +237,9 @@
                     <h2 class="font-semibold text-gray-700">Performance Analytics</h2>
                     <div class="flex items-center gap-4 text-xs">
                         <span class="flex items-center gap-1"><span
-                                class="w-3 h-3 bg-blue-500 rounded-full"></span>Teacher</span>
+                                class="w-2 h-2 bg-blue-500 rounded-full"></span>Teacher</span>
                         <span class="flex items-center gap-1"><span
-                                class="w-3 h-3 bg-cyan-400 rounded-full"></span>Student</span>
+                                class="w-2 h-2 bg-cyan-400 rounded-full"></span>Student</span>
                     </div>
                 </div>
                 <canvas id="performanceChart" height="100"></canvas>
@@ -247,17 +247,17 @@
 
             <!-- Recent Activity -->
             <div class="bg-white rounded-2xl p-6 shadow-sm md:col-span-2">
-                <h2 class="font-semibold text-gray-700 mb-4">Recent Activity</h2>
-                <ul class="space-y-4 text-sm text-gray-600">
-                    <li class="flex gap-3"><i class="fa-solid fa-circle-check"></i>
+                <h2 class="font-semibold text-primary text-h5 font-fredoka mb-4">Recent Activity</h2>
+                <ul class="space-y-4 text-sm text-black font-quicksand">
+                    <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Result for Second Term has been released</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-circle-check"></i>
+                    <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Result for Second Term has been released</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-circle-check"></i>
+                    <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Result for Second Term has been released</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-circle-check"></i>
+                    <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Result for Second Term has been released</li>
-                    <li class="flex gap-3"><i class="fa-solid fa-circle-check"></i>
+                    <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Result for Second Term has been released</li>
                 </ul>
             </div>

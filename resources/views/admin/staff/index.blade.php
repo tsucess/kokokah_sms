@@ -11,7 +11,7 @@
                 <h3 class="text-lg font-semibold text-gray-900">Staff</h3>
                 <p class="text-sm text-gray-600">Manage staff information and records</p>
             </div>
-            <a href="{{ route('admin.staff.bio-data') }}" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors">
+            <a href="{{ route('admin.staff.bio-data') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
                 + Add New Staff
             </a>
         </div>
@@ -33,7 +33,7 @@
             </svg>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">No Staff Members Yet</h3>
             <p class="text-gray-600 mb-4">Get started by adding your first staff member</p>
-            <a href="{{ route('admin.staff.bio-data') }}" class="inline-flex items-center px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors">
+            <a href="{{ route('admin.staff.bio-data') }}" class="inline-flex items-center px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>

@@ -11,7 +11,7 @@
                 <h3 class="text-lg font-semibold text-gray-900">Students</h3>
                 <p class="text-sm text-gray-600">Manage student information and enrollment</p>
             </div>
-            <a href="{{ route('admin.students.bio-data') }}" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors">
+            <a href="{{ route('admin.students.bio-data') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
                 + Add New Student
             </a>
         </div>
@@ -19,7 +19,7 @@
         <!-- Search -->
         <div class="mb-6">
             <div class="relative">
-                <input type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                <input type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-hover focus:border-transparent">
                 <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
@@ -33,7 +33,7 @@
             </svg>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">No Students Yet</h3>
             <p class="text-gray-600 mb-4">Get started by adding your first student</p>
-            <a href="{{ route('admin.students.bio-data') }}" class="inline-flex items-center px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors">
+            <a href="{{ route('admin.students.bio-data') }}" class="inline-flex items-center px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
