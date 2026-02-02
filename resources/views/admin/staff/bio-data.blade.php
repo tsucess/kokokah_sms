@@ -4,11 +4,11 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<style>
-    .hidden{
-        display: none;
-    }
-</style>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
     <div>
         <div class="p-8 step" data-content='bio-data'>
             <!-- Back Button -->
@@ -276,84 +276,94 @@
                 <p class="text-sm text-primary font-sitka">Manage Next of Kim information and enrollment</p>
             </div>
             <form class="">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- Next of Kin First Name -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin First Name</label>
-                                <input type="text" placeholder="Enter Next of Kin First Name" class="w-full outline-none text-primary text-sm">
-                            </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Next of Kin First Name -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin First Name</label>
+                        <input type="text" placeholder="Enter Next of Kin First Name"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin Surname -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin Surname</label>
-                                <input type="text" placeholder="Enter Next of Kin Surname"
-                                    class="w-full outline-none text-primary text-sm">
-                            </div>
+                    <!-- Next of Kin Surname -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin Surname</label>
+                        <input type="text" placeholder="Enter Next of Kin Surname"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin Other Name -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin Other Name</label>
-                                <input type="text" placeholder="Enter Next of Kin Other Name" class="w-full outline-none text-primary text-sm">
-                            </div>
+                    <!-- Next of Kin Other Name -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin Other Name</label>
+                        <input type="text" placeholder="Enter Next of Kin Other Name"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin Phone Number -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin Phone Number</label>
-                                <input type="text" placeholder="Enter Next of Kin Phone Number" class="w-full outline-none text-primary text-sm">
-                            </div>
+                    <!-- Next of Kin Phone Number -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin Phone Number</label>
+                        <input type="text" placeholder="Enter Next of Kin Phone Number"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin Relationship -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin Relationship</label>
-                                <input type="text" placeholder="Enter Next of Kin Relationship"
-                                    class="w-full outline-none text-primary text-sm">
-                            </div>
+                    <!-- Next of Kin Relationship -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin Relationship</label>
+                        <input type="text" placeholder="Enter Next of Kin Relationship"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin Email Address -->
-                            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin Email Address</label>
-                                <input type="email" placeholder="Next of Kin Email Address"
-                                    class="w-full outline-none text-primary text-sm">
-                            </div>
+                    <!-- Next of Kin Email Address -->
+                    <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin Email Address</label>
+                        <input type="email" placeholder="Next of Kin Email Address"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
 
-                            <!-- Next of Kin House Address -->
-                            <div class="md:col-span-3 border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
-                                <label
-                                    class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next of Kin House Address</label>
-                                <textarea rows="4" placeholder="Address" class="resize-none w-full outline-none text-primary text-sm"></textarea>
-                            </div>
-                        </div>
+                    <!-- Next of Kin House Address -->
+                    <div class="md:col-span-3 border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                            of Kin House Address</label>
+                        <textarea rows="4" placeholder="Address" class="resize-none w-full outline-none text-primary text-sm"></textarea>
+                    </div>
+                </div>
 
-                        <div class="flex items-center justify-between mt-6">
-                            <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-accent rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                            </div>
+                <div class="flex items-center justify-between mt-6">
+                    <!-- Progress Indicator -->
+                    <div class=" flex items-center justify-center gap-2">
+                        <div class="w-16 h-3 bg-grey300 rounded"></div>
+                        <div class="w-16 h-3 bg-accent rounded"></div>
+                        <div class="w-16 h-3 bg-grey300 rounded"></div>
+                    </div>
 
-                            <!-- Action Buttons -->
-                            <div class="flex items-center gap-5">
-                                <button data-type='bio-data' type="button"
-                                class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
-                                Previous
-                            </button>
-                            <button data-type='staff-management' type="button"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
-                                Next
-                            </button>
-                            </div>
-                        </div>
-                    </form>
+                    <!-- Action Buttons -->
+                    <div class="flex items-center gap-5">
+                        <button data-type='bio-data' type="button"
+                            class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                            Previous
+                        </button>
+                        <button data-type='staff-management' type="button"
+                            class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </form>
 
         </div>
-        <div class="p-8 step hidden"  data-content='staff-management'>
+        <div class="p-8 step hidden" data-content='staff-management'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.staff') }}"
@@ -374,7 +384,7 @@
                         <div class="bg-primary w-24 h-24 rounded-full flex justify-center items-center">
                             <i class="fa-solid fa-user-astronaut fa-2xl text-white"></i>
                         </div>
-                         <div class="bg-primary w-24 h-24 rounded-full flex justify-center items-center">
+                        <div class="bg-primary w-24 h-24 rounded-full flex justify-center items-center">
                             <p class="text-xs text-white font-mulish">Signature</p>
                         </div>
                     </div>
@@ -457,8 +467,8 @@
                 </div>
                 <div class="rounded-2xl p-10 border-4 border-orange50 flex flex-col gap-6">
                     <div class="flex flex-col gap-1">
-                <h3 class="text-base font-semibold text-primary font-fredoka">Next Kin</h3>
-                <p class="text-sm text-primary font-sitka">Below is your next of kin's Information</p>
+                        <h3 class="text-base font-semibold text-primary font-fredoka">Next Kin</h3>
+                        <p class="text-sm text-primary font-sitka">Below is your next of kin's Information</p>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                         <div class="flex flex-col items-start gap-1">
@@ -490,33 +500,33 @@
                             <p class="font-sitka text-sm text-primary">Sokoto</p>
                         </div>
                     </div>
-            </div>
-
                 </div>
-                 <div class="flex items-center justify-between mt-6">
-                            <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-accent rounded"></div>
-                            </div>
 
-                            <!-- Action Buttons -->
-                            <div class="flex items-center gap-5">
-                                <button data-type='kin-details' type="button"
-                                class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
-                                Previous
-                            </button>
-                            <button  type="submit"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
-                                Submit
-                            </button>
-                            </div>
-                        </div>
+            </div>
+            <div class="flex items-center justify-between mt-6">
+                <!-- Progress Indicator -->
+                <div class=" flex items-center justify-center gap-2">
+                    <div class="w-16 h-3 bg-grey300 rounded"></div>
+                    <div class="w-16 h-3 bg-grey300 rounded"></div>
+                    <div class="w-16 h-3 bg-accent rounded"></div>
+                </div>
 
+                <!-- Action Buttons -->
+                <div class="flex items-center gap-5">
+                    <button data-type='kin-details' type="button"
+                        class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                        Previous
+                    </button>
+                    <button type="submit"
+                        class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                        Submit
+                    </button>
+                </div>
             </div>
 
         </div>
+
+    </div>
     </div>
 
     @push('scripts')
@@ -545,25 +555,25 @@
                 }
             }
 
-             const steps = document.querySelectorAll(".step");
-  const buttons = document.querySelectorAll("button[data-type]");
+            const steps = document.querySelectorAll(".step");
+            const buttons = document.querySelectorAll("button[data-type]");
 
-  function showStep(type) {
-    steps.forEach(step => {
-      if (step.dataset.content === type) {
-        step.classList.remove("hidden");
-      } else {
-        step.classList.add("hidden");
-      }
-    });
-  }
+            function showStep(type) {
+                steps.forEach(step => {
+                    if (step.dataset.content === type) {
+                        step.classList.remove("hidden");
+                    } else {
+                        step.classList.add("hidden");
+                    }
+                });
+            }
 
-  buttons.forEach(button => {
-    button.addEventListener("click", () => {
-      const target = button.dataset.type;
-      if (target) showStep(target);
-    });
-  });
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const target = button.dataset.type;
+                    if (target) showStep(target);
+                });
+            });
         </script>
     @endpush
 @endsection

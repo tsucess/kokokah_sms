@@ -145,7 +145,7 @@
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex items-center">
-                                <div class="h-10 w-10 flex-shrink-0">
+                                <div class="h-10 w-10 shrink-0">
                                     <img class="h-10 w-10 rounded-full" src="https://ui-avatars.com/api/?name=Samuel+Victor&background=0D9488&color=fff" alt="">
                                 </div>
                                 <div class="ml-4">

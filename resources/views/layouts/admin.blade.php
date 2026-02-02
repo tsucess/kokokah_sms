@@ -24,7 +24,7 @@
         <x-admin-sidebar :active="$active ?? ''" />
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col">
+        <div class="flex-1 flex flex-col overflow-x-hidden">
             <!-- Top Header -->
             <header class="bg-superadmin-bg border-b border-gray-200 px-8 py-4">
                 <div class="flex items-center justify-between">
