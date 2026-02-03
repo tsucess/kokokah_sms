@@ -144,6 +144,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.timetable.index');
     })->name('timetable');
 
+    Route::get('/timetable/individual-timetable', function () {
+    return view('admin.timetable.individual-timetable');
+})->name('timetable.individual-timetable');
+
     Route::get('/broadsheet', function () {
         return view('admin.broadsheet.index');
     })->name('broadsheet');
