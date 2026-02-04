@@ -179,7 +179,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/messaging/inbox', function () {
         return view('admin.messaging.inbox');
     })->name('messaging.inbox');
-
+ 
     Route::get('/messaging/messages', function () {
         return view('admin.messaging.messages');
     })->name('messaging.messages');

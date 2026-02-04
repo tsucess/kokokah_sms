@@ -30,7 +30,7 @@
                 <option>2023-2024</option>
             </select>
         </div>
-
+ 
         <!-- Term -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
             <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Term</label>

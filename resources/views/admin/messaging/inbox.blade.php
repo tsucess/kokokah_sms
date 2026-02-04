@@ -4,215 +4,961 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
+<style>
+     .active-tab {
+            background-color: #fdaf22;
+            color: #004A53;
+            border-color: #fdaf22;
+        }
+
+        .active-tab:hover {
+            background-color: #feca6c;
+        }
+
+        .hidden {
+            display: none;
+        }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+</style>
 <div class="p-8">
     <!-- Statistics Cards -->
     <div class="grid grid-cols-4 gap-6 mb-6">
         <!-- Messages Sent -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-start justify-between mb-4">
-                <p class="text-sm text-gray-600">Messages Sent</p>
-                <div class="p-2 bg-blue-100 rounded-lg">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+                        <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 gap-4">
+                        <p class="text-body4 text-primary font-fredoka">Messages Sent</p>
+                        <p class="text-3xl font-bold font-fredoka text-primary">1,234</p>
+                    </div>
+
                 </div>
             </div>
-            <p class="text-4xl font-bold text-teal-900">1,234</p>
-        </div>
 
         <!-- Inbox -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-start justify-between mb-4">
-                <p class="text-sm text-gray-600">Inbox</p>
-                <div class="p-2 bg-blue-100 rounded-lg">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
-                    </svg>
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+                        <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 gap-4">
+                        <p class="text-body4 text-primary font-fredoka">Inbox</p>
+                        <p class="text-3xl font-bold font-fredoka text-primary">34</p>
+                    </div>
+
                 </div>
             </div>
-            <p class="text-4xl font-bold text-teal-900">3</p>
-        </div>
 
         <!-- Unread -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-start justify-between mb-4">
-                <p class="text-sm text-gray-600">Unread</p>
-                <div class="p-2 bg-blue-100 rounded-lg">
-                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76" />
-                    </svg>
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+                        <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 gap-4">
+                        <p class="text-body4 text-primary font-fredoka">Unread</p>
+                        <p class="text-3xl font-bold font-fredoka text-primary">234</p>
+                    </div>
+
                 </div>
             </div>
-            <p class="text-4xl font-bold text-teal-900">2</p>
-        </div>
 
         <!-- Announcements -->
-        <div class="bg-white rounded-lg border border-gray-200 p-6">
-            <div class="flex items-start justify-between mb-4">
-                <p class="text-sm text-gray-600">Announcements</p>
-                <div class="p-2 bg-green-100 rounded-lg">
-                    <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                    </svg>
+        <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-annoucementBg">
+                        <svg class="w-6 h-6" style="color: #1AAE50;" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 gap-4">
+                        <p class="text-body4 text-primary font-fredoka">Announcements</p>
+                        <p class="text-3xl font-bold font-fredoka text-primary">3</p>
+                    </div>
+
                 </div>
             </div>
-            <p class="text-4xl font-bold text-teal-900">3</p>
-        </div>
     </div>
 
     <!-- Tab Navigation -->
-    <div class="mb-6 border-b border-gray-200">
+    <div class="mb-6">
         <nav class="flex space-x-8">
-            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-1 border-b-2 border-transparent font-medium text-sm">
+            <div class="flex">
+            <button onclick="showTab('messages')" id="tab-messages"
+                class="px-6 py-2 text-sm rounded-l-lg font-fredoka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
                 Messages
-            </a>
-            <a href="#" class="text-orange-400 py-4 px-1 border-b-2 border-orange-400 font-medium text-sm">
+            </button>
+            <button onclick="showTab('inbox')" id="tab-inbox"
+                class="px-6 py-2 text-sm font-fredoka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
                 Inbox
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-1 border-b-2 border-transparent font-medium text-sm">
+            </button>
+            <button onclick="showTab('unread')" id="tab-unread"
+                class="px-6 py-2 text-sm font-fredoka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
                 Unread
-            </a>
-            <a href="#" class="text-gray-500 hover:text-gray-700 py-4 px-1 border-b-2 border-transparent font-medium text-sm">
-                Announcements
-            </a>
+            </button>
+            <button onclick="showTab('announcements')" id="tab-announcements"
+                class="px-6 py-2 text-sm font-fredoka border border-primary text-primary rounded-r-lg bg-white hover:bg-gray-200 transition-colors">
+                Announcement
+            </button>
+        </div>
         </nav>
     </div>
-
-    <!-- Section Header -->
-    <div class="mb-6">
-        <h2 class="text-2xl font-bold text-teal-900 mb-1">Inbox</h2>
-        <p class="text-sm text-gray-600">Send and manage messages to schools and users</p>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="mb-6">
-        <div class="relative max-w-md">
-            <input type="text" placeholder="Search teachers..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </div>
-    </div>
-
-    <!-- Message Cards -->
-    <div class="space-y-4">
-        <!-- Message 1 - Welcome to New Academic Year -->
-        <div class="bg-white rounded-lg border-l-4 border-orange-400 shadow-sm p-6">
-            <div class="flex items-start justify-between">
-                <div class="flex-1">
-                    <div class="flex items-center mb-2">
-                        <h3 class="text-lg font-semibold text-gray-900 mr-3">Welcome to New Academic Year</h3>
-                        <span class="px-2 py-1 bg-black text-white text-xs rounded">Sent</span>
+  <!-- Messages Tab Content -->
+        <div id="content-messages" class="tab-content hidden">
+            <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Messages</h3>
+                        <p class="text-sm text-gray-600">Send and manage messages to schools and users</p>
                     </div>
-                    <p class="text-sm text-gray-600 mb-2">To: All Schools</p>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Dear Parents and Guardians, We are excited to welcome you to the new academic year! This year promises to be filled with exciting learning opportunities...
-                    </p>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <span>20/06/2024</span>
-                        <span class="mx-2">•</span>
-                        <span>98/124 read</span>
-                    </div>
+                    <button onclick="openMessageModal()"
+                        class="px-4 py-2 rounded-lg font-medium bg-accent text-black font-inter hover:bg-accent-hover transition-colors">
+                        + New Message
+                    </button>
                 </div>
-                <div class="flex items-center space-x-2 ml-4">
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+
+                <!-- Search && Filter -->
+                <div class="mb-6 flex justify-between items-center gap-7">
+                    <div class="relative w-125">
+                        <input type="text" placeholder="Search teachers..."
+                            class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
+                            style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                        </svg>
-                    </button>
+                    </div>
+                    <select
+                        class="px-4 py-2 border border-communicationBtn text-primary rounded-lg focus:ring-2 focus:border-transparent">
+                        <option>All Messages</option>
+                        <option>Sent</option>
+                        <option>Scheduled</option>
+                        <option>Drafts</option>
+                    </select>
+                </div>
+
+                <!-- Filter Dropdown -->
+
+
+                <!-- Messages List -->
+                <div class="space-y-4">
+
+                    <!-- Messages List -->
+                    <div class="space-y-4">
+                        <!-- Message 1 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span
+                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Message 2 - System Maintenance Notice -->
-        <div class="bg-white rounded-lg border-l-4 border-gray-300 shadow-sm p-6">
-            <div class="flex items-start justify-between">
-                <div class="flex-1">
-                    <div class="flex items-center mb-2">
-                        <h3 class="text-lg font-semibold text-gray-900 mr-3">System Maintenance Notice</h3>
-                        <span class="px-2 py-1 bg-gray-200 text-gray-700 text-xs rounded">Scheduled</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">To: All Users</p>
-                    <p class="text-sm text-gray-700 mb-3">
-                        Please be informed that the system will undergo scheduled maintenance on Saturday, June 22nd from 2:00 AM to 6:00 AM. During this time...
-                    </p>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <span>20/06/2024</span>
-                        <span class="mx-2">•</span>
-                        <span>45/124 read</span>
+        <!-- Messages Tab Content -->
+        <div id="content-inbox" class="tab-content hidden">
+            <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Inbox</h3>
+                        <p class="text-sm text-gray-600">Send and manage messages to schools and users</p>
                     </div>
                 </div>
-                <div class="flex items-center space-x-2 ml-4">
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+
+                <!-- Search && Filter -->
+                <div class="mb-6 flex justify-between items-center gap-7">
+                    <div class="relative w-125">
+                        <input type="text" placeholder="Search teachers..."
+                            class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
+                            style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                        </svg>
-                    </button>
+                    </div>
+                    <select
+                        class="px-4 py-2 border border-communicationBtn text-primary rounded-lg focus:ring-2 focus:border-transparent">
+                        <option>All Messages</option>
+                        <option>Sent</option>
+                        <option>Scheduled</option>
+                        <option>Drafts</option>
+                    </select>
+                </div>
+
+                <!-- Filter Dropdown -->
+
+
+                <!-- Messages List -->
+                <div class="space-y-4">
+
+                    <!-- Messages List -->
+                    <div class="space-y-4">
+                        <!-- Message 1 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span
+                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Message 3 - Teacher Training Workshop -->
-        <div class="bg-white rounded-lg border-l-4 border-orange-400 shadow-sm p-6">
-            <div class="flex items-start justify-between">
-                <div class="flex-1">
-                    <div class="flex items-center mb-2">
-                        <h3 class="text-lg font-semibold text-gray-900 mr-3">Teacher Training Workshop</h3>
-                        <span class="px-2 py-1 bg-black text-white text-xs rounded">Sent</span>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-2">To: All Users</p>
-                    <p class="text-sm text-gray-700 mb-3">
-                        We are pleased to announce a professional development workshop for all teaching staff. The workshop will focus on innovative teaching methodologies...
-                    </p>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <span>20/06/2024</span>
-                        <span class="mx-2">•</span>
-                        <span>112/124 read</span>
+
+        <!-- Messages Tab Content -->
+        <div id="content-unread" class="tab-content hidden">
+            <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Unread</h3>
+                        <p class="text-sm text-gray-600">Send and manage messages to schools and users</p>
                     </div>
                 </div>
-                <div class="flex items-center space-x-2 ml-4">
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+
+                <!-- Search && Filter -->
+                <div class="mb-6 flex justify-between items-center gap-7">
+                    <div class="relative w-125">
+                        <input type="text" placeholder="Search teachers..."
+                            class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
+                            style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </button>
-                    <button class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                        </svg>
-                    </button>
+                    </div>
+                    <select
+                        class="px-4 py-2 border border-communicationBtn text-primary rounded-lg focus:ring-2 focus:border-transparent">
+                        <option>All Messages</option>
+                        <option>Sent</option>
+                        <option>Scheduled</option>
+                        <option>Drafts</option>
+                    </select>
+                </div>
+
+                <!-- Filter Dropdown -->
+
+
+                <!-- Messages List -->
+                <div class="space-y-4">
+
+                    <!-- Messages List -->
+                    <div class="space-y-4">
+                        <!-- Message 1 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Message 2 -->
+                        <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-start justify-between">
+                                <div class="flex-1 flex flex-col gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
+                                                Academic
+                                                Year</h4>
+                                            <span
+                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                        </div>
+                                        <div class="flex items-center text-xs text-primary space-x-3">
+                                            <span>To: All Schools</span>
+                                            <span>•</span>
+                                            <span>20/06/2024</span>
+                                            <span>•</span>
+                                            <span>98/124 read</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has
+                                        been published. Students can check their exam dates and timings on the student
+                                        portal. Please ensure you're well-prepared.</p>
+
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                        </svg>
+                                    </button>
+                                    <button class="p-2 hover:bg-gray-100 rounded">
+                                        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+
+        <!-- Announcements Tab Content -->
+        <div id="content-announcements" class="tab-content hidden">
+            <div class="bg-white rounded-lg border border-school-btn p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold font-fredoka text-primary">Announcements</h3>
+                        <p class="text-sm text-gray-600">Create and manage platform-wide announcements</p>
+                    </div>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="mb-6 flex justify-between items-center gap-7">
+                    <div class="relative w-125">
+                        <input type="text" placeholder="Search teachers..."
+                            class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
+                            style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <select
+                        class="px-4 py-2 border border-communicationBtn text-primary rounded-lg focus:ring-2 focus:border-transparent">
+                        <option>All Messages</option>
+                        <option>Sent</option>
+                        <option>Scheduled</option>
+                        <option>Drafts</option>
+                    </select>
+                </div>
+                <!-- Announcements List -->
+                <div class="space-y-4">
+                    <!-- Announcement 1 -->
+                    <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1 flex flex-col gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center">
+                                        <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
+                                            Notice
+                                        </h4>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                        <span>Published: All Users</span>
+                                        <span>•</span>
+                                        <span>Expired:20/06/2024</span>
+                                        <span>•</span>
+                                        <span>124 Views</span>
+                                        <span>•</span>
+                                        <span>All School</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has been
+                                    published. Students can check their exam dates and timings on the student portal. Please
+                                    ensure you're well-prepared.</p>
+
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Announcement 2 -->
+                    <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1 flex flex-col gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center">
+                                        <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
+                                            Notice
+                                        </h4>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                        <span>Published: All Users</span>
+                                        <span>•</span>
+                                        <span>Expired:20/06/2024</span>
+                                        <span>•</span>
+                                        <span>124 Views</span>
+                                        <span>•</span>
+                                        <span>All School</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has been
+                                    published. Students can check their exam dates and timings on the student portal. Please
+                                    ensure you're well-prepared.</p>
+
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Announcement 3 -->
+                    <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
+                        <div class="flex items-start justify-between">
+                            <div class="flex-1 flex flex-col gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center">
+                                        <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
+                                            Notice
+                                        </h4>
+                                        <div class="flex items-center gap-2">
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                            <span
+                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                        <span>Published: All Users</span>
+                                        <span>•</span>
+                                        <span>Expired:20/06/2024</span>
+                                        <span>•</span>
+                                        <span>124 Views</span>
+                                        <span>•</span>
+                                        <span>All School</span>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-600">The mid-term examination schedule for all grades has been
+                                    published. Students can check their exam dates and timings on the student portal. Please
+                                    ensure you're well-prepared.</p>
+
+                            </div>
+                            <div class="flex items-center space-x-1">
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                                    </svg>
+                                </button>
+                                <button class="p-2 hover:bg-gray-100 rounded">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compose New Message Modal -->
+        <div id="messageModal" class="modal-overlay bg-primary/50 mb-0">
+            <div class="modal-content p-8">
+
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex flex-col gap-1">
+                        <h2 class="text-xl font-semibold text-primary font-fredoka">Compose New Message</h2>
+                        <p class="text-sm text-gray-600 font-fredoka">Send a message to schools, teachers, students or
+                            parents</p>
+                    </div>
+                    <button onclick="closeMessageModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
+                        <i class="fa-regular fa-circle-xmark fa-lg"></i>
+                    </button>
+                </div>
+
+
+
+                <form id="messageForm" class="space-y-6 flex flex-col">
+                    <!-- Recipients -->
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Recipients</label>
+                        <select class="w-full outline-none text-primary text-sm">
+                            <option>All users</option>
+                            <option>All teachers</option>
+                        </select>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Subject</label>
+                        <input type="text" placeholder="Enter message subject"
+                            class="w-full outline-none text-primary text-sm">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
+                        <label
+                            class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Message</label>
+                        <textarea rows="4" placeholder="Type your message here...."
+                            class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
+                    </div>
+
+                    <!-- Schedule (Optional) -->
+                    <div>
+                        <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                            <label
+                                class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Schedule
+                                (Optional)</label>
+                            <div class="relative">
+                                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
+                                <svg class="w-5 h-5 text-gray-400 absolute right-4 top-1" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-1 font-sitka">Leave empty to send immediately</p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex items-center justify-end gap-3 py-4">
+                        <button type="button" onclick="closeMessageModal()"
+                            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                            class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
 </div>
+
+ @push('scripts')
+            <script>
+                function showTab(tabName) {
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+
+                    // Remove active class from all tabs
+                    document.querySelectorAll('[id^="tab-"]').forEach(tab => {
+                        tab.classList.remove('active-tab');
+                    });
+
+                    // Show selected tab content
+                    const contentElement = document.getElementById('content-' + tabName);
+                    if (contentElement) {
+                        contentElement.classList.remove('hidden');
+                        console.log(contentElement)
+                    }
+
+                    // Add active class to clicked tab
+                    const activeTab = document.getElementById('tab-' + tabName);
+                    if (activeTab) {
+                        activeTab.classList.add('active-tab');
+                    }
+                }
+
+                // On load
+                document.addEventListener('DOMContentLoaded', () => {
+                    showTab('messages');
+                });
+
+                // Modal Functions
+                function openMessageModal() {
+                    document.getElementById('messageModal').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeMessageModal() {
+                    document.getElementById('messageModal').classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    document.getElementById('messageForm').reset();
+                }
+
+                function openAnnouncementModal() {
+                    document.getElementById('announcementModal').classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeAnnouncementModal() {
+                    document.getElementById('announcementModal').classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                    document.getElementById('announcementForm').reset();
+                }
+
+                // Close modal when clicking outside
+                document.addEventListener('click', function(event) {
+                    const messageModal = document.getElementById('messageModal');
+                    const announcementModal = document.getElementById('announcementModal');
+
+                    if (event.target === messageModal) {
+                        closeMessageModal();
+                    }
+                    if (event.target === announcementModal) {
+                        closeAnnouncementModal();
+                    }
+                });
+
+                // Handle form submissions
+                document.getElementById('messageForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add your form submission logic here
+                    console.log('Message form submitted');
+                    closeMessageModal();
+                });
+
+                document.getElementById('announcementForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Add your form submission logic here
+                    console.log('Announcement form submitted');
+                    closeAnnouncementModal();
+                });
+            </script>
+        @endpush
 @endsection
 
