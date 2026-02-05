@@ -30,7 +30,7 @@
                 <!-- Select Level Dropdown -->
                 <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                     <label for=""
-                        class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select
+                        class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select
                         level</label>
 
                     <select class="w-full outline-none text-primary text-sm">
@@ -43,7 +43,7 @@
 
                 <!-- Select Arm Dropdown -->
                 <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 w-full"><label for=""
-                        class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select
+                        class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select
                         arm</label>
                     <select class="w-full outline-none text-primary text-sm">
                         <option>Select arm</option>
