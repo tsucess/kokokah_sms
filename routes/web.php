@@ -179,7 +179,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/messaging/inbox', function () {
         return view('admin.messaging.inbox');
     })->name('messaging.inbox');
- 
+
     Route::get('/messaging/messages', function () {
         return view('admin.messaging.messages');
     })->name('messaging.messages');
@@ -204,9 +204,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.parents.link-children');
     })->name('parents.link-children');
 
-    Route::get('/settings', function () {
-        return view('admin.settings');
-    })->name('settings');
+    Route::get('/configuration', function () {
+        return view('admin.login-history');
+    })->name('configuration');
 
     // Configuration Routes
     Route::get('/configuration', function () {
