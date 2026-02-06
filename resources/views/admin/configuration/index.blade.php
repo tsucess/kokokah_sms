@@ -24,7 +24,7 @@
             <div class="bg-white rounded-lg border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
                 <h4 class="text-base font-bold text-primary font-sitka mb-4">Academic Session & Term</h4>
-                <a class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                <a href="{{ route('admin.configuration.academic-sessions') }}" class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
                     View
                 </a>
             </div>
@@ -42,7 +42,7 @@
             <div class="bg-white rounded-lg border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
                 <h4 class="text-base font-bold text-primary font-sitka mb-4">School Calendar</h4>
-                <a class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                <a href="{{ route('admin.configuration.class-arm-activities') }}" class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
                     View
                 </a>
             </div>
@@ -51,7 +51,7 @@
             <div class="bg-white rounded-lg border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
                 <h4 class="text-base font-bold text-primary font-sitka mb-4">Class Arm</h4>
-                <a class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                <a href="{{ route('admin.configuration.class-arms') }}" class="w-full flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
                     View
                 </a>
             </div>

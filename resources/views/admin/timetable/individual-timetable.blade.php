@@ -179,7 +179,7 @@
                             type="checkbox" name="" id="">Saturday</label>
                 </div>
                 <!-- Subject -->
-                <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                     <label
                         class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select Subject</label>
                     <select class="w-full outline-none text-primary text-sm">
@@ -191,7 +191,7 @@
                     </select>
                 </div>
 
-                <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
+                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                     <label
                         class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select Teacher</label>
                     <select class="w-full outline-none text-primary text-sm">
