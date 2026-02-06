@@ -166,10 +166,10 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">---/---</td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <div class="flex items-center space-x-2">
-                                            <button
+                                            <a href="{{ route('admin.configuration.assign-classes') }}"
                                                 class="px-4 py-2 border border-primary text-primary font-sitka rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-colors">
                                                 Configure
-                                            </button>
+                                        </a>
                                         </div>
                                     </td>
                                 </tr>
