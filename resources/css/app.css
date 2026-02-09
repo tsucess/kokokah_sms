@@ -77,6 +77,8 @@
     --color-gray50:#DFE1E6;
     --color-gray100:#666666;
     --color-blue500:#0051FF;
+    --color-green700:#00BC45;
+    --color-red100:#FD0004;
 
 
     --font-fredoka: "Fredoka", sans-serif;
@@ -115,6 +117,8 @@
     --text-body5: 12px;
 
     --shadow-auth: 6px 6px 54px 0 #00000026 ;
+    --shadow-boardsheet: 0 4px 4px 0 #00000040;
+    --shadow-individualBroadsheet: 0 4px 4px 0 #00000040, 0 -4px 4px 0 #00000026;
 }
 
 .donut-chart {

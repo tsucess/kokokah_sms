@@ -152,6 +152,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.broadsheet.index');
     })->name('broadsheet');
 
+    Route::get('/broadsheet/individual-broadsheet', function () {
+        return view('admin.broadsheet.individual-broadsheet');
+    })->name('broadsheet.individual-broadsheet');
+
     Route::get('/lesson-plan', function () {
         return view('admin.lesson-plan.index');
     })->name('lesson-plan');
