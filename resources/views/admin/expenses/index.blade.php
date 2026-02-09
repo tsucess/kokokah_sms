@@ -7,11 +7,11 @@
 <div class="p-8">
     <!-- Header -->
     <div class="mb-6 flex items-center justify-between">
-        <div>
-            <h2 class="text-2xl font-bold text-teal-900 mb-1">Expenses</h2>
-            <p class="text-sm text-gray-600">This is a random display of all classes and subjects with the respective time limit. You can choose to edit or make change</p>
+        <div class="space-y-2">
+            <h2 class="text-2xl font-bold text-primary font-fredoka">Expenses</h2>
+            <p class="text-sm text-primary font-sitka">This is a random display of all classes and subjects with the respective time limit.</p>
         </div>
-        <a href="{{ route('admin.expenses.create') }}" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <a href="{{ route('admin.expenses.create') }}" class="px-4 py-2 bg-accent text-black font-semibold rounded-lg hover:bg-accent-hover transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -20,41 +20,42 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-3 gap-6 mb-6">
+    <div class="grid grid-cols-4 gap-6 mb-6">
         <!-- Total Expenses -->
         <div class="bg-white rounded-lg border border-gray-200 p-6 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-blue-500"></div>
-            <p class="text-sm text-gray-600 mb-2">Total Expenses</p>
-            <p class="text-3xl font-bold text-teal-900">₦495,000</p>
+            <div class="absolute top-0 left-0 right-0 h-2 bg-blue300"></div>
+            <p class="text-3xl font-bold text-primary font-inter mb-2">₦495,000</p>
+            <p class="text-xs text-primary font-mulish">Total Expenses</p>
+
         </div>
 
         <!-- Approved Expenses -->
         <div class="bg-white rounded-lg border border-gray-200 p-6 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-green-500"></div>
-            <p class="text-sm text-gray-600 mb-2">Approval Expenses</p>
-            <p class="text-3xl font-bold text-teal-900">₦495,000</p>
+            <div class="absolute top-0 left-0 right-0 h-2 bg-green700"></div>
+            <p class="text-3xl font-bold text-primary font-inter mb-2">₦495,000</p>
+            <p class="text-xs text-primary font-mulish">Approval Expenses</p>
         </div>
 
         <!-- Pending Expenses -->
         <div class="bg-white rounded-lg border border-gray-200 p-6 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-red-500"></div>
-            <p class="text-sm text-gray-600 mb-2">Pending Expenses</p>
-            <p class="text-3xl font-bold text-teal-900">₦19,000</p>
+            <div class="absolute top-0 left-0 right-0 h-2 bg-red100"></div>
+            <p class="text-3xl font-bold text-primary font-inter mb-2">₦49,000</p>
+            <p class="text-xs text-primary font-mulish">Pending Expenses</p>
         </div>
     </div>
 
     <!-- Filters -->
     <div class="mb-6 flex items-center space-x-4">
         <!-- Date Range -->
-        <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Date Range</label>
-            <input type="date" value="2025-12-12" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Date Range</label>
+            <input type="date" value="2025-12-12" class="w-full outline-none text-primary text-sm">
         </div>
 
         <!-- Category Dropdown -->
-        <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
-            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Category</label>
+            <select class="w-full outline-none text-primary text-sm">
                 <option>---</option>
                 <option>Salary</option>
                 <option>Maintenance</option>
@@ -63,9 +64,9 @@
         </div>
 
         <!-- Payment Method Dropdown -->
-        <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Payment Method</label>
-            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Payment Method</label>
+            <select class="w-full outline-none text-primary text-sm">
                 <option>---</option>
                 <option>Bank Transfer</option>
                 <option>Cash</option>
@@ -74,9 +75,9 @@
         </div>
 
         <!-- Status Dropdown -->
-        <div class="flex-1">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Status</label>
-            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Status</label>
+            <select class="w-full outline-none text-primary text-sm">
                 <option>---</option>
                 <option>Approved</option>
                 <option>Pending</option>
@@ -84,56 +85,57 @@
         </div>
     </div>
 
-    <!-- Search Bar -->
-    <div class="mb-6">
-        <div class="relative">
-            <input type="text" placeholder="Search for class..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-            <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    <!-- Search -->
+        <div class="relative mb-8">
+            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
+            <input type="text" placeholder="Search for class..."
+                class="w-full pl-10 pr-4 py-4 text-body5 text-search bg-white shadow-sm rounded-full focus:ring-2 focus:ring-rimary focus:border-transparent">
         </div>
-    </div>
 
     <!-- Expenses Table -->
-    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+    <div class="bg-white rounded-lg overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full">
-                <thead class="bg-gray-50 border-b border-gray-200">
+                <thead class="border-b border-gray-200">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Expense Tittle</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Payment Method</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Added By</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Date</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Expense Tittle</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Category</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Amount</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Payment Method</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Added By</th>
+                        <th class="px-6 py-3 text-left text-xs font-semibold text-black font-sitka tracking-wider">Action</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                     <!-- Row 1 - Teacher Salaries -->
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01 Oct 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">01 Oct 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm font-medium text-teal-600 hover:text-teal-800">Teacher Salaries</a>
+                            <a href="#" class="text-sm font-medium text-primary font-sitka">Teacher Salaries</a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Salary</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Salary</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₦450,000</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bank Transfer</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">₦450,000</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Bank Transfer</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-500 text-white">
                                 ✓ Approved
                             </span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Admin</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Admin</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                            <div class="flex">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-primary text-primary rounded-l-lg text-sm hover:bg-primary hover:text-white">
                                     View
                                 </button>
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button class="px-3 py-1 border border-primary text-primary rounded-r-lg text-sm hover:bg-primary hover:text-white">
                                     Edit
                                 </button>
                             </div>
@@ -142,27 +144,27 @@
 
                     <!-- Row 2 - Teacher Salaries -->
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01 Oct 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">01 Oct 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm font-medium text-teal-600 hover:text-teal-800">Teacher Salaries</a>
+                            <a href="#" class="text-sm font-medium text-primary font-sitka">Teacher Salaries</a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Salary</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Salary</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₦450,000</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bank Transfer</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">₦450,000</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Bank Transfer</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-500 text-white">
                                 ✓ Approved
                             </span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Admin</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Admin</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="flex space-x-2">
-                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                            <div class="flex">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-primary text-primary rounded-l-lg text-sm hover:bg-primary hover:text-white">
                                     View
                                 </button>
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button class="px-3 py-1 border border-primary text-primary rounded-r-lg text-sm hover:bg-primary hover:text-white">
                                     Edit
                                 </button>
                             </div>
@@ -171,27 +173,27 @@
 
                     <!-- Row 3 - Generate Repair -->
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">03 Oct 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">03 Oct 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm font-medium text-teal-600 hover:text-teal-800">Generate Repair</a>
+                            <a href="#" class="text-sm font-medium text-primary font-sitka">Generate Repair</a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Maintenance</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Maintenance</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₦40,000</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Cash</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">₦40,000</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Cash</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-500 text-white">
                                 ⏱ Pending
                             </span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bursar</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Bursar</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                            <div class="flex">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-primary text-primary rounded-l-lg text-sm hover:bg-primary hover:text-white">
                                     View
                                 </button>
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button class="px-3 py-1 border border-primary text-primary rounded-r-lg text-sm hover:bg-primary hover:text-white">
                                     Edit
                                 </button>
                             </div>
@@ -200,27 +202,27 @@
 
                     <!-- Row 4 - School Supplies -->
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01 Oct 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">01 Oct 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm font-medium text-teal-600 hover:text-teal-800">School Supplies</a>
+                            <a href="#" class="text-sm font-medium text-primary font-sitka">School Supplies</a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Stationery</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Stationery</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₦10,000</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">POS</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">₦10,000</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">POS</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-500 text-white">
                                 ✓ Approved
                             </span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Admin</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Admin</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                            <div class="flex">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-primary text-primary rounded-l-lg text-sm hover:bg-primary hover:text-white">
                                     View
                                 </button>
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button class="px-3 py-1 border border-primary text-primary rounded-r-lg text-sm hover:bg-primary hover:text-white">
                                     Edit
                                 </button>
                             </div>
@@ -229,27 +231,27 @@
 
                     <!-- Row 5 - Generate Repair -->
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">03 Oct 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">03 Oct 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm font-medium text-teal-600 hover:text-teal-800">Generate Repair</a>
+                            <a href="#" class="text-sm font-medium text-primary font-sitka">Generate Repair</a>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Maintenance</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Maintenance</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₦40,000</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Cash</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">₦40,000</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Cash</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-500 text-white">
                                 ⏱ Pending
                             </span>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Bursar</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Bursar</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <div class="flex space-x-2">
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                            <div class="flex">
+                                <button onclick="openExpenseDetailsModal()" class="px-3 py-1 border border-primary text-primary rounded-l-lg text-sm hover:bg-primary hover:text-white">
                                     View
                                 </button>
-                                <button class="px-3 py-1 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 text-sm">
+                                <button class="px-3 py-1 border border-primary text-primary rounded-r-lg text-sm hover:bg-primary hover:text-white">
                                     Edit
                                 </button>
                             </div>
@@ -262,34 +264,32 @@
 </div>
 
 <!-- Expense Details Modal -->
-<div id="expenseDetailsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+<div id="expenseDetailsModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 sticky top-0 bg-white">
-            <h3 class="text-lg font-semibold" style="color: #004A53;">Expense Details</h3>
+        <div class="flex items-center justify-between px-6 pt-4">
+            <h3 class="text-lg font-semibold font-fredoka text-primary">Expense Details</h3>
             <button onclick="closeExpenseDetailsModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <i class="fa-regular fa-circle-xmark"></i>
             </button>
         </div>
 
         <!-- Modal Body -->
-        <div class="px-6 py-6 space-y-4">
+        <div class="px-6 py-6 space-y-6">
             <!-- Expense Title -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Expense Title
                 </label>
-                <input type="text" value="Generate Repair" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+                <input type="text" value="Generate Repair" class="w-full outline-none text-primary text-sm" readonly>
             </div>
 
             <!-- Category -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Category
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="maintenance" selected>Maintenance</option>
                     <option value="salary">Salary</option>
@@ -299,19 +299,19 @@
             </div>
 
             <!-- Amount -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Amount
                 </label>
-                <input type="text" value="₦30,000" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+                <input type="text" value="₦30,000" class="w-full outline-none text-primary text-sm" readonly>
             </div>
 
             <!-- Payment Method -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Payment Method
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="cash" selected>Cash</option>
                     <option value="pos">POS</option>
@@ -321,19 +321,19 @@
             </div>
 
             <!-- Date -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Date
                 </label>
-                <input type="text" value="03 Oct. 2025" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" readonly>
+                <input type="text" value="03 Oct. 2025" class="w-full outline-none text-primary text-sm" readonly>
             </div>
 
             <!-- Status -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Status
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="pending" selected>Pending</option>
                     <option value="approved">Approved</option>
@@ -342,11 +342,11 @@
             </div>
 
             <!-- Added By -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Added By
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="bursar" selected>Bursar</option>
                     <option value="admin">Admin</option>
@@ -355,23 +355,23 @@
             </div>
 
             <!-- Description -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Description
                 </label>
-                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700" placeholder="Enter expense description..."></textarea>
+                <textarea rows="4" class="w-full outline-none text-primary text-sm resize-none" placeholder="Enter expense description..."></textarea>
             </div>
         </div>
 
         <!-- Modal Footer -->
-        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 sticky bottom-0 bg-white">
-            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+        <div class="flex items-center justify-end px-6 py-4">
+            <button class="px-6 py-2 border border-primary text-primary rounded-l-lg hover:bg-primary hover:text-white transition-colors font-medium">
                 Delete
             </button>
-            <button class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+            <button class="px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition-colors font-medium">
                 Reject
             </button>
-            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+            <button class="px-6 py-2 rounded-r-lg font-medium bg-accent text-black border border-accent hover:border-accent-hover hover:bg-accent-hover transition-colors" >
                 Approve
             </button>
         </div>
