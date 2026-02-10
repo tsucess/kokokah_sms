@@ -24,7 +24,7 @@
             <p class="text-sm text-primary font-sitka">This is a rundown display of all classes and subjects with the approved time slot. You can choose to add or makes change</p>
         </div>
 
-        <button href="{{ route('admin.expenses.create') }}" class="px-4 py-2 bg-accent text-black font-semibold text-sm rounded-lg hover:bg-accent-hover transition-colors flex items-center">
+        <button onclick="openCreateSubjectModal()" class="px-4 py-2 bg-accent text-black font-semibold text-sm rounded-lg hover:bg-accent-hover transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -36,8 +36,8 @@
     <div class="grid grid-cols-4 gap-6 mb-10">
         <!-- Total Students -->
         <div class="bg-white rounded-lg border-t-8 border-blue300 p-6 space-y-1.5 shadow-boardsheet">
-            <p class="text-3xl font-bold text-primary font-mulish">180</p>
-            <p class="text-xs text-primary font-mulish">Total Students</p>
+            <p class="text-3xl font-bold text-primary font-mulish">10</p>
+            <p class="text-xs text-primary font-mulish">Total Number of Subjects</p>
         </div>
     </div>
 
@@ -131,19 +131,123 @@ Grade 2, Pry 1, SS 3, Pry 2, JS 2</td>
     </div>
 </div>
 
+<div id="createSubjectModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50" >
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-scroll mx-4">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between px-6 py-4">
+            <h3 class="text-2xl font-bold text-primary font-fredoka">Create Subject</h3>
+            <button onclick="closeCreateSubjectModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+               <i class="fa-regular fa-circle-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-6 space-y-7">
+            <!-- Name of Subject -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Name of Subject
+                </label>
+                <input type="text" placeholder="e.g. English Language, Mathematic...." class="w-full outline-none text-primary text-sm">
+            </div>
+
+            <!-- Subject Code -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Subject Code
+                </label>
+                <input type="text" placeholder="e.g. 100, 109, 123" class="w-full outline-none text-primary text-sm">
+            </div>
+
+            <!-- Short Name -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Short Name
+                </label>
+                <input type="text" placeholder="English, MAths, Agric...." class="w-full outline-none text-primary text-sm">
+            </div>
+
+            <!-- Subject Abbreviation -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Subject Abbreviation
+                </label>
+                <input type="text" placeholder="ENG, MTH, AGR" class="w-full outline-none text-primary text-sm">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Unit(Used in calculating grade score) -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Unit(Used in calculating grade score)
+                </label>
+                <input type="text" placeholder="----" class="w-full outline-none text-primary text-sm">
+            </div>
+
+            <!-- Order(Used in sorting subjects -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Order(Used in sorting subjects
+                </label>
+                <input type="text" placeholder="ENG, MTH, AGR" class="w-full outline-none text-primary text-sm">
+            </div>
+
+            </div>
+
+            <!-- Subject TAG(S) (Used to easily group together subjects) -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Subject TAG(S) (Used to easily group together subjects)
+                </label>
+                <select class="w-full outline-none text-primary text-sm">
+                    <option value="">Select...</option>
+                    <option value="nursery">Nursery Section</option>
+                    <option value="primary">Primary Section</option>
+                    <option value="junior">Junior Secondary Section</option>
+                    <option value="senior">Senior Secondary Section</option>
+                </select>
+            </div>
+
+            <!-- Subject Leve(S) (Select levels that offer this subject)  -->
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
+                    Subject Leve(S) (Select levels that offer this subject)
+                </label>
+                <select class="w-full outline-none text-primary text-sm">
+                    <option value="">Select...</option>
+                    <option value="nursery">Nursery Section</option>
+                    <option value="primary">Primary Section</option>
+                    <option value="junior">Junior Secondary Section</option>
+                    <option value="senior">Senior Secondary Section</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4">
+            <button onclick="closeCreateSubjectModal()" class="px-6 py-2 font-sitka text-sm border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold" >
+                Cancel
+            </button>
+            <button class="px-6 py-2 rounded-lg font-semibold bg-accent text-black hover:bg-accent-hover transition-colors font-sitka" >
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
+
+
 @push('scripts')
 <script>
     // Create Class Level Modal functions
-function openCreateClassLevelModal() {
-    const modal = document.getElementById('createClassLevelModal');
+function openCreateSubjectModal() {
+    const modal = document.getElementById('createSubjectModal');
     if (modal) {
         modal.classList.remove('hidden');
         modal.classList.add('flex');
     }
 }
 
-function closeCreateClassLevelModal() {
-    const modal = document.getElementById('createClassLevelModal');
+function closeCreateSubjectModal() {
+    const modal = document.getElementById('createSubjectModal');
     if (modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
@@ -152,11 +256,11 @@ function closeCreateClassLevelModal() {
 
 // Close modal when clicking outside
 document.addEventListener('click', function(event) {
-    if (event.target.id === 'createLevelSectionModal') {
-        closeCreateLevelSectionModal();
+    if (event.target.id === 'createSubjectModal') {
+        closeCreateSubjectModal();
     }
-    if (event.target.id === 'createClassLevelModal') {
-        closeCreateClassLevelModal();
+    if (event.target.id === 'createSubjectModal') {
+        closeCreateSubjectModal();
     }
 });
 </script>
