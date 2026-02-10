@@ -6,7 +6,7 @@
 @section('content')
 <div class="p-8">
     <!-- Back Button -->
-    <div class="mb-6">
+    <div class="mb-6 flex items-center gap-1">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -18,44 +18,46 @@
     </div>
 
     <!-- Action Buttons -->
-    <div class="mb-6 flex justify-end space-x-3">
-        <button onclick="openCreateLevelSectionModal()" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+    <div class="mb-6 flex justify-end space-x-4">
+        <button onclick="openCreateLevelSectionModal()" class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
             Create New Level Section
         </button>
-        <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+        <div class="flex items-center ">
+        <button class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
             Create New Level with Template
         </button>
-        <button onclick="openCreateClassLevelModal()" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors">
+        <button onclick="openCreateClassLevelModal()" class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
             Create New Level
         </button>
+        </div>
     </div>
 
     <!-- Levels Table -->
-    <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
         <div class="overflow-x-auto">
             <table class="w-full">
-                <thead class="bg-gray-50 border-b border-gray-200">
+                <thead class=" border-b border-gray-200">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level Name</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Level Short Name</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number of Arms</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date Created</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Order</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Level Name</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Level Short Name</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Number of Arms</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Date Created</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Status</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Action</th>
+                        <th class="px-6 py-4 text-left text-xs font-semibold text-black font-sitka tracking-wider">Total</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                     @for($i = 1; $i <= 14; $i++)
                     <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ $i }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">{{ $i }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="#" class="text-sm text-teal-600 hover:text-teal-800">Nursery {{ $i }}</a>
+                            <a href="#" class="text-sm text-primary font-sitka">Nursery {{ $i }}</a>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Nur {{ $i }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">6</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">22/04/2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">Nur {{ $i }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">6</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">22/04/2025</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <span class="px-2 py-1 bg-green-500 text-white text-xs rounded">Active</span>
                         </td>
@@ -98,7 +100,7 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">18 / 60</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">18 / 60</td>
                     </tr>
                     @endfor
                 </tbody>
@@ -108,34 +110,32 @@
 </div>
 
 <!-- Create Level Section Modal -->
-<div id="createLevelSectionModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+<div id="createLevelSectionModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50" >
     <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4">
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <h3 class="text-lg font-semibold" style="color: #004A53;">Create Level Section</h3>
+        <div class="flex items-center justify-between px-6 py-4">
+            <h3 class="text-2xl font-bold text-primary font-fredoka">Create Level Section</h3>
             <button onclick="closeCreateLevelSectionModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+               <i class="fa-regular fa-circle-xmark"></i>
             </button>
         </div>
 
         <!-- Modal Body -->
-        <div class="px-6 py-6 space-y-4">
+        <div class="px-6 py-6 space-y-7">
             <!-- Title -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Title
                 </label>
-                <input type="text" placeholder="e.g. Nursery, Primary, Junior Secondary..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <input type="text" placeholder="e.g. Nursery, Primary, Junior Secondary..." class="w-full outline-none text-primary text-sm">
             </div>
 
             <!-- Description -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Description
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="nursery">Nursery Section</option>
                     <option value="primary">Primary Section</option>
@@ -146,11 +146,11 @@
         </div>
 
         <!-- Modal Footer -->
-        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
-            <button onclick="closeCreateLevelSectionModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+        <div class="flex items-center justify-end gap-3 px-6 py-4">
+            <button onclick="closeCreateLevelSectionModal()" class="px-6 py-2 font-sitka text-sm border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold" >
                 Cancel
             </button>
-            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+            <button class="px-6 py-2 rounded-lg font-semibold bg-accent text-black hover:bg-accent-hover transition-colors font-sitka" >
                 Submit
             </button>
         </div>
@@ -158,34 +158,32 @@
 </div>
 
 <!-- Create Class Level Modal -->
-<div id="createClassLevelModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" style="font-family: 'Sitka', Georgia, serif;">
+<div id="createClassLevelModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50" >
     <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4">
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <h3 class="text-lg font-semibold" style="color: #004A53;">Create Class Level</h3>
+        <div class="flex items-center justify-between px-6 py-4">
+            <h3 class="text-2xl font-bold text-primary font-fredoka">Create Class Level</h3>
             <button onclick="closeCreateClassLevelModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <i class="fa-regular fa-circle-xmark"></i>
             </button>
         </div>
 
         <!-- Modal Body -->
-        <div class="px-6 py-6 space-y-4">
+        <div class="px-6 py-6 space-y-7">
             <!-- Level Name -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Level Name
                 </label>
-                <input type="text" placeholder="e.g. Nursery 1, Primary 1, JSS 1..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <input type="text" placeholder="e.g. Nursery 1, Primary 1, JSS 1..." class="w-full outline-none text-primary text-sm">
             </div>
 
             <!-- Level Short Name -->
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
+                <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                     Level Short Name
                 </label>
-                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+                <select class="w-full outline-none text-primary text-sm">
                     <option value="">Select...</option>
                     <option value="nur1">Nur 1</option>
                     <option value="nur2">Nur 2</option>
@@ -206,11 +204,11 @@
         </div>
 
         <!-- Modal Footer -->
-        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200">
-            <button onclick="closeCreateClassLevelModal()" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium" style="font-family: 'Sitka', Georgia, serif;">
+        <div class="flex items-center justify-end gap-3 px-6 py-4">
+            <button onclick="closeCreateClassLevelModal()" class="px-6 py-2 font-sitka text-sm border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold" >
                 Cancel
             </button>
-            <button class="px-6 py-2 rounded-lg font-medium transition-colors" style="font-family: 'Sitka', Georgia, serif; background-color: #FDAF22; color: #000;">
+            <button class="px-6 py-2 rounded-lg font-semibold bg-accent text-black hover:bg-accent-hover transition-colors font-sitka" >
                 Save
             </button>
         </div>

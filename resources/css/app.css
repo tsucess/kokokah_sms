@@ -116,7 +116,7 @@
     --text-body4: 14px;
     --text-body5: 12px;
 
-    --shadow-auth: 6px 6px 54px 0 #00000026 ;
+    --shadow-auth: 6px 6px 54px 0 #00000026;
     --shadow-boardsheet: 0 4px 4px 0 #00000040;
     --shadow-individualBroadsheet: 0 4px 4px 0 #00000040, 0 -4px 4px 0 #00000026;
 }
