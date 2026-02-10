@@ -217,9 +217,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.configuration.index');
     })->name('configuration');
 
-    Route::get('/configuration/sessions', function () {
-        return view('admin.configuration.sessions');
-    })->name('configuration.sessions');
+    Route::get('/configuration/subject', function () {
+        return view('admin.configuration.subject');
+    })->name('configuration.subject');
 
     Route::get('/configuration/academic-sessions', function () {
         return view('admin.configuration.academic-sessions');

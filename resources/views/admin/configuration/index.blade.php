@@ -136,7 +136,7 @@
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
                 <h4 class="text-base font-bold text-primary font-sitka mb-4">Subjects</h4>
-                <a class="w-full mt-auto flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                <a href="{{ route('admin.configuration.subject') }}" class="w-full mt-auto flex justify-center items-center px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
                     View
                 </a>
             </div>
