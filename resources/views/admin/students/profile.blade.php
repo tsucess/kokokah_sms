@@ -22,8 +22,8 @@
         <div class="flex items-start justify-between">
             <div class="flex items-start space-x-6">
                 <!-- Profile Image -->
-                <div class="w-24 h-24 bg-teal-900 rounded-full flex-shrink-0"></div>
-                
+                <div class="w-24 h-24 bg-teal-900 rounded-full shrink-0"></div>
+
                 <!-- Personal Information Grid -->
                 <div class="grid grid-cols-3 gap-x-12 gap-y-6 flex-1">
                     <!-- Row 1 -->
