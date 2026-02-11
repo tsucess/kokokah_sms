@@ -219,7 +219,7 @@
                 <!-- Linked Parents Display -->
                 <div class="grid grid-cols-2 gap-4">
                     <!-- Parent 1 -->
-                    <div class="bg-gray100 rounded-lg p-4 flex items-center justify-between">
+                    <div class="bg-gray200 rounded-lg p-4 flex items-center justify-between">
                         <div class="flex items-center space-x-3">
                             <div class="w-8 h-8 border-2 border-black rounded-full flex items-center justify-center">
                                 <i class="fa-regular fa-user text-black fa-xl"></i>
@@ -235,7 +235,7 @@
                     </div>
 
                     <!-- Parent 2 -->
-                    <div class="bg-gray100 rounded-lg p-4 flex items-center justify-between">
+                    <div class="bg-gray200 rounded-lg p-4 flex items-center justify-between">
                         <div class="flex items-center space-x-3">
                             <div class="w-8 h-8 border-2 border-black rounded-full flex items-center justify-center">
                                 <i class="fa-regular fa-user text-black fa-xl"></i>

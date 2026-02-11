@@ -55,7 +55,7 @@
         <!-- Subject Table -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
         <div class="overflow-x-auto">
-            <table class="w-full">
+            <table class="w-full"> 
                 <thead class=" border-b border-gray-200">
                     <tr>
                         <th class="px-6 py-4  rounded flex items-center justify-center"><span class="border-2 border-gray100 w-4 h-4"></span></th>
