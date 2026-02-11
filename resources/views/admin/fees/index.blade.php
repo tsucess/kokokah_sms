@@ -45,7 +45,7 @@
     <div class="mb-6 flex items-center space-x-4">
         <!-- Select Session Dropdown -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-4 mt-3 w-full">
-            <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select Session</label>
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Session</label>
             <select class="w-full outline-none text-primary text-sm">
                 <option>Active</option>
                 <option>2024/2025</option>
@@ -55,7 +55,7 @@
 
         <!-- Select Term Dropdown -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-4 mt-3 w-full">
-            <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Select Term</label>
+            <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Term</label>
             <select class="w-full outline-none text-primary text-sm">
                 <option>Active</option>
                 <option>First Term</option>
