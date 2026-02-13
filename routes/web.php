@@ -253,10 +253,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.staff.management');
     })->name('staff.management');
 
-    Route::get('/staff/overview', function () {
-        return view('admin.staff.overview');
-    })->name('staff.overview');
-
     Route::get('/students/management', function () {
         return view('admin.students.management');
     })->name('students.management');

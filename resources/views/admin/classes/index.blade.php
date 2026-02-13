@@ -52,9 +52,10 @@
                         <option>C</option>
                     </select>
                 </div>
-                <!-- Search Bar -->
+
 
             </div>
+            <!-- Search Bar -->
             <div class="flex-1 relative bg-white rounded-full shadow py-1">
                 <input type="text" placeholder="Search for classes" class="w-full pl-10 pr-4 py-2 text-sm text-search">
                 <svg class="w-5 h-5 text-search absolute left-3 top-2.5" fill="none" stroke="currentColor"
