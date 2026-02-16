@@ -406,3 +406,38 @@ Route::prefix('parent')->name('parent.')->group(function () {
 
 
 });
+
+
+// Teacher Admin Routes
+// Route::prefix('teacher')->name('teacher.')->middleware('auth')->group(function () {
+Route::prefix('teacher')->name('teacher.')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('teacher.dashboard');
+    })->name('dashboard');
+
+    Route::get('/class', function () {
+        return view('teacher.class');
+    })->name('class');
+
+    Route::get('/class/individual-class', function () {
+        return view('class.individual-class');
+    })->name('class.individual-class');
+
+    Route::get('/attendance', function () {
+        return view('teacher.attendance');
+    })->name('attendance');
+
+    Route::get('/result', function () {
+        return view('teacher.result');
+    })->name('result');
+
+    Route::get('/messaging', function () {
+        return view('teacher.messaging');
+    })->name('messaging');
+
+    Route::get('/starboard', function () {
+        return view('teacher.starboard');
+    })->name('starboard');
+
+
+});
