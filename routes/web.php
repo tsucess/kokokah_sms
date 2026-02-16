@@ -367,3 +367,42 @@ Route::prefix('school')->name('school.')->group(function () {
         return view('school.class-members-cards');
     })->name('class-members-cards');
 });
+
+
+// Parent Admin Routes
+// Route::prefix('parent')->name('parent.')->middleware('auth')->group(function () {
+Route::prefix('parent')->name('parent.')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('parent.dashboard');
+    })->name('dashboard');
+
+    Route::get('/child-information', function () {
+        return view('parent.child-information');
+    })->name('child-information');
+
+    Route::get('/attendance', function () {
+        return view('parent.attendance');
+    })->name('attendance');
+
+    Route::get('/result', function () {
+        return view('parent.result');
+    })->name('result');
+
+    Route::get('/fees', function () {
+        return view('parent.fees');
+    })->name('fees');
+
+    Route::get('/fees/payment-history', function () {
+        return view('fees.payment-history');
+    })->name('fees.payment-history');
+
+    Route::get('/message', function () {
+        return view('parent.message');
+    })->name('message');
+
+    Route::get('/starboard', function () {
+        return view('parent.starboard');
+    })->name('starboard');
+
+
+});
