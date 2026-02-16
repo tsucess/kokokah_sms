@@ -26,29 +26,29 @@
     <div class="flex min-h-screen">
 
         <!-- Mobile Sidebar -->
-    <div id="mobileSidebar" class="fixed inset-0 z-40 hidden md:hidden">
+        <div id="mobileSidebar" class="fixed inset-0 z-40 hidden md:hidden">
 
-        <!-- Overlay -->
-        <div id="sidebarOverlay" class="absolute inset-0 bg-black/50"></div>
+            <!-- Overlay -->
+            <div id="sidebarOverlay" class="absolute inset-0 bg-black/50"></div>
 
-        <!-- Sidebar Panel -->
-        <div class="relative w-64 bg-white h-full shadow-lg">
+            <!-- Sidebar Panel -->
+            <div class="relative w-64 bg-white h-full shadow-lg">
+                <x-teacher-sidebar :active="$active ?? ''" />
+            </div>
+        </div>
+
+        <!-- Desktop Sidebar -->
+        <div class="hidden md:flex">
             <x-teacher-sidebar :active="$active ?? ''" />
         </div>
-    </div>
-
-    <!-- Desktop Sidebar -->
-    <div class="hidden md:flex">
-        <x-teacher-sidebar :active="$active ?? ''" />
-    </div>
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-x-hidden">
             <!-- Top Header -->
             <header class="bg-superadmin-bg border-b border-gray-200 px-4 md:px-8 py-4 relative">
                 <button id="openMenu" class="absolute top-4 right-4 z-50 md:hidden">
-    <i class="fa-solid fa-bars fa-lg"></i>
-</button>
+                    <i class="fa-solid fa-bars fa-lg"></i>
+                </button>
                 <div class="flex flex-col items-start gap-4 justify-between md:flex-row md:items-center">
                     <div class="">
                         <h1 class="text-lg md:text-xl font-semibold text-primary font-fredoka">@yield('page-title')</h1>
@@ -86,25 +86,25 @@
             </main>
         </div>
     </div>
-     <script>
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const mobileSidebar = document.getElementById('mobileSidebar');
-    const sidebarOverlay = document.getElementById('sidebarOverlay');
-    
+    <script>
+        const openMenu = document.getElementById('openMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-    openMenu.addEventListener('click', () => {
-        mobileSidebar.classList.remove('hidden');
-    });
 
-    closeMenu.addEventListener('click', () => {
-        mobileSidebar.classList.add('hidden');
-    });
+        openMenu.addEventListener('click', () => {
+            mobileSidebar.classList.remove('hidden');
+        });
 
-    sidebarOverlay.addEventListener('click', () => {
-        mobileSidebar.classList.add('hidden');
-    });
-</script>
+        closeMenu.addEventListener('click', () => {
+            mobileSidebar.classList.add('hidden');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            mobileSidebar.classList.add('hidden');
+        });
+    </script>
 
     @stack('scripts')
 </body>

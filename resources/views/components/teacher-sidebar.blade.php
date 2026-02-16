@@ -33,7 +33,7 @@
         <!-- Attendance -->
         <a href="{{ route('teacher.attendance') }}"
            class="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors {{ $active === 'attendance' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">
-            <i class="fa-solid fa-user-clock {{ $active === 'attendance' ? ' text-black' : 'text-primary' }}"></i>
+            <i class="fa-solid fa-user-check {{ $active === 'attendance' ? ' text-black' : 'text-primary' }}"></i>
             Attendance
         </a>
 
