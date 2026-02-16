@@ -43,6 +43,21 @@
             overflow-y: auto;
             position: relative;
         }
+        .dark-btn {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .bordered-btn {
+            border: 1px solid #8E8D93;
+            background-color: transparent;
+            color: #000F11;
+        }
+
+        .grayed-btn {
+            background-color: #E0E0E0;
+            color: #000F11;
+        }
 </style>
 <div class="p-8">
     <!-- Statistics Cards -->
