@@ -431,6 +431,10 @@ Route::prefix('teacher')->name('teacher.')->group(function () {
         return view('teacher.result');
     })->name('result');
 
+    Route::get('/result/student-result', function () {
+        return view('result.student-result');
+    })->name('result.student-result');
+
     Route::get('/messaging', function () {
         return view('teacher.messaging');
     })->name('messaging');
