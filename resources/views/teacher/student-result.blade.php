@@ -207,7 +207,7 @@
         <div class="modal-content p-8">
 
             <div class="flex justify-end items-center mb-6">
-                <button onclick="closeInputResultModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
+                <button onclick="closeEditResultModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
                     <i class="fa-regular fa-circle-xmark fa-lg"></i>
                 </button>
             </div>
