@@ -208,9 +208,9 @@
                                             <button onclick="openInputResultModal()"
                                                 class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100">
                                                 <i class="fa-solid fa-pen text-primary"></i>Input results</button>
-                                            <button
+                                            <a href="{{ route('teacher.student-result') }}"
                                                 class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-primary hover:bg-red-50">
-                                                <i class="fa-regular fa-eye"></i>View student result</button>
+                                                <i class="fa-regular fa-eye"></i>View student result</a>
                                             <button
                                                 class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-primary hover:bg-red-50">
                                                 <i class="fa-regular fa-user"></i>Date Student</button>
