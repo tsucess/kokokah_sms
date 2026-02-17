@@ -76,9 +76,9 @@
             <button
                 class="px-6 py-2 rounded-lg font-sitka bg-accent text-black text-sm hover:bg-accent-hover font-semibold transition-colors">Take
                 Attendance</button>
-            <button
+            <a href="{{ route('teacher.individual-class') }}"
                 class="px-6 py-2 border border-primary text-primary text-sm rounded-lg font-sitka hover:bg-primary hover:text-white transition-colors font-semibold">View
-                Class</button>
+                Class</a>
         </div>
     </div>
 

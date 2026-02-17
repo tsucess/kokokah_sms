@@ -419,9 +419,9 @@ Route::prefix('teacher')->name('teacher.')->group(function () {
         return view('teacher.class');
     })->name('class');
 
-    Route::get('/class/individual-class', function () {
-        return view('class.individual-class');
-    })->name('class.individual-class');
+    Route::get('/individual-class', function () {
+        return view('teacher.individual-class');
+    })->name('individual-class');
 
     Route::get('/attendance', function () {
         return view('teacher.attendance');
