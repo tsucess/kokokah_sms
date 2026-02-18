@@ -199,7 +199,29 @@
         </div>
 
         {{-- Results --}}
-        <div id="content-results" class="tab-content hidden"> result</div>
+        <div id="content-results" class="tab-content hidden">
+            <div class="border border-black rounded-2xl flex">
+                <aside class="w-80 border-r border-r-black">
+                    <div class="flex items-center px-4 h-22.5 border-b border-b-black"><input type="search" name="" id="" class="text-sm" placeholder="Search student"></div>
+                    <div class="flex flex-col gap-3 p-4 ">
+                        <h3 class='text-sm font-sitka text-black'>Student</h3>
+                        <div class="flex flex-col gap-2">
+                            <button class="p-3 rounded-xl bg-primary text-white font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                            <button class="p-3 rounded-xl bg-transparent text-primary font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                            <button class="p-3 rounded-xl bg-transparent text-primary font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                            <button class="p-3 rounded-xl bg-transparent text-primary font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                            <button class="p-3 rounded-xl bg-transparent text-primary font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                            <button class="p-3 rounded-xl bg-transparent text-primary font-sitka text-sm w-full">Emmanuel Sunday (0001)</button>
+                        </div>
+                    </div>
+                </aside>
+                <div class="flex flex-col h-auto flex-1 ">
+                    <div class=" border-b border-b-black h-22.5 px-4 font-sitka text-sm font-semibold flex items-center shrink-0">Emmanuel Sunday (00001)</div>
+                    <div class="flex-1 flex items-center justify-center text-sm font-sitka text-black">No Record Available</div>
+                </div>
+
+            </div>
+        </div>
 
         {{-- Star board --}}
         <div id="content-starboard" class="tab-content hidden"> star board</div>
