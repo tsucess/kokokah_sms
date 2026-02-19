@@ -403,8 +403,6 @@ Route::prefix('parent')->name('parent.')->group(function () {
     Route::get('/starboard', function () {
         return view('parent.starboard');
     })->name('starboard');
-
-
 });
 
 
@@ -445,4 +443,40 @@ Route::prefix('teacher')->name('teacher.')->group(function () {
     })->name('starboard');
 
 
+});
+
+// Student Admin Routes
+// Route::prefix('student')->name('student.')->middleware('auth')->group(function () {
+Route::prefix('student')->name('student.')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('student.dashboard');
+    })->name('dashboard');
+
+    Route::get('/timetable', function () {
+        return view('student.timetable');
+    })->name('timetable');
+
+    Route::get('/attendance', function () {
+        return view('student.attendance');
+    })->name('attendance');
+
+    Route::get('/result', function () {
+        return view('student.result');
+    })->name('result');
+
+    Route::get('/fees', function () {
+        return view('student.fees');
+    })->name('fees');
+
+    Route::get('payment-history', function () {
+        return view('student.payment-history');
+    })->name('payment-history');
+
+    Route::get('/announcements', function () {
+        return view('student.announcements');
+    })->name('announcements');
+
+    Route::get('/starboard', function () {
+        return view('student.starboard');
+    })->name('starboard');
 });
