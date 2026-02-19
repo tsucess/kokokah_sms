@@ -50,7 +50,7 @@
 
             <!-- Low Stock -->
             <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                <div class="h-2 bg-red50"></div>
+                <div class="h-2 bg-red200"></div>
                 <div class="p-6">
                     <p class="text-3xl font-sitka text-primary font-semibold">290</p>
                     <p class="text-sm font-semibold text-primary">Low Stock</p>
@@ -59,7 +59,7 @@
 
             <!-- Total Value -->
             <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-                <div class="h-2 bg-red50"></div>
+                <div class="h-2 bg-red200"></div>
                 <div class="p-6">
                     <p class="text-3xl font-sitka text-primary font-semibold">₦4,900,000</p>
                     <p class="text-sm font-semibold text-primary">Total Value</p>

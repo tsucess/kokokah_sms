@@ -164,25 +164,29 @@
                             <h5 class="text-black font-sitka text-base font-semibold">Result to submit</h5>
                             <p class="text-black font-mulish text-xs">Primary 4A Mathematics</p>
                         </div>
-                        <button class="px-1 md:px-6 py-3 rounded-lg font-sitka bg-accent text-black text-xs hover:bg-accent-hover font-semibold transition-colors">Enter Scores</button>
+                        <button
+                            class="px-1 md:px-6 py-3 rounded-lg font-sitka bg-accent text-black text-xs hover:bg-accent-hover font-semibold transition-colors">Enter
+                            Scores</button>
                     </div>
                     <div class="flex items-center justify-between gap-2">
                         <div class="flex flex-col gap-1">
                             <h5 class="text-black font-sitka text-base font-semibold">Result to submit</h5>
                             <p class="text-black font-mulish text-xs">Primary 4A Mathematics</p>
                         </div>
-                        <button class="px-1 md:px-6 py-3 rounded-lg font-sitka bg-accent text-black text-xs hover:bg-accent-hover font-semibold transition-colors">Enter Scores</button>
+                        <button
+                            class="px-1 md:px-6 py-3 rounded-lg font-sitka bg-accent text-black text-xs hover:bg-accent-hover font-semibold transition-colors">Enter
+                            Scores</button>
                     </div>
 
                 </div>
 
             </article>
-             <!-- Recent Activity -->
+            <!-- Recent Activity -->
             <div class="bg-white border-school-btn border rounded-2xl space-y-4 p-6 w-full">
                 <h2 class="font-semibold text-primary text-xl font-fredoka">Recent Activity</h2>
                 <ul class="space-y-4 text-sm text-black font-quicksand">
                     <li class="flex gap-3.5 items-center"><i class="fa-solid fa-circle-check"></i>
-                       You submitted Mathematics results for Primary 4A</li>
+                        You submitted Mathematics results for Primary 4A</li>
                     <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
                         Attendance taken for Primary 5</li>
                     <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>

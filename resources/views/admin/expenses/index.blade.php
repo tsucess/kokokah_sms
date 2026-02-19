@@ -38,7 +38,7 @@
 
         <!-- Pending Expenses -->
         <div class="bg-white rounded-lg border border-gray-200 p-6 relative overflow-hidden">
-            <div class="absolute top-0 left-0 right-0 h-2 bg-red100"></div>
+            <div class="absolute top-0 left-0 right-0 h-2 bg-red200"></div>
             <p class="text-3xl font-bold text-primary font-inter mb-2">₦49,000</p>
             <p class="text-xs text-primary font-mulish">Pending Expenses</p>
         </div>

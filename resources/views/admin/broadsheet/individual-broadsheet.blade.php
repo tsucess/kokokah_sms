@@ -50,13 +50,13 @@
             </div>
 
             <!-- Top Performing Class -->
-            <div class="bg-white rounded-lg border-t-8 border-red100 p-6 space-y-1.5 shadow-boardsheet">
+            <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
                 <p class="text-3xl font-bold text-primary font-mulish">45%</p>
                 <p class="text-xs text-primary font-mulish">TLowest Student (Fatima Ballo)</p>
             </div>
 
             <!-- Lowest Performing Subject -->
-            <div class="bg-white rounded-lg border-t-8 border-red-500 p-6 space-y-1.5 shadow-boardsheet">
+            <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
                 <p class="text-3xl font-bold text-primary font-mulish">78%</p>
                 <p class="text-xs text-primary font-mulish">Top Subject (English)</p>
             </div>
