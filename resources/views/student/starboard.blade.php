@@ -45,12 +45,12 @@
     </style>
     <div class="p-4 md:px-8 space-y-6">
         <header
-            class="w-full rounded-2xl h-44 bg-linear-to-r from-purple600 to-purple700 shadow-headerBox flex items-center justify-between gap-2 px-4 md:px-8">
+            class="w-full rounded-2xl h-44 bg-linear-to-r from-purple600 to-purple700 shadow-headerBox flex flex-col sm:flex-row gap-6 py-6 sm:items-center sm:justify-between sm:gap-2 px-4 sm:px-8">
             <div class="flex flex-col gap-1">
                 <h2 class="text-white font-poppins font-semibold text-lg md:text-xl">Welcome back, Aisha!</h2>
                 <p class="text-white/75 font-poppins text-xs">You’re doing amazing! Keep up the great work</p>
             </div>
-            <div class="flex flex-col gap-1 items-center">
+            <div class="flex flex-col gap-1 sm:items-center">
                 <h2 class="text-white font-poppins font-semibold text-lg md:text-xl">3</h2>
                 <p class="text-white/75 font-poppins text-xs">Badges Awarded Today</p>
             </div>
@@ -64,7 +64,7 @@
 
         <section class="flex flex-col gap-4">
             <h3 class="text-black font-sitka text-sm font-semibold">Your Badges</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 @for ($i = 1; $i <= 6; $i++)
                     <div onclick='openBadgeModal()'
                         class="border-2 border-purple600 rounded-2xl px-4 py-6 md:py-8 flex flex-col gap-5 items-center bg-white">
@@ -73,7 +73,7 @@
                         </div>
                         <div class="flex flex-col gap-1 items-center">
                             <h4 class="font-sitka font-semibold text-black50 text-base">Math Whiz</h4>
-                            <p class="text-sm text-user-date font-mulish">Awarded for consistent attendance</p>
+                            <p class="text-sm text-user-date font-mulish text-center">Awarded for consistent attendance</p>
                         </div>
                     </div>
                 @endfor
@@ -102,7 +102,7 @@
                 </div>
                 <div class="flex flex-col gap-1 items-center">
                     <h4 class="font-sitka font-semibold text-black50 text-base">Math Whiz</h4>
-                    <p class="text-sm text-user-date font-mulish">Awarded for consistent attendance</p>
+                    <p class="text-sm text-user-date font-mulish text-center">Awarded for consistent attendance</p>
                 </div>
                 <div class="bg-school-btn flex items-center gap-1 px-3 py-1 rounded-md"><i class="fa-solid fa-trophy text-primary"></i> <span class="text-xs font-semibold text-primary">Earned on 20/12/2025</span></div>
                 <div class="bg-accent w-80 py-3 rounded-md flex items-center justify-center text-sm font-sitka text-black font-semibold">Awesome!</div>

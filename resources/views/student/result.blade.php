@@ -6,24 +6,24 @@
 @section('content')
     <div class="p-4 md:px-8 space-y-6">
         <!-- Header -->
-    <div class="mb-10 flex items-start justify-between gap-6">
+    <div class="mb-10 flex flex-col md:flex-row items-start justify-between gap-6">
         <div class="space-y-2">
             <h2 class="text-xl font-bold text-primary font-fredoka">My Results</h2>
         </div>
         <div class="flex items-center justify-end space-x-3">
-            <button class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
-                <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
+            <button class="px-4 py-2 border border-communicationBtn text-xs md:text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
+                <i class="fa-solid fa-download text-black group-hover:text-primary hidden sm:inline"></i>
                 Export PDF
             </button>
             <div class="flex items-center ">
-            <button class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
-                <svg class="w-5 h-5 text-black group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-xs md:text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
+                <svg class="w-5 h-5 text-black group-hover:text-white hidden sm:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                 </svg>
                 Export Excel
             </button>
-            <button class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
-                <i class="fa-solid fa-print text-black"></i>
+            <button class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-xs md:text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
+                <i class="fa-solid fa-print text-black hidden sm:inline"></i>
                 Print Broadsheet
             </button>
             </div>
@@ -185,7 +185,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ">
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 h-20">
                     <label
-                        class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Teacher
+                        class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Teacher
                         Comment</label>
                     <textarea placeholder="You performed excellently term this term. Keep improving your weaker subjects."
                         class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
@@ -193,7 +193,7 @@
 
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 h-20">
                     <label
-                        class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Principal
+                        class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Principal
                         Comment</label>
                     <textarea placeholder="You performed excellently term this term. Keep improving your weaker subjects."
                         class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
@@ -201,12 +201,12 @@
 
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 h-20">
                     <label
-                        class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Status</label>
+                        class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Status</label>
                     <textarea placeholder="Promoted" class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
                 </div>
 
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 h-20">
-                    <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Next
+                    <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Next
                         Section Begins</label>
                     <input type="date" placeholder="22/2/2025"
                         class="w-full outline-none text-primary text-sm resize-none h-full" />

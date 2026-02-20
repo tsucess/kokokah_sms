@@ -13,11 +13,11 @@
                 <span class="text-xs text-white/75 font-poppins">Primary 1 1-A</span>
             </div>
 
-            <img src="/images/image_timetable_page.png" alt="" class="absolute right-20 w-50 top-2">
+            <img src="/images/image_timetable_page.png" alt="" class="absolute right-2 md:right-20 w-35 md:w-50 top-6 md:top-2">
         </header>
 
-        <section class="bg-white shadow-xl rounded-2xl p-6">
-            <table class="w-full">
+        <section class="bg-white shadow-xl rounded-2xl p-2 md:p-6 overflow-x-auto">
+            <table class="w-full ">
                 <thead class="border-b border-gray-200">
 
                     <tr>

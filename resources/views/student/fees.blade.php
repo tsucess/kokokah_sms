@@ -6,7 +6,7 @@
 @section('content')
     <div class="p-4 md:px-8 space-y-6">
         <!-- Header -->
-    <div class="mb-10 flex items-start justify-between gap-6">
+    <div class="mb-10 flex flex-col sm:flex-row items-start justify-between gap-6">
         <div class="space-y-2">
             <h2 class="text-xl font-bold text-primary font-fredoka">Fees</h2>
         </div>

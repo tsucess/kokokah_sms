@@ -6,17 +6,17 @@
 @section('content')
     <div class="p-4 md:px-8 space-y-6">
         <header
-            class="bg-linear-to-r from-purple600 from-80%  to-purple700 to-95% rounded-2xl px-6 py-6 shadow-headerBox md:py-12 md:px-8 lg:px-12 flex items-center relative">
+            class="bg-linear-to-r from-purple600 from-80%  to-purple700 to-95% rounded-2xl px-6 py-10 shadow-headerBox sm:py-12 md:px-8 lg:px-12 flex items-center relative">
             <div>
                 <h2 class="text-white font-poppins text-base md:text-2xl font-semibold">Attendance Summary</h2>
                 <span class="text-xs text-white/75 font-poppins">Always stay updated in your student portal</span>
             </div>
 
-            <img src="/images/parent-child-info-illustration.png" alt="" class="absolute right-20 w-40 top-0">
+            <img src="/images/parent-child-info-illustration.png" alt="" class="absolute right-0 sm:right-20 w-20 sm:w-40 top-8 sm:top-0">
         </header>
 
         <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <div class="flex flex-col gap-5 rounded-2xl border border-school-btn p-4">
+            <div class="flex flex-col gap-3 sm:gap-5 rounded-2xl border border-school-btn p-4">
                 <div class="flex items-center justify-between gap-3">
                     <h4 class="text-primary text-base font-fredoka">Attendance Rate</h4>
                     <i class="fa-solid fa-school-circle-check"></i>
@@ -24,7 +24,7 @@
                 <h3 class="text-primary text-2xl font-fredoka font-semibold">98%</h3>
                 <span class="text-search text-xs font-semibold mt-auto">Good</span>
             </div>
-            <div class="flex flex-col gap-5 rounded-2xl border border-school-btn p-4">
+            <div class="flex flex-col gap-3 sm:gap-5 rounded-2xl border border-school-btn p-4">
                 <div class="flex items-center justify-between gap-3">
                     <h4 class="text-primary text-base font-fredoka">Total School Days</h4>
                     <i class="fa-solid fa-school-circle-check"></i>
@@ -32,7 +32,7 @@
                 <h3 class="text-primary text-2xl font-fredoka font-semibold">92</h3>
                 <span class="text-search text-xs font-semibold mt-auto">Days</span>
             </div>
-            <div class="flex flex-col gap-5 rounded-2xl border border-school-btn p-4">
+            <div class="flex flex-col gap-3 sm:gap-5 rounded-2xl border border-school-btn p-4">
                 <div class="flex items-center justify-between gap-3">
                     <h4 class="text-primary text-base font-fredoka">Present Days</h4>
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -40,7 +40,7 @@
                 <h3 class="text-primary text-2xl font-fredoka font-semibold">89</h3>
                 <span class="text-search text-xs font-semibold mt-auto">Days</span>
             </div>
-            <div class="flex flex-col gap-5 rounded-2xl border border-school-btn p-4">
+            <div class="flex flex-col gap-3 sm:gap-5 rounded-2xl border border-school-btn p-4">
                 <div class="flex items-center justify-between gap-3">
                     <h4 class="text-primary text-base font-fredoka">Absent Days</h4>
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -48,7 +48,7 @@
                 <h3 class="text-primary text-2xl font-fredoka font-semibold">3</h3>
                 <span class="text-search text-xs font-semibold mt-auto">Days</span>
             </div>
-            <div class="flex flex-col gap-5 rounded-2xl border border-school-btn p-4">
+            <div class="flex flex-col gap-3 sm:gap-5 rounded-2xl border border-school-btn p-4">
                 <div class="flex items-center justify-between gap-3">
                     <h4 class="text-primary text-base font-fredoka">Late</h4>
                     <i class="fa-solid fa-naira-sign"></i>
