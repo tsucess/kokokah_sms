@@ -104,6 +104,7 @@
     --color-orange150:#FF8103;
     --color-gray650:#6E6D71;
     --color-green450:#09AF5F;
+    --color-black400: #121212;
 
     --font-fredoka: "Fredoka", sans-serif;
     --font-inter: "Inter", sans-serif;
@@ -146,6 +147,7 @@
     --shadow-boardsheet: 0 4px 4px 0 #00000040;
     --shadow-individualBroadsheet: 0 4px 4px 0 #00000040, 0 -4px 4px 0 #00000026;
     --shadow-headerBox : 8px 8px 48px 8px #00000014;
+    --shadow-celebration: 0 16px 6px 0 #7A7A7A1F;
 
 
 }
