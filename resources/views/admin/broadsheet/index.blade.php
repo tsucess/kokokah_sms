@@ -79,13 +79,13 @@
         </div>
 
         <!-- Top Performing Class -->
-        <div class="bg-white rounded-lg border-t-8 border-red100 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">SS2A (83%)</p>
             <p class="text-xs text-primary font-mulish">Top Performing Class</p>
         </div>
 
         <!-- Lowest Performing Subject -->
-        <div class="bg-white rounded-lg border-t-8 border-red-500 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">Mathematics</p>
             <p class="text-xs text-primary font-mulish">Lowest Performing Subject </p>
         </div>

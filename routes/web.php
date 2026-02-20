@@ -456,9 +456,9 @@ Route::prefix('student')->name('student.')->group(function () {
         return view('student.timetable');
     })->name('timetable');
 
-    Route::get('/attendance', function () {
-        return view('student.attendance');
-    })->name('attendance');
+    Route::get('/attendance-summary', function () {
+        return view('student.attendance-summary');
+    })->name('attendance-summary');
 
     Route::get('/result', function () {
         return view('student.result');
