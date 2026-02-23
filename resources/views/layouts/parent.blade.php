@@ -18,13 +18,13 @@
 
     @stack('styles')
 </head>
-<body class="font-sans antialiased bg-gray-50">
-    <div class="flex min-h-screen">
+<body class="font-sans antialiased bg-superadmin-bg">
+    <div class="flex min-h-screen bg-superadmin-bg">
         <!-- Sidebar -->
         <x-parent-sidebar :active="$active ?? ''" />
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col overflow-x-hidden">
+        <div class="flex-1 flex flex-col overflow-x-hidden bg-superadmin-bg">
             <!-- Top Header -->
             <header class="bg-superadmin-bg border-b border-gray-200 px-8 py-4">
                 <div class="flex items-center justify-between">
@@ -55,7 +55,7 @@
             </header>
 
             <!-- Page Content -->
-            <main class="flex-1 overflow-y-auto bg-gray-50">
+            <main class="flex-1 overflow-y-auto bg-superadmin-bg">
                 @yield('content')
             </main>
         </div>
