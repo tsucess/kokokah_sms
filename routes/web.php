@@ -380,9 +380,9 @@ Route::prefix('parent')->name('parent.')->group(function () {
         return view('parent.child-information');
     })->name('child-information');
 
-    Route::get('/attendance', function () {
-        return view('parent.attendance');
-    })->name('attendance');
+    Route::get('/attendance-summary', function () {
+        return view('parent.attendance-summary');
+    })->name('attendance-summary');
 
     Route::get('/result', function () {
         return view('parent.result');
@@ -392,13 +392,13 @@ Route::prefix('parent')->name('parent.')->group(function () {
         return view('parent.fees');
     })->name('fees');
 
-    Route::get('/fees/payment-history', function () {
-        return view('fees.payment-history');
-    })->name('fees.payment-history');
+    Route::get('/payment-history', function () {
+        return view('parent.payment-history');
+    })->name('payment-history');
 
-    Route::get('/message', function () {
-        return view('parent.message');
-    })->name('message');
+    Route::get('/announcements', function () {
+        return view('parent.announcements');
+    })->name('announcements');
 
     Route::get('/starboard', function () {
         return view('parent.starboard');
