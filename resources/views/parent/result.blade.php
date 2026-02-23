@@ -31,20 +31,20 @@
     </div>
 
     {{-- filter --}}
-    <div class="flex gap-3">
-        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40 ">
+    <div class="flex gap-3 flex-col md:flex-row">
+        <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40 ">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Session</label>
                 <select class="w-full outline-none text-primary text-sm">
                     <option>2025-2026</option>
                 </select>
             </div>
-            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Term</label>
                 <select class="w-full outline-none text-primary text-sm">
                     <option>First Term</option>
                 </select>
             </div>
-            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40">
+            <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Term</label>
                 <select class="w-full outline-none text-primary text-sm">
                     <option>First Term</option>
