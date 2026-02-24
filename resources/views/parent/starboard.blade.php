@@ -127,7 +127,7 @@
                 <div class="flex items-center gap-1"><i class="fa-solid fa-share-nodes text-black fa-lg"></i>
                     <h2 class="text-primary font-fredoka text-lg font-semibold">Share Achievement</h2>
                 </div>
-                <button onclick="closeachievementModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
+                <button onclick="closeAchievementModal()" class="text-gray-700 hover:text-gray-900 transition-colors">
                     <i class="fa-regular fa-circle-xmark fa-lg"></i>
                 </button>
             </div>
