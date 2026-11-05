@@ -4,7 +4,7 @@
 @section('page-title', 'Dashboard')
 @section('page-description', 'Manage and oversee your school management platform')
 
-@section('header-actions')
+{{-- @section('header-actions')
 <div class="flex align-items-center">
     <button class="px-4 py-2 bg-white text-body3 border border-primary text-primary rounded-l-lg font-medium hover:bg-primary hover:text-white transition-colors">
         Bulk Upload Student
@@ -16,7 +16,7 @@
         Add New School
     </button>
     </div>
-@endsection
+@endsection --}}
 
 @section('content')
 <div class="p-8 space-y-6">
@@ -149,7 +149,7 @@
             <h2 class="text-h6 font-bold font-fredoka text-primary">Recently Added Schools</h2>
             <p class="text-body4 font-fredoka text-primary">Latest schools subscribed to the platform</p>
         </div>
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="bg-gray-50 border-b border-gray-200">
                     <tr>

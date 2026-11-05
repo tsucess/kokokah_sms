@@ -41,13 +41,13 @@
                         Parents
                     </button>
                 </nav>
-                <button
+                {{-- <button
                     class="px-4 py-2 bg-accent text-black rounded-lg font-sitka text-sm hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Teacher
-                </button>
+                </button> --}}
             </div>
 
             <!-- Search -->
@@ -78,7 +78,8 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
+                        @for ($i = 0; $i < 9; $i++)
+                         <tr class="hover:bg-gray-50 relative">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div>
                                     <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
@@ -111,245 +112,32 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
+
+                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+        ? 'font-medium bg-black text-white'
+        : ($i % 3 === 1 ?
+         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
+    }}">
+    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
                             </td>
+
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
+                                <button class="text-gray-600 hover:text-primary more-btn">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                         <path
                                             d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                                     </svg>
                                 </button>
+                                 <div
+                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
+                            Teacher</button>
+                    </div>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Sarah Thompson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 12/06/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        sarah.t@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 345 6789
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Michael Chen</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 20/09/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        michael.c@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 456 7890
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">David Rodriguez</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 05/07/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood Comprehensive</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        david.r@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 567 8901
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emily Johnson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 18/04/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        emily.j@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 678 9012
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Jessica Williams</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 22/03/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        jessica.w@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 789 0123
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
+                        @endfor
+
                     </tbody>
 
 
@@ -386,56 +174,9 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood High</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        emmanuel.w@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 234 5678
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
+                         @for ($i = 0; $i < 9; $i++)
+
+                        <tr class="hover:bg-gray-50 relative">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div>
                                     <p class="text-sm font-sitka font-medium text-primary">Sarah Thompson</p>
@@ -471,216 +212,36 @@
                                     </p>
                                 </div>
                             </td>
+
+
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
+
+                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+        ? 'font-medium bg-black text-white'
+        : ($i % 3 === 1 ?
+         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
+    }}">
+    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
                             </td>
+
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
+                                <button class="text-gray-600 hover:text-primary more-btn">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                         <path
                                             d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                                     </svg>
                                 </button>
+                                 <div
+                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
+                            Student</button>
+                    </div>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Michael Chen</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 20/09/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        michael.c@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 456 7890
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">David Rodriguez</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 05/07/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood Comprehensive</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        david.r@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 567 8901
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emily Johnson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 18/04/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        emily.j@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 678 9012
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Jessica Williams</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 22/03/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        jessica.w@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 789 0123
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
+                        @endfor
+                         </tbody>
 
 
 
@@ -715,8 +276,11 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
+                        @for ($i = 0; $i < 9; $i++)
+
+                        <tr class="hover:bg-gray-50 relative">
+
+<td class="px-6 py-4 whitespace-nowrap">
                                 <div>
                                     <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
                                     <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
@@ -748,249 +312,35 @@
                                     </p>
                                 </div>
                             </td>
+
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
+
+                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+        ? 'font-medium bg-black text-white'
+        : ($i % 3 === 1 ?
+         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
+    }}">
+    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
                             </td>
+
                             <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
+                                <button class="text-gray-600 hover:text-primary more-btn">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                         <path
                                             d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                                     </svg>
                                 </button>
+                                 <div
+                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
+                            Parent</button>
+                    </div>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Sarah Thompson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 12/06/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">1 child</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        sarah.t@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 345 6789
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Michael Chen</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 20/09/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">2 children</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        michael.c@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 456 7890
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">David Rodriguez</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 05/07/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood Comprehensive</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">3 children</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        david.r@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 567 8901
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-white border border-school-btn text-black font-fredoka rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emily Johnson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 18/04/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Riverside</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">6 children</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        emily.j@riverside.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 678 9012
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-medium bg-black text-white font-fredoka rounded-full">Active</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Jessica Williams</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 22/03/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">2 children</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        jessica.w@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 789 0123
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-                                    class="px-4 py-1.5 text-xs font-sitka font-medium bg-white border border-school-btn text-black rounded-full">Inactive</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                            </td>
-                        </tr>
+                        @endfor
+                        
                     </tbody>
 
 
@@ -1044,6 +394,48 @@
             document.addEventListener('DOMContentLoaded', () => {
                 showTab('teachers');
             });
+
+
+            document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".more-btn");
+            console.log('clicked')
+
+            function closeAllMenus() {
+                document.querySelectorAll(".action-menu").forEach(menu => {
+                    menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+                    menu.classList.remove("opacity-100", "scale-100");
+                });
+            }
+
+
+            buttons.forEach(btn => {
+                const menu = btn.nextElementSibling;
+                console.dir(btn)
+
+                // CLICK → open
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+
+                    const isOpen = menu.classList.contains("opacity-100");
+
+                    closeAllMenus();
+
+                    if (!isOpen) {
+                        menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+                        menu.classList.add("opacity-100", "scale-100");
+                    }
+                });
+
+                // DOUBLE CLICK → force close
+                btn.addEventListener("dblclick", (e) => {
+                    e.stopPropagation();
+                    closeAllMenus();
+                });
+            });
+
+            // click outside
+            document.addEventListener("click", closeAllMenus);
+        });
         </script>
     @endpush
 @endsection

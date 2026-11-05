@@ -36,7 +36,8 @@ Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('auth')->name('dashboard');
+})->name('dashboard');
+// })->middleware('auth')->name('dashboard');
 
 // Super Admin Routes
 Route::prefix('superadmin')->name('superadmin.')->group(function () {

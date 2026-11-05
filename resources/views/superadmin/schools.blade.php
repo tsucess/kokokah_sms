@@ -4,7 +4,7 @@
 @section('page-title', 'Schools')
 @section('page-description', 'Manage and oversee your school management platform')
 
-@section('header-actions')
+{{-- @section('header-actions')
     <button
         class="px-4 py-2 bg-accent text-gray-900 rounded-lg font-medium hover:bg-accent-hover transition-colors flex items-center">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -12,7 +12,7 @@
         </svg>
         Add New School
     </button>
-@endsection
+@endsection --}}
 
 @section('content')
     <div class="p-8 space-y-6">
@@ -81,7 +81,7 @@
                         <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
                             School</button>
                     </div>
-                    </div> 
+                    </div>
 
 
 
@@ -123,9 +123,14 @@
                     <!-- Footer -->
                     <div class="flex items-center justify-between pt-4 border-t border-black">
                         <button
-                            class="px-4 py-2 bg-accent text-black rounded-full font-medium text-sm hover:bg-accent-hover">
-                            {{ $i % 3 === 0 ? 'active' : ($i % 3 === 1 ? 'Inactive' : 'active') }}
-                        </button>
+    class="px-4 py-2 rounded-full font-medium text-sm
+    {{ $i % 3 === 0
+        ? 'bg-accent text-black hover:bg-accent-hover'
+        : ($i % 3 === 1 ?
+         'border border-accent text-accent hover:bg-accent hover:text-black' : 'bg-accent text-black hover:bg-accent-hover')
+    }}">
+    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}
+</button>
                         <button class="px-4 py-2 rounded-full bg-white border border-school-btn">
                             <span class="text-sm font-medium text-black">{{ $i % 3 === 0 ? 'Standard' : 'Premium' }}</span>
                         </button>
