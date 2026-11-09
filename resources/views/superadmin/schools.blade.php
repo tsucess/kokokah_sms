@@ -15,18 +15,18 @@
 @endsection --}}
 
 @section('content')
-    <div class="p-8 space-y-6">
+    <div class="p-4 md:p-8 space-y-6">
         <!-- Filter Tabs and Search -->
         <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <button class="px-4 py-2 bg-accent border border-accent text-primary rounded-l-lg font-medium text-sm">
+            <div class="flex items-center tabs">
+                <button data-tab-btn="All" class="px-4 py-2 bg-accent border border-accent text-primary rounded-l-lg font-medium text-sm tab-btn">
                     All
                 </button>
-                <button class="px-4 py-2 bg-white border border-primary text-primary font-medium text-sm hover:bg-gray-50">
+                <button data-tab-btn="Active" class="px-4 py-2 bg-white border border-primary text-primary font-medium text-sm  tab-btn">
                     Active
                 </button>
-                <button
-                    class="px-4 py-2 bg-white border border-primary text-primary rounded-r-lg font-medium text-sm hover:bg-gray-50">
+                <button data-tab-btn="Inactive"
+                    class="px-4 py-2 bg-white border border-primary text-primary rounded-r-lg font-medium text-sm  tab-btn">
                     Inactive
                 </button>
             </div>
@@ -47,7 +47,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @for ($i = 0; $i < 9; $i++)
                 <!-- School Card -->
-                <div class="bg-white rounded-2xl border border-school-btn p-6">
+                <div class="bg-white rounded-2xl border border-school-btn p-6 school-card"  data-status="{{ $i % 3 === 1 ? 'Inactive' : 'Active' }}">
                     <!-- Header -->
                     <div class="flex items-start justify-between mb-10 relative">
                         <div class="flex items-start space-x-3">
@@ -131,7 +131,7 @@
     }}">
     {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}
 </button>
-                        <button class="px-4 py-2 rounded-full bg-white border border-school-btn">
+                        <button class="px-4 py-2 rounded-full bg-white border border-school-btn ">
                             <span class="text-sm font-medium text-black">{{ $i % 3 === 0 ? 'Standard' : 'Premium' }}</span>
                         </button>
 
@@ -179,6 +179,41 @@
             // click outside
             document.addEventListener("click", closeAllMenus);
         });
+
+        let selectedTab = 'All';
+
+const tabButtons = document.querySelectorAll('.tab-btn');
+const schoolCards = document.querySelectorAll('.school-card');
+
+function filterSchools() {
+    schoolCards.forEach(card => {
+        const status = card.dataset.status;
+
+        if (selectedTab === 'All' || status === selectedTab) {
+            card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+}
+
+tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        selectedTab = btn.dataset.tabBtn;
+
+        filterSchools();
+
+        // Update active tab styling
+        tabButtons.forEach(tab => {
+            tab.classList.remove('bg-accent', 'border-accent');
+            tab.classList.add('bg-white', 'border-primary');
+        });
+
+        btn.classList.remove('bg-white', 'border-primary');
+        btn.classList.add('bg-accent', 'border-accent');
+    });
+});
+
     </script>
 
 @endsection

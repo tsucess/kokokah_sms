@@ -19,7 +19,7 @@
 @endsection --}}
 
 @section('content')
-<div class="p-8 space-y-6">
+<div class="p-4 md:p-8 space-y-6">
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Total Schools -->
@@ -91,7 +91,7 @@
     </div>
 
     <!-- Charts Row -->
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-6">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-x-6 gap-y-5">
         <!-- Revenue & Profitability -->
         <div class="bg-white rounded-lg border border-gray-200 py-6 px-4 lg:col-span-3">
             <div class="flex items-center justify-between mb-4">
@@ -112,7 +112,7 @@
                     <h2 class="text-body4 font-semibold text-black font-inter">School Types (Distribution by institution type)</h2>
                 </div>
             </div>
-            <div class="flex items-center justify-center h-80 lg:flex-col lg:gap-5">
+            <div class="flex items-center justify-center h-80 flex-col gap-4 sm:flex-row lg:flex-col lg:gap-5">
                 <div class="relative w-64 h-64">
                     <canvas id="schoolTypesChart"></canvas>
                 </div>

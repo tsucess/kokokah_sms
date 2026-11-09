@@ -1,6 +1,8 @@
 @props(['active' => ''])
 
-<aside class="w-56 shrink-0 bg-white border-r border-gray-200 min-h-screen flex flex-col font-sitka">
+<aside id="sidebar" class="fixed top-0 left-0 z-50 h-full
+    -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto
+    lg:translate-x-0 lg:static w-56 shrink-0 bg-white border-r border-gray-200  flex flex-col font-sitka">
     <!-- Logo -->
     <div class="p-6">
         <a href="{{ route('superadmin.dashboard') }}" class="flex items-center">
@@ -71,7 +73,7 @@
     </nav>
 
     <!-- Settings -->
-    <div class="px-4 pb-4">
+    <div class="px-4 pb-4 ">
         <a href="{{ route('superadmin.settings') }}" class="flex items-center gap-4 px-4 py-3 text-sm font-medium text-black hover:bg-gray-100 rounded-lg transition-colors">
             <i class="fa-solid fa-gear text-black"></i>
             Settings
@@ -79,7 +81,7 @@
     </div>
 
     <!-- User Profile -->
-    <div class="p-4 border-t border-gray-200">
+    <div class="p-4 border-t border-gray-200 mt-auto">
         <div class="flex items-center">
             <img src="https://ui-avatars.com/api/?name=Culaccino&background=f59e0b&color=fff" alt="User" class="w-10 h-10 rounded-full">
             <div class="ml-3 flex-1">

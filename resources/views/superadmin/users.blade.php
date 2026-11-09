@@ -22,7 +22,7 @@
         }
 
     </style>
-    <div class="p-8 space-y-6 font-sitka">
+    <div class="p-4 md:p-8 space-y-6 font-sitka">
 
         <!-- Tabs and Add Teacher Button -->
         <div class="flex flex-col gap-6">
@@ -340,7 +340,7 @@
                             </td>
                         </tr>
                         @endfor
-                        
+
                     </tbody>
 
 
