@@ -5,7 +5,7 @@
 @section('page-description', 'Manage and oversee your school management platform')
 
 @section('content')
-<div class="p-8 space-y-6">
+<div class="p-4 md:p-8 space-y-6">
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Average Response Time -->

@@ -39,10 +39,10 @@
     <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
 
         <!-- Header (does not scroll) -->
-          <header class="shrink-0 bg-white border-b border-gray-200 px-4 md:px-8 py-6">
-            <div class="flex items-center justify-between">
+          <header class="shrink-0 bg-white border-b border-gray-200 px-4 md:px-8 py-4 sm:py-6">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
 
-                <div class="flex items-center gap-3">
+                <div class="flex items-start gap-3 ">
                     <!-- Mobile Menu Button -->
                     <button id="sidebar-toggle"
                         class="lg:hidden text-primary p-2 rounded-lg hover:bg-gray-100">

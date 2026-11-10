@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-<div class="p-8 space-y-6">
+<div class="p-4 md:p-8 space-y-6">
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Monthly Revenue -->
@@ -126,7 +126,7 @@
                 </li>
             </ul>
 
-            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 justify-between pt-4 border-t border-gray-200">
                 <button class="px-6 py-2 bg-accent text-black rounded-full font-medium hover:bg-accent-hover transition-colors">
                     25 schools
                 </button>
@@ -198,7 +198,7 @@
                 </li>
             </ul>
 
-            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 justify-between pt-4 border-t border-gray-200">
                 <button class="px-6 py-2 bg-accent text-black rounded-full font-medium hover:bg-accent-hover transition-colors">
                     52 schools
                 </button>
@@ -269,7 +269,7 @@
                 </li>
             </ul>
 
-            <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 justify-between pt-4 border-t border-gray-200">
                 <button class="px-6 py-2 bg-accent text-black rounded-full font-medium hover:bg-accent-hover transition-colors">
                     47 schools
                 </button>
@@ -286,7 +286,7 @@
             <h2 class="text-lg font-semibold text-primary font-fredoka">Recently Transactions</h2>
             <p class="text-sm text-primary font-fredoka">Latest subscription payments and billing</p>
         </div>
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>
@@ -361,7 +361,8 @@
             <h2 class="text-lg font-semibold text-primary">Upcoming Renewals</h2>
             <p class="text-sm text-primary">Schools with upcoming subscription renewals</p>
         </div>
-        <div class="divide-y divide-gray-200">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <div class="divide-y divide-gray-200 w-full min-w-150">
             <div class="px-6 py-4 flex items-center justify-between hover:bg-gray-50">
                 <div class="flex-1">
                     <h3 class="text-sm font-medium text-primary">Sunset Valley School</h3>
@@ -418,6 +419,7 @@
                     <button class="px-4 py-1 border border-primary text-primary text-sm rounded-lg hover:bg-gray-50">Contact</button>
                 </div>
             </div>
+        </div>
         </div>
         <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
             <button class="px-4 py-1 border border- primary rounded-lg text-body5 font-medium text-primary bg-white hover:bg-gray-50">

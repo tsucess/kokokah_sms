@@ -12,7 +12,7 @@
 @endsection
 
 @section('content')
-    <div class="p-8 space-y-6">
+    <div class="p-4 md:p-8 space-y-6">
         <!-- Stats Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5  gap-6">
             <!-- Total Budgets -->
@@ -240,9 +240,10 @@
                     <p class="text-grey100 text-sm">Top schools</p>
                 </div>
                 <div class="space-y-4">
-                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
+                     @for ($i = 0; $i < 3; $i++)
+                    <div class="flex flex-col sm:flex-row gap-4 sm:items-center justify-between py-5 px-3 sm:px-6 rounded-2xl border border-grey200">
+                        <div class="flex sm:items-center gap-4">
+                            <div class="bg-[#FEF9C2] w-10 sm:w-13 h-10 sm:h-13 rounded-xl flex items-center justify-center">
                                 <span class="text-h4 font-bold text-secondary font-sitka">1</span>
                             </div>
 
@@ -256,70 +257,12 @@
 
                             </div>
                         </div>
-                        <div class="border border-grey200 rounded-full px-7.5 py-2">
+                        <div class="border border-grey200 rounded-full px-7.5 py-2 flex justify-center items-center">
                             <p class="text-primary text-sm font-sitka">84% engagement</p>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
-                                <span class="text-h4 font-bold text-secondary font-sitka">1</span>
-                            </div>
+@endfor
 
-                            <div class="flex flex-col gap-1">
-                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
-                                <div class="flex items-center gap-1">
-                                    <p class="text-xs text-grey100">324 Budgets </p>
-                                    <p class="text-xs text-grey100">.</p>
-                                    <p class="text-xs text-grey100">187 classes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="border border-grey200 rounded-full px-7.5 py-2">
-                            <p class="text-primary text-sm font-sitka">84% engagement</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
-                                <span class="text-h4 font-bold text-secondary font-sitka">1</span>
-                            </div>
-
-                            <div class="flex flex-col gap-1">
-                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
-                                <div class="flex items-center gap-1">
-                                    <p class="text-xs text-grey100">324 Budgets </p>
-                                    <p class="text-xs text-grey100">.</p>
-                                    <p class="text-xs text-grey100">187 classes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="border border-grey200 rounded-full px-7.5 py-2">
-                            <p class="text-primary text-sm font-sitka">84% engagement</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center justify-between py-5 px-6 rounded-2xl border border-grey200">
-                        <div class="flex items-center gap-4">
-                            <div class="bg-[#FEF9C2] w-13 h-13 rounded-xl flex items-center justify-center">
-                                <span class="text-h4 font-bold text-secondary font-sitka">1</span>
-                            </div>
-
-                            <div class="flex flex-col gap-1">
-                                <p class="text-body2 font-semibold text-primary font-sitka">Lagos International School</p>
-                                <div class="flex items-center gap-1">
-                                    <p class="text-xs text-grey100">324 Budgets </p>
-                                    <p class="text-xs text-grey100">.</p>
-                                    <p class="text-xs text-grey100">187 classes</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="border border-grey200 rounded-full px-7.5 py-2">
-                            <p class="text-primary text-sm font-sitka">84% engagement</p>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -332,36 +275,36 @@
                 <h2 class="text-lg font-bold text-black font-inter">Recent System Activity</h2>
             </div>
             <div class="space-y-4">
-                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-10">
+                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-4 sm:px-10">
                     <div class="w-2 h-2 bg-blue-500 rounded-full shrink"></div>
-                    <div class="flex items-center justify-between flex-1">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center justify-between flex-1">
                         <p class="text-sm text-black"> <span class='text-blue100'>Lagos International School</span>
                             awarded 23 badges today</p>
                         <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 rounded-lg bg-purple50 py-6 px-10">
+                <div class="flex items-center gap-3 rounded-lg bg-purple50 py-6 px-4 sm:px-10">
                     <div class="w-2 h-2 bg-purple200 rounded-full shrink"></div>
-                    <div class="flex items-center justify-between flex-1">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center justify-between flex-1">
                         <p class="text-sm text-black"> <span class='text-purple100'>Lagos International School</span>
                             awarded 23 badges today</p>
                         <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 rounded-lg bg-green50 py-6 px-10">
+                <div class="flex items-center gap-3 rounded-lg bg-green50 py-6 px-4 sm:px-10">
                     <div class="w-2 h-2 bg-green100 rounded-full shrink"></div>
-                    <div class="flex items-center justify-between flex-1">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center justify-between flex-1">
                         <p class="text-sm text-black"> <span class='text-green200'>Lagos International School</span>
                             awarded 23 badges today</p>
                         <p class="text-xs text-black">2 minutes ago</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-10">
+                <div class="flex items-center gap-3 rounded-lg bg-blue50 py-6 px-4 sm:px-10">
                     <div class="w-2 h-2 bg-blue-500 rounded-full shrink"></div>
-                    <div class="flex items-center justify-between flex-1">
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center justify-between flex-1">
                         <p class="text-sm text-black"> <span class='text-blue100'>Lagos International School</span>
                             awarded 23 badges today</p>
                         <p class="text-xs text-black">2 minutes ago</p>

@@ -14,30 +14,31 @@
             color: #004A53;
             border-color: #fdaf22;
         }
+
         .active-tab:hover {
             background-color: #feca6c;
         }
+
         .hidden {
             display: none;
         }
-
     </style>
     <div class="p-4 md:p-8 space-y-6 font-sitka">
 
         <!-- Tabs and Add Teacher Button -->
         <div class="flex flex-col gap-6">
             <div class=" flex items-center justify-between">
-                <nav class="flex" aria-label="Tabs">
+                <nav class="flex w-full max-w-sm" aria-label="Tabs">
                     <button onclick="showTab('teachers')" id="tab-teachers"
-                        class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-l-lg hover:bg-gray-200 transition-colors">
+                        class="py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-l-lg hover:bg-primary/5 transition-colors flex-1">
                         Teachers
                     </button>
                     <button onclick="showTab('students')" id="tab-students"
-                        class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
+                        class="text-sm font-sitka border border-primary text-primary bg-white hover:bg-primary/5 transition-colors flex-1">
                         Students
                     </button>
                     <button onclick="showTab('parents')" id="tab-parents"
-                        class="px-6 py-2 text-sm font-sitka rounded-r-lg border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
+                        class="text-sm font-sitka rounded-r-lg border border-primary text-primary bg-white hover:bg-primary/5 transition-colors flex-1">
                         Parents
                     </button>
                 </nav>
@@ -64,9 +65,10 @@
 
 
             <!-- Teachers Table -->
-            <div class="overflow-x-auto bg-white rounded-lg border border-gray-200 tab-content hidden"
+            <div class=" bg-white rounded-lg border border-gray-200 tab-content hidden"
                 id="content-teachers">
-                <table class="w-full">
+                <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <table class="w-full min-w-150" >
                     <thead class="border-b border-gray-200">
                         <tr>
                             <th class="px-6 py-5 text-left text-xs font-sitka text-black  tracking-wider">Name</th>
@@ -79,63 +81,66 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         @for ($i = 0; $i < 9; $i++)
-                         <tr class="hover:bg-gray-50 relative">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood High</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                        </svg>
-                                        emmanuel.w@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 234 5678
-                                    </p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
+                            <tr class="hover:bg-gray-50 relative">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div>
+                                        <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
+                                        <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">Greenwood High</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">accent 1-1A</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-sitka">
+                                        <p class="text-primary flex items-center">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                            emmanuel.w@greenwood.edu
+                                        </p>
+                                        <p class="text-primary flex items-center mt-1">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            +234 810 234 5678
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+                                            ? 'font-medium bg-black text-white'
+                                            : ($i % 3 === 1
+                                                ? 'font-sitka font-medium bg-white border border-school-btn text-black'
+                                                : 'font-medium bg-black text-white') }}">
+                                        {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
+                                </td>
 
-                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
-        ? 'font-medium bg-black text-white'
-        : ($i % 3 === 1 ?
-         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
-    }}">
-    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
-                            </td>
-
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary more-btn">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                                 <div
-                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
-                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
-                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
-                            Teacher</button>
-                    </div>
-                            </td>
-                        </tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <button class="text-gray-600 hover:text-primary more-btn">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+                                        </svg>
+                                    </button>
+                                    <div
+                                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                                        <button
+                                            class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i
+                                                class="fa-solid fa-trash"></i>Delete
+                                            Teacher</button>
+                                    </div>
+                                </td>
+                            </tr>
                         @endfor
 
                     </tbody>
@@ -143,6 +148,7 @@
 
 
                 </table>
+                </div>
                 <div class="px-6 py-4 border-t border-gray-200 flex items-center justify-between">
                     <button
                         class="px-4 py-1 border border-gray-300 rounded-lg text-body5 font-medium text-primary bg-white hover:bg-gray-50">
@@ -174,74 +180,74 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                         @for ($i = 0; $i < 9; $i++)
+                        @for ($i = 0; $i < 9; $i++)
+                            <tr class="hover:bg-gray-50 relative">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div>
+                                        <p class="text-sm font-sitka font-medium text-primary">Sarah Thompson</p>
+                                        <p class="text-xs font-sitka text-user-date">Joined 12/06/2023</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">Oakmont International</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">accent 1-1A</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">Robert Johnson</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-sitka">
+                                        <p class="text-primary flex items-center">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                            sarah.t@oakmont.edu
+                                        </p>
+                                        <p class="text-primary flex items-center mt-1">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            +234 810 345 6789
+                                        </p>
+                                    </div>
+                                </td>
 
-                        <tr class="hover:bg-gray-50 relative">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Sarah Thompson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 12/06/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Oakmont International</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">accent 1-1A</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Robert Johnson</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+                                            ? 'font-medium bg-black text-white'
+                                            : ($i % 3 === 1
+                                                ? 'font-sitka font-medium bg-white border border-school-btn text-black'
+                                                : 'font-medium bg-black text-white') }}">
+                                        {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
+                                </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <button class="text-gray-600 hover:text-primary more-btn">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                                         </svg>
-                                        sarah.t@oakmont.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 345 6789
-                                    </p>
-                                </div>
-                            </td>
-
-
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-
-                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
-        ? 'font-medium bg-black text-white'
-        : ($i % 3 === 1 ?
-         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
-    }}">
-    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
-                            </td>
-
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary more-btn">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                                 <div
-                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
-                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
-                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
-                            Student</button>
-                    </div>
-                            </td>
-                        </tr>
+                                    </button>
+                                    <div
+                                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                                        <button
+                                            class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i
+                                                class="fa-solid fa-trash"></i>Delete
+                                            Student</button>
+                                    </div>
+                                </td>
+                            </tr>
                         @endfor
-                         </tbody>
+                    </tbody>
 
 
 
@@ -277,68 +283,70 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         @for ($i = 0; $i < 9; $i++)
+                            <tr class="hover:bg-gray-50 relative">
 
-                        <tr class="hover:bg-gray-50 relative">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div>
+                                        <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
+                                        <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p class="text-sm font-sitka text-primary">Greenwood High</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <p
+                                        class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">
+                                        2 children</p>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm font-sitka">
+                                        <p class="text-primary flex items-center">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                            </svg>
+                                            emmanuel.w@greenwood.edu
+                                        </p>
+                                        <p class="text-primary flex items-center mt-1">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                            +234 810 234 5678
+                                        </p>
+                                    </div>
+                                </td>
 
-<td class="px-6 py-4 whitespace-nowrap">
-                                <div>
-                                    <p class="text-sm font-sitka font-medium text-primary">Emmanuel Wilson</p>
-                                    <p class="text-xs font-sitka text-user-date">Joined 15/08/2023</p>
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-sm font-sitka text-primary">Greenwood High</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <p class="text-xs font-fredoka text-black bg-grey300 py-1 px-2 rounded-lg flex justify-center items-center">2 children</p>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-sitka">
-                                    <p class="text-primary flex items-center">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
+                                            ? 'font-medium bg-black text-white'
+                                            : ($i % 3 === 1
+                                                ? 'font-sitka font-medium bg-white border border-school-btn text-black'
+                                                : 'font-medium bg-black text-white') }}">
+                                        {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
+                                </td>
+
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <button class="text-gray-600 hover:text-primary more-btn">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path
+                                                d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                                         </svg>
-                                        emmanuel.w@greenwood.edu
-                                    </p>
-                                    <p class="text-primary flex items-center mt-1">
-                                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                        </svg>
-                                        +234 810 234 5678
-                                    </p>
-                                </div>
-                            </td>
-
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span
-
-                               class="px-4 py-1.5 text-xs font-fredoka rounded-full  {{ $i % 3 === 0
-        ? 'font-medium bg-black text-white'
-        : ($i % 3 === 1 ?
-         'font-sitka font-medium bg-white border border-school-btn text-black' : 'font-medium bg-black text-white')
-    }}">
-    {{ $i % 3 === 0 ? 'Active' : ($i % 3 === 1 ? 'Inactive' : 'Active') }}</span>
-                            </td>
-
-                            <td class="px-6 py-4 whitespace-nowrap text-sm">
-                                <button class="text-gray-600 hover:text-primary more-btn">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                                    </svg>
-                                </button>
-                                 <div
-                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
-                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
-                        <button class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i class="fa-solid fa-trash"></i>Delete
-                            Parent</button>
-                    </div>
-                            </td>
-                        </tr>
+                                    </button>
+                                    <div
+                                        class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-10 w-30 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                                        {{-- <button class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100"> <i class="fa-regular fa-eye"></i>View School</button> --}}
+                                        <button
+                                            class="w-full text-left px-4 py-2 text-body5 font-sitka flex items-center gap-2 text-red-600 hover:bg-red-50"><i
+                                                class="fa-solid fa-trash"></i>Delete
+                                            Parent</button>
+                                    </div>
+                                </td>
+                            </tr>
                         @endfor
 
                     </tbody>
@@ -397,45 +405,45 @@
 
 
             document.addEventListener("DOMContentLoaded", () => {
-            const buttons = document.querySelectorAll(".more-btn");
-            console.log('clicked')
+                const buttons = document.querySelectorAll(".more-btn");
+                console.log('clicked')
 
-            function closeAllMenus() {
-                document.querySelectorAll(".action-menu").forEach(menu => {
-                    menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-                    menu.classList.remove("opacity-100", "scale-100");
+                function closeAllMenus() {
+                    document.querySelectorAll(".action-menu").forEach(menu => {
+                        menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
+                        menu.classList.remove("opacity-100", "scale-100");
+                    });
+                }
+
+
+                buttons.forEach(btn => {
+                    const menu = btn.nextElementSibling;
+                    console.dir(btn)
+
+                    // CLICK → open
+                    btn.addEventListener("click", (e) => {
+                        e.stopPropagation();
+
+                        const isOpen = menu.classList.contains("opacity-100");
+
+                        closeAllMenus();
+
+                        if (!isOpen) {
+                            menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+                            menu.classList.add("opacity-100", "scale-100");
+                        }
+                    });
+
+                    // DOUBLE CLICK → force close
+                    btn.addEventListener("dblclick", (e) => {
+                        e.stopPropagation();
+                        closeAllMenus();
+                    });
                 });
-            }
 
-
-            buttons.forEach(btn => {
-                const menu = btn.nextElementSibling;
-                console.dir(btn)
-
-                // CLICK → open
-                btn.addEventListener("click", (e) => {
-                    e.stopPropagation();
-
-                    const isOpen = menu.classList.contains("opacity-100");
-
-                    closeAllMenus();
-
-                    if (!isOpen) {
-                        menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
-                        menu.classList.add("opacity-100", "scale-100");
-                    }
-                });
-
-                // DOUBLE CLICK → force close
-                btn.addEventListener("dblclick", (e) => {
-                    e.stopPropagation();
-                    closeAllMenus();
-                });
+                // click outside
+                document.addEventListener("click", closeAllMenus);
             });
-
-            // click outside
-            document.addEventListener("click", closeAllMenus);
-        });
         </script>
     @endpush
 @endsection

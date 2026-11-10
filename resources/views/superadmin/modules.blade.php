@@ -36,9 +36,10 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
 @endsection
 
 @section('content')
-<div class="p-8 space-y-6">
+<div class="p-4 md:p-8 space-y-6">
     <!-- Tabs -->
-    <div class="flex">
+    <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+    <div class="flex min-w-120">
         <button class="px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-l-lg hover:bg-gray-200 transition-colors tab-btn active" data-tab="academicSetup">
             Academic Setup
         </button>
@@ -49,24 +50,25 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
             Grading System
         </button>
     </div>
+    </div>
 
     <!-- Academic Setup Content -->
     <div class="tab-content" id="academicSetupContent">
         <!-- Sessions Section -->
         <div class="bg-white rounded-lg border border-gray-200 mb-6">
-            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
                 <div>
                     <h2 class="text-body2 font-bold text-primary font-fredoka">Sessions</h2>
                     <p class="text-body4 text-primary">Manage school sessions</p>
                 </div>
-                <button class="px-4 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
+                <button class="px-4 py-2 bg-accent text-black self-start rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Session
                 </button>
             </div>
-            <div class="p-6 space-y-4">
+            <div class="p-4 sm:p-6 space-y-4">
                 <!-- Session Items -->
                 @for ($i = 0; $i < 3; $i++)
                 <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -92,19 +94,19 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
 
         <!-- Terms Section -->
         <div class="bg-white rounded-lg border border-gray-200 mb-6">
-            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
                 <div>
                     <h2 class="text-body2 font-bold text-primary font-fredoka">Terms</h2>
                     <p class="text-body4 text-primary">Manage school sessions</p>
                 </div>
-                <button class="px-4 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
+                <button class="px-4 py-2 bg-accent text-black rounded-lg self-start font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Term
                 </button>
             </div>
-            <div class="p-6 space-y-4">
+            <div class="p-4 sm:p-6 space-y-4">
                 <!-- Term Items -->
                 @foreach (['First Term', 'Second Term', 'Third Term'] as $term)
                 <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -130,19 +132,19 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
 
         <!-- Classes Section -->
         <div class="bg-white rounded-lg border border-gray-200 mb-6">
-            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
                 <div>
                     <h2 class="text-body2 font-bold text-primary font-fredoka">Classes</h2>
                     <p class="text-body4 text-primary">Manage school classes</p>
                 </div>
-                <button class="px-4 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
+                <button class="px-4 py-2 bg-accent text-black rounded-lg self-start font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Class
                 </button>
             </div>
-            <div class="p-6 space-y-4">
+            <div class="p-4 sm:p-6 space-y-4">
                 <!-- Class Items -->
                 @foreach (['Group 1', 'Group 2', 'Group 3'] as $class)
                 <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -168,19 +170,19 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
 
         <!-- Class Arms Section -->
         <div class="bg-white rounded-lg border border-gray-200 mb-6">
-            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
                 <div>
                     <h2 class="text-body2 font-bold text-primary font-fredoka">Class Arms</h2>
                     <p class="text-body4 text-primary">Manage school arms</p>
                 </div>
-                <button class="px-4 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
+                <button class="px-4 py-2 bg-accent text-black rounded-lg self-start font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Arm
                 </button>
             </div>
-            <div class="p-6 space-y-4">
+            <div class="p-4 sm:p-6 space-y-4">
                 <!-- Arm Items -->
                 @foreach (['A', 'B', 'C'] as $arm)
                 <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -206,19 +208,19 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
 
         <!-- Subject Tags Section -->
         <div class="bg-white rounded-lg border border-gray-200">
-            <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
                 <div>
                     <h2 class="text-body2 font-bold text-primary font-fredoka">Subject Tags</h2>
                     <p class="text-body4 text-primary">Manage school subject tags</p>
                 </div>
-                <button class="px-4 py-2 bg-accent text-black rounded-lg font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
+                <button class="px-4 py-2 bg-accent text-black rounded-lg self-start font-medium text-body3 hover:bg-accent-hover transition-colors flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                     </svg>
                     Add Subject Tag
                 </button>
             </div>
-            <div class="p-6 space-y-4">
+            <div class="p-4 sm:p-6 space-y-4">
                 <!-- Subject Tag Items -->
                 @foreach (['Science', 'Art', 'Commercial', 'Vocational', 'General', 'Language', 'Other'] as $tag)
                 <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -319,12 +321,12 @@ hover:bg-primary hover:text-white transition-colors flex items-center gap-2">
     <!-- Grading System Content -->
     <div class="tab-content hidden" id="gradingSystemContent">
         <div class="bg-white rounded-lg border border-gray-200">
-            <div class="px-6 py-4 border-b border-gray-200">
+            <div class="px-4 sm:px-6 py-4 border-b border-gray-200">
                 <h2 class="text-body2 font-bold text-primary font-fredoka">Grading System</h2>
                 <p class="text-body4 text-primary">Configure grading scales and assessment criteria</p>
             </div>
-            <div class="p-6">
-                <div class="overflow-x-auto">
+            <div class="p-4 sm:p-6">
+                <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                     <table class="w-full">
                         <thead class="bg-gray-50 border-b border-gray-200">
                             <tr>
