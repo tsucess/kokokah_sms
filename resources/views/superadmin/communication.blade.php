@@ -6,12 +6,12 @@
 
 @section('header-actions')
     <button
-        class="px-4 py-2 text-primary text-body3 font-fredoka border border-communicationBtn rounded-lg font-medium hover:bg-gray-50 transition-colors mr-3">
+        class="px-4 py-2 text-primary text-sm sm:text-body3 font-fredoka border border-communicationBtn rounded-lg font-medium hover:bg-gray-50 transition-colors mr-3">
         <i class="fa-solid fa-download text-black"></i>
         Export PDF
     </button>
     <button
-        class="px-4 py-2 text-primary text-body3 font-fredoka border border-communicationBtn rounded-lg font-medium hover:bg-gray-50 transition-colors">
+        class="px-4 py-2 text-primary text-sm sm:text-body3 font-fredoka border border-communicationBtn rounded-lg font-medium hover:bg-gray-50 transition-colors">
         <i class="fa-solid fa-download text-black"></i>
         Export Excel
     </button>
@@ -309,7 +309,7 @@
                         <p class="text-sm text-gray-600">Create and manage platform-wide announcements</p>
                     </div>
                     <button onclick="openAnnouncementModal()"
-                        class="px-4 py-2 flex items-center gap-1 text-body3 rounded-lg font-medium bg-accent text-black font-inter hover:bg-accent-hover transition-colors">
+                        class="px-4 py-2 flex items-center gap-1 text-body3 justify-center rounded-lg font-medium bg-accent text-black font-inter hover:bg-accent-hover transition-colors">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                         </svg>
@@ -647,7 +647,7 @@
 
         <!-- Compose New Message Modal -->
         <div id="messageModal" class="modal-overlay bg-primary/50 mb-0">
-            <div class="modal-content p-8">
+            <div class="modal-content p-4 sm:p-8">
 
                 <div class="flex justify-between items-center mb-6">
                     <div class="flex flex-col gap-1">
@@ -667,7 +667,7 @@
                     <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                         <label
                             class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Recipients</label>
-                        <select class="w-full outline-none text-primary text-sm">
+                        <select name='recipients' class="w-full outline-none text-primary text-sm">
                             <option>All users</option>
                             <option>All teachers</option>
                         </select>
@@ -677,7 +677,7 @@
                     <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                         <label
                             class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Subject</label>
-                        <input type="text" placeholder="Enter message subject"
+                        <input name='subject' type="text" placeholder="Enter message subject"
                             class="w-full outline-none text-primary text-sm">
                     </div>
 
@@ -685,7 +685,7 @@
                     <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
                         <label
                             class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Message</label>
-                        <textarea rows="4" placeholder="Type your message here...."
+                        <textarea name='message' rows="4" placeholder="Type your message here...."
                             class="w-full outline-none text-primary text-sm resize-none h-full"></textarea>
                     </div>
 
@@ -696,7 +696,7 @@
                                 class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Schedule
                                 (Optional)</label>
                             <div class="relative">
-                                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
+                                <input name='schedule' type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
                                 <svg class="w-5 h-5 text-gray-400 absolute right-4 top-1" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -724,7 +724,7 @@
 
         <!-- Create New Announcement Modal -->
         <div id="announcementModal" class="modal-overlay bg-primary/50 h-full">
-            <div class="modal-content p-8">
+            <div class="modal-content p-4 sm:p-8">
                 <div class="flex justify-between items-center mb-6">
                     <div class="flex flex-col gap-1">
                         <h2 class="text-xl font-semibold text-primary font-fredoka">Create New Announcement</h2>
@@ -741,17 +741,17 @@
                     <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                         <label
                             class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Title</label>
-                        <input type="text" placeholder="Enter announcement title"
+                        <input name='title' type="text" placeholder="Enter announcement title"
                             class="w-full outline-none text-primary text-sm">
                     </div>
 
                     <!-- Category and Priority -->
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
 
                         <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label
                                 class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Category</label>
-                            <select class="w-full outline-none text-primary text-sm">
+                            <select name='category' class="w-full outline-none text-primary text-sm">
                                 <option>General</option>
                                 <option>Academic</option>
                                 <option>Administrative</option>
@@ -762,7 +762,7 @@
                         <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label
                                 class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Priority</label>
-                            <select class="w-full outline-none text-primary text-sm">
+                            <select name='priority' class="w-full outline-none text-primary text-sm">
                                 <option>Medium</option>
                                 <option>Low</option>
                                 <option>High</option>
@@ -774,15 +774,15 @@
                     <!-- Content -->
                     <div class="border border-primary rounded-xl relative px-4 py-3 mt-3 h-30">
                 <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Content</label>
-                <textarea rows="4" placeholder="Write your announcement here..." class="w-full outline-none text-primary text-sm resize-none h-full" ></textarea>
+                <textarea name='content' rows="4" placeholder="Write your announcement here..." class="w-full outline-none text-primary text-sm resize-none h-full" ></textarea>
             </div>
 
                     <!-- Target Audience and Expiry Date -->
-                    <div class="grid grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4">
                         <div class="border border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label
                                 class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Target Audience</label>
-                            <select class="w-full outline-none text-primary text-sm">
+                            <select name='targetAudience' class="w-full outline-none text-primary text-sm">
                                <option>All Schools</option>
                                 <option>Specific Schools</option>
                                 <option>All Teachers</option>
@@ -794,7 +794,7 @@
                             <label
                                 class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">Expiry Date</label>
                             <div class="relative">
-                                <input type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
+                                <input name='expiryDate' type="text" placeholder="dd/mm/yyyy --:--" class="w-full outline-none text-primary text-sm">
                                 <svg class="w-5 h-5 text-gray-400 absolute right-4 top-1" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -807,11 +807,11 @@
                     <!-- Action Buttons -->
                     <div class="flex items-center justify-end gap-3 py-4">
                         <button type="button" onclick="closeAnnouncementModal()"
-                            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                            class="px-2 sm:px-6 py-2 text-sm border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
+                            class="px-2 sm:px-6 py-2 rounded-lg text-sm bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
                             Publish Announcement
                         </button>
                     </div>
@@ -891,14 +891,20 @@
                 document.getElementById('messageForm').addEventListener('submit', function(e) {
                     e.preventDefault();
                     // Add your form submission logic here
-                    console.log('Message form submitted');
+                    const form = e.currentTarget
+
+                    const formData = new FormData(form)
+                    const data = Object.fromEntries(formData.entries())
+                    form.reset()
                     closeMessageModal();
                 });
 
                 document.getElementById('announcementForm').addEventListener('submit', function(e) {
                     e.preventDefault();
                     // Add your form submission logic here
-                    console.log('Announcement form submitted');
+                    const formData = new FormData(form)
+                    const data = Object.fromEntries(formData.entries())
+                    form.reset()
                     closeAnnouncementModal();
                 });
             </script>
