@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-<div class="p-8 space-y-6">
+<div class="p-4 md:p-8 space-y-6">
     <!-- Stats Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Total Number of Academic Badges -->
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Table -->
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="border-b border-school-btn">
                     <tr>
@@ -337,6 +337,18 @@
             closeBadgeModal();
         }
     });
+
+     const badgeModal = document.querySelector('#badgeModal')
+           badgeModal.addEventListener('submit', handlebadgeModalSubmit)
+            function handlebadgeModalSubmit(e) {
+                e.preventDefault()
+               const form = e.currentTarget
+
+                const formData = new FormData(form)
+                const data = Object.fromEntries(formData.entries())
+                form.reset()
+                closeBadgeModal()
+            }
     </script>
     @endpush
 

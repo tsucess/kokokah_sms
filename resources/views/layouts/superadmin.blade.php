@@ -30,65 +30,67 @@
     @stack('styles')
 </head>
 <body class="font-sitka antialiased bg-background">
-   <div class="flex min-h-screen h-screen overflow-hidden">
+    <div class="flex h-screen overflow-hidden">
 
-    <!-- Sidebar -->
-    <x-sidebar :active="$active ?? ''" />
+        <!-- Sidebar -->
+        <x-sidebar :active="$active ?? ''" />
 
-    <!-- Main Content -->
-    <div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+        <!-- Right Content Area -->
+        <div class="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto">
 
-        <!-- Header (does not scroll) -->
-          <header class="shrink-0 bg-white border-b border-gray-200 px-4 md:px-8 py-4 sm:py-6">
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+            <!-- Header (scrollable) -->
+            <header class="shrink-0 bg-white border-b border-gray-200 px-4 md:px-8 py-4 sm:py-6">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
 
-                <div class="flex items-start gap-3 ">
-                    <!-- Mobile Menu Button -->
-                    <button id="sidebar-toggle"
-                        class="lg:hidden text-primary p-2 rounded-lg hover:bg-gray-100">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
+                    <div class="flex items-start gap-3">
+                        <!-- Mobile Menu Button -->
+                        <button id="sidebar-toggle"
+                            class="lg:hidden text-primary p-2 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
 
-                    <div class="flex flex-col gap-2">
-                        <h1 class="font-fredoka text-h6 text-primary">
-                            @yield('page-title')
-                        </h1>
-                        <p class="text-body4 text-primary">
-                            @yield('page-description')
-                        </p>
+                        <div class="flex flex-col gap-2">
+                            <h1 class="font-fredoka text-h6 text-primary">
+                                @yield('page-title')
+                            </h1>
+
+                            <p class="text-body4 text-primary">
+                                @yield('page-description')
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="flex items-center space-x-4">
+                        @yield('header-actions')
+                    </div>
+
                 </div>
+            </header>
 
-                <div class="flex items-center space-x-4">
-                    @yield('header-actions')
-                </div>
+            <!-- Main Content -->
+            <main class="flex-1 bg-superadmin-bg">
+                @yield('content')
+            </main>
 
-            </div>
-        </header>
+            <!-- Footer -->
+            <footer class="shrink-0 bg-white border-t border-gray-200 px-8 py-4">
+                <p class="text-center text-sm text-gray-500">
+                    COPYRIGHT © {{ date('Y') }}
+                </p>
+            </footer>
 
-        <!-- Only this section scrolls -->
-        <main class="flex-1 min-h-0 bg-superadmin-bg overflow-y-auto overflow-x-hidden">
-            @yield('content')
-        </main>
-
-        <!-- Footer (does not scroll) -->
-        <footer class="shrink-0 bg-white border-t border-gray-200 px-8 py-4">
-            <p class="text-center text-sm text-gray-500">
-                COPYRIGHT © {{ date('Y') }}
-            </p>
-        </footer>
-
+        </div>
     </div>
-</div>
 
     @stack('scripts')
+
     <script>
         const sidebar = document.getElementById('sidebar');
-const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
 
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('-translate-x-full');
-});
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('-translate-x-full');
+        });
     </script>
 </body>
 </html>
