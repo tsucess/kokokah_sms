@@ -4,7 +4,7 @@
 @section('page-title', 'Dashboard')
 
 @section('content')
-<div class="p-8">
+<div class="p-8 ">
     <!-- Header -->
     <div class="mb-6 flex items-center justify-between">
         <div>

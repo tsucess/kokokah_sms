@@ -59,13 +59,13 @@
             color: #000F11;
         }
 </style>
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-4 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 mb-6">
         <!-- Messages Sent -->
-        <div class="bg-white rounded-lg border border-school-btn p-6">
-                <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+        <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
+                <div class="flex items-start gap-2 sm:gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg shrink-0">
                         <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -81,9 +81,9 @@
             </div>
 
         <!-- Inbox -->
-        <div class="bg-white rounded-lg border border-school-btn p-6">
-                <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+        <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
+                <div class="flex items-start gap-2 sm:gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg shrink-0">
                         <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -99,9 +99,9 @@
             </div>
 
         <!-- Unread -->
-        <div class="bg-white rounded-lg border border-school-btn p-6">
-                <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg">
+        <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
+                <div class="flex items-start gap-2 sm:gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-messageBg shrink-0">
                         <svg class="w-6 h-6" style="color: #3D5EE1;" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -117,9 +117,9 @@
             </div>
 
         <!-- Announcements -->
-        <div class="bg-white rounded-lg border border-school-btn p-6">
-                <div class="flex items-start gap-4">
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-annoucementBg">
+        <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
+                <div class="flex items-start gap-2 sm:gap-4">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center bg-annoucementBg shrink-0">
                         <svg class="w-6 h-6" style="color: #1AAE50;" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

@@ -4,22 +4,22 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header with Filters -->
         <div class="mb-10 flex flex-col gap-5">
 
-            <div class="flex items-start justify-between gap-3">
+            <div class="flex flex-col sm:flex-row items-start justify-between gap-3">
                 <div class="flex flex-col gap-1">
                     <h2 class="text-2xl font-bold text-primary font-fredoka">Classes</h2>
                     <p class="text-xs text-primary font-sitka">Manage staff information and enrollment</p>
                 </div>
                 <div class="flex align-items-center">
                     <button
-                        class="px-4 py-2 bg-white text-body3 border border-primary text-primary rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                        class="px-3 py-3 sm:py-2 bg-white text-xs sm:text-body3 border border-primary text-primary rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                         Download PDF Report
                     </button>
                     <button
-                        class="px-4 py-2 bg-accent text-body3 text-black rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors flex items-center">
+                        class="px-3 py-3 sm:py-2 bg-accent text-xs sm:text-body3 text-black rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors flex items-center">
                         Download Excel Report
                     </button>
                 </div>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Classes Grid -->
-        <div class="grid grid-cols-3 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
             @for ($i = 1; $i <= 12; $i++)
                 <div class="bg-white rounded-lg border-4 border-orange50 p-6 hover:shadow-lg transition-shadow">
                     <!-- Status Badge -->

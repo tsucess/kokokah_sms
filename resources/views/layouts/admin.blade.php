@@ -19,18 +19,24 @@
     @stack('styles')
 </head>
 <body class="font-sans antialiased bg-gray-50">
-    <div class="flex min-h-screen">
+    <div class="flex h-screen">
         <!-- Sidebar -->
         <x-admin-sidebar :active="$active ?? ''" />
 
         <!-- Main Content -->
         <div class="flex-1 flex flex-col overflow-x-hidden">
             <!-- Top Header -->
-            <header class="bg-superadmin-bg border-b border-gray-200 px-8 py-4">
-                <div class="flex items-center justify-between">
-                    <div>
+            <header class="bg-superadmin-bg border-b border-gray-200 px-4 md:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <button id="sidebar-toggle"
+                            class="lg:hidden text-primary p-2 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                        <div>
                         <h1 class="text-xl font-semibold text-primary font-fredoka">@yield('page-title')</h1>
                     </div>
+                </div>
+
                     <div class="flex items-center space-x-4">
                         <!-- Notification Icon -->
                         <button class="relative p-2 bg-purple300 hover:bg-gray-100 rounded-full">
@@ -42,7 +48,7 @@
 
                         <!-- User Profile -->
                         <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center shrink-0">
                                 <span class="text-white font-semibold text-sm">WI</span>
                             </div>
                             <div class="text-left">
@@ -51,7 +57,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </header>
 
             <!-- Page Content -->
@@ -62,6 +67,14 @@
     </div>
 
     @stack('scripts')
+    <script>
+        const sidebar = document.getElementById('admin-sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+
+        sidebarToggle?.addEventListener('click', () => {
+            sidebar?.classList.toggle('-translate-x-full');
+        });
+    </script>
 </body>
 </html>
 

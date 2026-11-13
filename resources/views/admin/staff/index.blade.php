@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
-    <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="flex items-center justify-between mb-6">
+<div class="p-4 md:p-8">
+    <div class="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+        <div class="flex flex-col gap-2 sm:flex-row sm:items-center justify-between mb-6">
             <div>
                 <h3 class="text-lg font-semibold text-gray-900">Staff</h3>
                 <p class="text-sm text-gray-600">Manage staff information and records</p>
             </div>
-            <a href="{{ route('admin.staff.bio-data') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
+            <a href="{{ route('admin.staff.bio-data') }}" class="px-4 py-2 bg-accent text-center text-white rounded-lg hover:bg-accent-hover transition-colors">
                 + Add New Staff
             </a>
         </div>

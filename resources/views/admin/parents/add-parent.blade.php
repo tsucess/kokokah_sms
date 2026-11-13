@@ -10,7 +10,7 @@
         }
     </style>
 <div>
-   <div class="p-8 step" data-content='bio-data'>
+   <div class="p-4 md:p-8 step" data-content='bio-data'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.parents') }}"
@@ -71,7 +71,7 @@
 
                 <!-- Right Column - Form Fields -->
                 <div class="lg:col-span-2">
-                    <form class="px-6">
+                    <form class="px-4 sm:px-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Enter First Name -->
                             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
@@ -181,17 +181,17 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center justify-between mt-6 gap-2">
                             <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-accent rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
+                            <div class=" flex items-center justify-center gap-2 flex-1">
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-accent rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
                             </div>
 
                             <!-- Action Buttons -->
                             <button data-type='link-children' type="button"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                                 Next
                             </button>
                         </div>
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-        <div class="p-8 step hidden" data-content='link-children'>
+        <div class="p-4 md:p-8 step hidden" data-content='link-children'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.parents') }}"
@@ -213,7 +213,7 @@
                 <h3 class="text-lg font-semibold text-primary font-fredoka">Link Children</h3>
                 <p class="text-sm text-primary font-sitka">Select a child and the relationship this parent has with the Children.</p>
             </div>
-            <div class="flex items-center gap-4 mb-10">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
                  <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                                 <label
                                     class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Search for Child</label>
@@ -282,29 +282,29 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-between mt-6">
+            <div class="flex items-center justify-between mt-6 gap-2">
                             <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-accent rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
+                            <div class=" flex items-center justify-center gap-2 flex-1">
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-accent rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
                             </div>
 
                             <!-- Action Buttons -->
-                            <div class="flex items-center gap-5">
+                            <div class="flex items-center gap-2 sm:gap-5">
                                 <button data-type='bio-data' type="button"
-                                class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
                                 Previous
                             </button>
                             <button data-type='parent-management' type="submit"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                                 Next
                             </button>
                             </div>
                         </div>
 
         </div>
-        <div class="p-8 step hidden"  data-content='parent-management'>
+        <div class="p-4 md:p-8 step hidden"  data-content='parent-management'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.staff') }}"
@@ -320,7 +320,7 @@
             </div>
 
             <div class="flex flex-col gap-6">
-                <div class="rounded-2xl p-10 border-4 border-orange50 flex flex-col gap-8">
+                <div class="rounded-2xl p-5 sm:p-10 border-4 border-orange50 flex flex-col gap-8">
                     <div class="flex">
                         <div class="bg-primary w-24 h-24 rounded-full flex justify-center items-center">
                             <i class="fa-solid fa-user-astronaut fa-2xl text-white"></i>
@@ -383,7 +383,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rounded-2xl p-10 border-4 border-orange50 flex flex-col gap-6">
+                <div class="rounded-2xl p-5 sm:p-10 border-4 border-orange50 flex flex-col gap-6">
                     <div class="flex flex-col gap-1">
                 <h3 class="text-base font-semibold text-primary font-fredoka">Linked Children</h3>
                 <p class="text-sm text-primary font-sitka">Below is your next of kin's Information</p>
@@ -443,22 +443,22 @@
             </div>
 
                 </div>
-                 <div class="flex items-center justify-between mt-6">
+                 <div class="flex items-center justify-between mt-6 gap-2">
                             <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-accent rounded"></div>
+                            <div class=" flex items-center justify-center gap-2 flex-1">
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                                <div class="max-w-16 h-1 sm:h-3 flex-1 bg-accent rounded"></div>
                             </div>
 
                             <!-- Action Buttons -->
-                            <div class="flex items-center gap-5">
+                            <div class="flex items-center gap-3 sm:gap-5">
                                 <button data-type='link-children' type="button"
-                                class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
                                 Previous
                             </button>
                             <button type="submit"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                                 Submit
                             </button>
                             </div>

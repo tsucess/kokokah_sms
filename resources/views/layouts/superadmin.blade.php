@@ -28,7 +28,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('styles')
-</head>
+</head> 
 <body class="font-sitka antialiased bg-background">
     <div class="flex h-screen overflow-hidden">
 

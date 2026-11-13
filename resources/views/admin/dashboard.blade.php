@@ -4,10 +4,10 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8 flex flex-col gap-6">
+    <div class="p-4 md:p-8 flex flex-col gap-6">
         <section
-            class="w-full flex items-center justify-between py-10 px-10 rounded-4xl bg-linear-to-r from-primary from-40% via-primary2 via-50% to-accent to-70%">
-            <div class="flex flex-col gap-8">
+            class="w-full flex flex-col md:flex-row md:items-center justify-between py-10 px-4 md:px-10 gap-4  rounded-4xl bg-linear-to-b md:bg-linear-to-r from-primary from-40% via-primary2 via-50% to-accent to-70%">
+            <div class="flex flex-col gap-8 order-1 md:order-0">
                 <h1 class="font-mulish text-white uppercase text-2xl">WINNER’S INTERNATIONAL ACADEMY</h1>
                 <div class="flex flex-col gap-1">
                     <div class="flex items-center gap-1"><i class="fa-solid fa-envelope text-white"></i><span
@@ -18,12 +18,12 @@
                             class="text-xs text-white font-sitka">winnersinternationalacadem.com</span></div>
                 </div>
             </div>
-            <div class="w-35 h-35 bg-white flex justify-center items-center rounded-full">
+            <div class="w-20 h-20 md:w-35 md:h-35 bg-white flex justify-center items-center rounded-full">
                 <i class="fa-solid fa-graduation-cap fa-2xl text-blue-600"></i>
             </div>
         </section>
         <section class="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div class="border border-school-btn rounded-xl p-7.5 flex flex-col gap-8">
+            <div class="border border-school-btn rounded-xl p-4 sm:p-7.5 flex flex-col gap-8">
                 <div class="flex justify-between items-center gap-3">
                     <h2 class="font-fredoka text-primary text-body3"> Revenue</h2> <i
                         class="fa-solid fa-naira-sign text-black"></i>
@@ -37,7 +37,7 @@
                     <span class="text-sm font-medium text-green-600">+2% this month</span>
                 </div>
             </div>
-            <div class="border border-school-btn rounded-xl p-7.5 flex flex-col gap-8">
+            <div class="border border-school-btn rounded-xl p-4 sm:p-7.5 flex flex-col gap-8">
                 <div class="flex justify-between items-center gap-3">
                     <h2 class="font-fredoka text-red50 text-body3">Outstanding</h2> <i
                         class="fa-solid fa-naira-sign text-red50"></i>
@@ -50,14 +50,14 @@
                     </svg>
                     <span class="text-sm font-medium text-red50">+2% this month</span>
                 </div>
-                <button class="border border-primary text-primary font-semibold font-sitka text-base py-4 px-4">View Debtors
+                <button class="border border-primary text-primary font-semibold font-sitka text-base py-2 sm:py-4 px-4">View Debtors
                     List</button>
             </div>
 
         </section>
         <section class="grid grid-cols-1 md:grid-cols-4 gap-5">
             {{-- total student --}}
-            <div class="border border-school-btn rounded-3xl py-7 px-6 flex flex-col gap-8 justify-center">
+            <div class="border border-school-btn rounded-3xl py-4 sm:py-7 px-4 sm:px-6 flex flex-col gap-8 justify-center">
                 <h3 class="text-sm font-fredoka text-primary">Total Students</h3>
                 <div class="flex items-center justify-between">
 
@@ -94,7 +94,7 @@
             </div>
 
             {{-- total teacher --}}
-            <div class="border border-school-btn rounded-3xl flex flex-col gap-8 justify-center py-7 px-6">
+            <div class="border border-school-btn rounded-3xl flex flex-col gap-8 justify-center py-4 sm:py-7 px-4 sm:px-6">
                 <h3 class="text-sm font-fredoka text-primary">Total Teacher</h3>
                 <div class="flex items-center justify-between">
 
@@ -131,7 +131,7 @@
             </div>
 
             {{-- total parent --}}
-            <div class="border border-school-btn rounded-3xl py-7 px-6 flex flex-col justify-center gap-8">
+            <div class="border border-school-btn rounded-3xl py-4 sm:py-7 px-4 sm:px-6 flex flex-col justify-center gap-8">
 
                 <h3 class="text-sm font-fredoka text-primary">Total Parents</h3>
                 <div class="flex items-center justify-between">
@@ -169,7 +169,7 @@
             </div>
 
             {{-- total class --}}
-            <div class="bg-secondary rounded-3xl py-7 px-6 flex flex-col justify-center gap-8">
+            <div class="bg-secondary rounded-3xl py-4 sm:py-7 px-4 sm:px-6 flex flex-col justify-center gap-8">
 
                 <h3 class="text-sm font-fredoka text-white">Total Students</h3>
                 <p class="text-h5 font-bold text-white font-fredoka">1,247</p>
@@ -183,10 +183,10 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-3">
 
             <!-- Enrollment Trend -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm md:col-span-3">
-                <div class="flex justify-between mb-4">
+            <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm md:col-span-3">
+                <div class="flex flex-col sm:flex-row gap-2 justify-between mb-4">
                     <h2 class="font-semibold text-gray-700">Student Enrollment Trend</h2>
-                    <div class="flex gap-2 text-xs">
+                    <div class="flex gap-2 text-xs items-start">
                         <span class="px-3 py-1 bg-gray-100 rounded">Year</span>
                         <span class="px-3 py-1 bg-gray-100 rounded">Class</span>
                         <span class="px-3 py-1 bg-gray-100 rounded">Gender</span>
@@ -196,7 +196,7 @@
             </div>
 
             <!-- Attendance Overview -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm md:col-span-2">
+            <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm md:col-span-2">
                 <h2 class="font-semibold text-gray-700 mb-4">Attendance Overview</h2>
                 <div class="flex justify-center">
                     <canvas id="attendanceChart" width="220" height="220"></canvas>
@@ -232,7 +232,7 @@
         <div class="gap-5 grid grid-cols-1 md:grid-cols-5">
 
             <!-- Performance Analytics -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm md:col-span-3">
+            <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm md:col-span-3">
                 <div class="flex justify-between mb-4">
                     <h2 class="font-semibold text-gray-700">Performance Analytics</h2>
                     <div class="flex items-center gap-4 text-xs">
@@ -246,7 +246,7 @@
             </div>
 
             <!-- Recent Activity -->
-            <div class="bg-white rounded-2xl p-6 shadow-sm md:col-span-2">
+            <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm md:col-span-2">
                 <h2 class="font-semibold text-primary text-h5 font-fredoka mb-4">Recent Activity</h2>
                 <ul class="space-y-4 text-sm text-black font-quicksand">
                     <li class="flex gap-3 items-center"><i class="fa-solid fa-circle-check"></i>
@@ -266,7 +266,7 @@
         </div>
 
 
-        <div class="bg-white rounded-lg border border-school-btn p-6">
+        <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
             <div class=" mb-6">
                 <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Messages</h3>
 
@@ -281,7 +281,7 @@
                 <div class="space-y-4">
                     <!-- Message 1 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col sm:flex-row items-start justify-between">
                             <div class="flex-1 flex flex-col gap-4">
                                 <div class="flex flex-col gap-2">
                                     <div class="flex items-center">
@@ -331,7 +331,7 @@
 
                     <!-- Message 2 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col sm:flex-row items-start justify-between">
                             <div class="flex-1 flex flex-col gap-4">
                                 <div class="flex flex-col gap-2">
                                     <div class="flex items-center">

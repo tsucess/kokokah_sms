@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
-    <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="flex items-center justify-between mb-6">
+<div class="p-4 md:p-8">
+    <div class="bg-white rounded-lg border border-gray-200 p-4 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
             <div>
                 <h3 class="text-lg font-semibold text-gray-900">Students</h3>
                 <p class="text-sm text-gray-600">Manage student information and enrollment</p>
             </div>
-            <a href="{{ route('admin.students.bio-data') }}" class="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors">
+            <a href="{{ route('admin.students.bio-data') }}" class="px-4 py-2 bg-accent text-white text-center rounded-lg hover:bg-accent-hover transition-colors">
                 + Add New Student
             </a>
         </div>

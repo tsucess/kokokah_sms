@@ -1,6 +1,8 @@
 @props(['active' => ''])
 
-<aside class="w-64 bg-white border-r border-gray-200 min-h-screen flex flex-col shrink-0">
+<aside id='admin-sidebar' class="fixed top-0 left-0 z-50 h-full
+    -translate-x-full transition-transform duration-300 ease-in-out
+    lg:translate-x-0 lg:static w-56 shrink-0 bg-white border-r border-gray-200 flex flex-col">
     <!-- Logo -->
     <div class="p-6">
         <a href="{{ route('admin.dashboard') }}" class="flex items-center">
@@ -12,7 +14,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 px-4 space-y-1">
+    <nav class="flex-1 px-4 space-y-1 overflow-y-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
         <!-- Dashboard -->
         <a href="{{ route('admin.dashboard') }}"
            class="flex items-center px-4 py-3 gap-3 text-sm font-medium rounded-lg transition-colors {{ $active === 'dashboard' ? 'bg-accent text-black' : 'text-primary hover:bg-gray-100' }}">

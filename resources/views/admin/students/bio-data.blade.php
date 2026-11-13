@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
     <div class="mb-6">
         <a href="{{ route('admin.students') }}" class="inline-flex items-center text-sm font-sitka gap-2 text-black100 hover:text-grey400">
@@ -59,8 +59,8 @@
 
         <!-- Right Column - Form Fields -->
         <div class="lg:col-span-2">
-            <form class="px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form class="px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Last Student ID -->
                     <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                         <label  class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Last Student ID</label>

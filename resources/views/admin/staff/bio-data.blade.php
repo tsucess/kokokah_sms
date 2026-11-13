@@ -10,7 +10,7 @@
         }
     </style>
     <div>
-        <div class="p-8 step" data-content='bio-data'>
+        <div class="p-4 md:p-8 step" data-content='bio-data'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.staff') }}"
@@ -105,7 +105,7 @@
 
                 <!-- Right Column - Form Fields -->
                 <div class="lg:col-span-2">
-                    <form class="px-6">
+                    <form class="px-4 sm:px-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Last Staff ID -->
                             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
@@ -243,17 +243,17 @@
                             </div>
                         </div>
 
-                        <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center justify-between mt-6 gap-4">
                             <!-- Progress Indicator -->
-                            <div class=" flex items-center justify-center gap-2">
-                                <div class="w-16 h-3 bg-accent rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
-                                <div class="w-16 h-3 bg-grey300 rounded"></div>
+                            <div class=" flex items-center justify-center gap-2 flex-1">
+                                <div class="max-w-16 h-1 sm:h-3 bg-accent rounded flex-1"></div>
+                                <div class="max-w-16 h-1 sm:h-3 bg-grey300 rounded flex-1"></div>
+                                <div class="max-w-16 h-1 sm:h-3 bg-grey300 rounded flex-1"></div>
                             </div>
 
                             <!-- Action Buttons -->
                             <button data-type='kin-details' type="button"
-                                class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                                class="px-4 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                                 Next
                             </button>
                         </div>
@@ -261,7 +261,7 @@
                 </div>
             </div>
         </div>
-        <div class="p-8 step hidden" data-content='kin-details'>
+        <div class="p-4 md:p-8 step hidden" data-content='kin-details'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.staff') }}"
@@ -340,22 +340,22 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between mt-6">
+                <div class="flex items-center justify-between mt-6 gap-2">
                     <!-- Progress Indicator -->
-                    <div class=" flex items-center justify-center gap-2">
-                        <div class="w-16 h-3 bg-grey300 rounded"></div>
-                        <div class="w-16 h-3 bg-accent rounded"></div>
-                        <div class="w-16 h-3 bg-grey300 rounded"></div>
+                    <div class=" flex items-center justify-center gap-2 flex-1">
+                        <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                        <div class="max-w-16 h-1 sm:h-3 flex-1 bg-accent rounded"></div>
+                        <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
                     </div>
 
                     <!-- Action Buttons -->
-                    <div class="flex items-center gap-5">
+                    <div class="flex items-center gap-2 sm:gap-5">
                         <button data-type='bio-data' type="button"
-                            class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                            class="px-2 md:px-20 py-2 sm:py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
                             Previous
                         </button>
                         <button data-type='staff-management' type="button"
-                            class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                            class="px-2 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                             Next
                         </button>
                     </div>
@@ -363,7 +363,7 @@
             </form>
 
         </div>
-        <div class="p-8 step hidden" data-content='staff-management'>
+        <div class="p-4 md:p-8 step hidden" data-content='staff-management'>
             <!-- Back Button -->
             <div class="mb-6">
                 <a href="{{ route('admin.staff') }}"
@@ -503,22 +503,22 @@
                 </div>
 
             </div>
-            <div class="flex items-center justify-between mt-6">
+            <div class="flex items-center justify-between mt-6 gap-3">
                 <!-- Progress Indicator -->
-                <div class=" flex items-center justify-center gap-2">
-                    <div class="w-16 h-3 bg-grey300 rounded"></div>
-                    <div class="w-16 h-3 bg-grey300 rounded"></div>
-                    <div class="w-16 h-3 bg-accent rounded"></div>
+                <div class=" flex items-center justify-center gap-2 flex-1">
+                    <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                    <div class="max-w-16 h-1 sm:h-3 flex-1 bg-grey300 rounded"></div>
+                    <div class="max-w-16 h-1 sm:h-3 flex-1 bg-accent rounded"></div>
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="flex items-center gap-5">
+                <div class="flex items-center gap-2 sm:gap-5">
                     <button data-type='kin-details' type="button"
-                        class="px-20 py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
+                        class="px-2 md:px-20 py-2 sm:py-3 bg-transparent border border-primary text-primary font-sikta rounded-lg hover:bg-primary hover:text-white transition-colors font-semibold">
                         Previous
                     </button>
                     <button type="submit"
-                        class="px-20 py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
+                        class="px-2 md:px-20 py-2 sm:py-3 bg-accent text-black font-sikta rounded-lg hover:bg-accent-hover transition-colors font-semibold">
                         Submit
                     </button>
                 </div>

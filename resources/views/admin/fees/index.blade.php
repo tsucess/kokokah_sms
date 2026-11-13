@@ -14,26 +14,26 @@
             display: none;
         }
 </style>
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-    <div class="mb-10 flex items-center justify-between">
+    <div class="mb-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
             <h2 class="text-2xl font-bold text-primary font-fredoka">Fees</h2>
             <p class="text-sm text-primary font-sitka">Manage user information and enrollment</p>
         </div>
-        <div class="flex space-x-3">
-            <button class="px-4 py-2 gap-2 border group border-communicationBtn text-sm text-primary font-semibold rounded-lg hover:border-primary hover:bg-primary hover:text-white transition-colors flex items-center">
+        <div class="flex flex-wrap space-x-3 gap-2">
+            <button class="px-3 py-2 gap-2 border group border-communicationBtn text-sm text-primary font-semibold rounded-lg hover:border-primary hover:bg-primary hover:text-white transition-colors flex items-center">
                 <i class="fa-solid fa-download text-black group-hover:text-white"></i>
                 Send Payment Link
             </button>
             <div class="flex items-center">
-            <button class="px-4 py-2 border border-primary text-primary rounded-l-lg font-semibold hover:bg-primary hover:text-white  transition-colors flex items-center">
+            <button class="px-3 py-2 border border-primary text-sm text-primary rounded-l-lg font-semibold hover:bg-primary hover:text-white  transition-colors flex items-center">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Download
             </button>
-            <button class="px-4 py-2 border border-school-btn group font-semibold gap-2 text-primary bg-school-btn rounded-r-lg hover:bg-gray-50 transition-colors flex items-center">
+            <button class="px-3 py-2 border border-school-btn text-sm group font-semibold gap-2 text-primary bg-school-btn rounded-r-lg hover:bg-gray-50 transition-colors flex items-center">
                 <i class="fa-solid fa-print text-black group-hover:text-primary"></i>
                 Notify Defaulters
             </button>
@@ -66,7 +66,7 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-3 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
         <!-- Expected Revenue -->
         <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
             <div class="h-2 bg-blue-500"></div>
@@ -147,7 +147,7 @@
 
     <!-- Student Fees Table -->
     <div id="content-student-list" class="tab-content hidden bg-white rounded-lg shadow overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>
