@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-    <div class="mb-6 flex items-center justify-between">
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
         <div class="space-y-2">
             <h2 class="text-2xl font-bold text-primary font-fredoka">Broadsheet Overview</h2>
             <p class="text-sm text-primary font-sitka">This is a random display of all classes and subjects with the respective time limit. You can choose to edit or make change</p>
         </div>
-        <button class="px-4 py-2 bg-accent text-black font-sitka text-base rounded-lg hover:bg-accent-hover transition-colors flex items-center">
+        <button class="px-4 py-2 bg-accent text-black font-sitka text-base rounded-lg hover:bg-accent-hover transition-colors flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Filters -->
-    <div class="mb-8 grid grid-cols-4 gap-4">
+    <div class="mb-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
         <!-- School Session -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
             <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">School Session</label>
@@ -30,7 +30,7 @@
                 <option>2023-2024</option>
             </select>
         </div>
- 
+
         <!-- Term -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
             <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Term</label>

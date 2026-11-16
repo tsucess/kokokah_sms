@@ -137,7 +137,7 @@
 
     <!-- Tab Navigation -->
     <div class="mb-6">
-        <nav class="flex space-x-8">
+        <nav class="flex space-x-8 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <div class="flex">
             <button onclick="showTab('messages')" id="tab-messages"
                 class="px-6 py-2 text-sm rounded-l-lg font-fredoka border border-primary text-primary bg-white hover:bg-gray-200 transition-colors">
@@ -160,21 +160,21 @@
     </div>
   <!-- Messages Tab Content -->
         <div id="content-messages" class="tab-content hidden">
-            <div class="bg-white rounded-lg border border-school-btn p-6">
-                <div class="flex items-center justify-between mb-6">
+            <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 justify-between mb-6">
                     <div>
                         <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Messages</h3>
                         <p class="text-sm text-gray-600">Send and manage messages to schools and users</p>
                     </div>
                     <button onclick="openMessageModal()"
-                        class="px-4 py-2 rounded-lg font-medium bg-accent text-black font-inter hover:bg-accent-hover transition-colors">
+                        class="px-4 py-2 rounded-lg font-medium bg-accent text-black text-center font-inter hover:bg-accent-hover transition-colors">
                         + New Message
                     </button>
                 </div>
 
                 <!-- Search && Filter -->
-                <div class="mb-6 flex justify-between items-center gap-7">
-                    <div class="relative w-125">
+                <div class="mb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-7">
+                    <div class="relative max-w-125">
                         <input type="text" placeholder="Search teachers..."
                             class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
                             style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
@@ -203,7 +203,7 @@
                     <div class="space-y-4">
                         <!-- Message 1 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -253,7 +253,7 @@
 
                         <!-- Message 2 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -308,7 +308,7 @@
 
         <!-- Messages Tab Content -->
         <div id="content-inbox" class="tab-content hidden">
-            <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
                 <div class="flex items-center justify-between mb-6">
                     <div>
                         <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Inbox</h3>
@@ -317,8 +317,8 @@
                 </div>
 
                 <!-- Search && Filter -->
-                <div class="mb-6 flex justify-between items-center gap-7">
-                    <div class="relative w-125">
+                <div class="mb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-7">
+                    <div class="relative max-w-125">
                         <input type="text" placeholder="Search teachers..."
                             class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
                             style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
@@ -347,7 +347,7 @@
                     <div class="space-y-4">
                         <!-- Message 1 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -397,7 +397,7 @@
 
                         <!-- Message 2 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -453,7 +453,7 @@
 
         <!-- Messages Tab Content -->
         <div id="content-unread" class="tab-content hidden">
-            <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
                 <div class="flex items-center justify-between mb-6">
                     <div>
                         <h3 class="text-lg font-semibold mb-1 font-fredoka text-primary">Unread</h3>
@@ -462,8 +462,8 @@
                 </div>
 
                 <!-- Search && Filter -->
-                <div class="mb-6 flex justify-between items-center gap-7">
-                    <div class="relative w-125">
+                <div class="mb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-7">
+                    <div class="relative max-w-125">
                         <input type="text" placeholder="Search teachers..."
                             class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
                             style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
@@ -492,7 +492,7 @@
                     <div class="space-y-4">
                         <!-- Message 1 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -542,7 +542,7 @@
 
                         <!-- Message 2 -->
                         <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                            <div class="flex items-start justify-between">
+                            <div class="flex flex-col sm:flex-row items-start justify-between">
                                 <div class="flex-1 flex flex-col gap-4">
                                     <div class="flex flex-col gap-2">
                                         <div class="flex items-center">
@@ -598,7 +598,7 @@
 
         <!-- Announcements Tab Content -->
         <div id="content-announcements" class="tab-content hidden">
-            <div class="bg-white rounded-lg border border-school-btn p-6">
+            <div class="bg-white rounded-lg border border-school-btn p-4 sm:p-6">
                 <div class="flex items-center justify-between mb-6">
                     <div class="flex flex-col gap-2">
                         <h3 class="text-lg font-semibold font-fredoka text-primary">Announcements</h3>
@@ -607,8 +607,8 @@
                 </div>
 
                 <!-- Search and Filter -->
-                <div class="mb-6 flex justify-between items-center gap-7">
-                    <div class="relative w-125">
+                <div class="mb-6 flex flex-col sm:flex-row justify-between sm:items-center gap-7">
+                    <div class="relative max-w-125">
                         <input type="text" placeholder="Search teachers..."
                             class="w-full pl-10 pr-4 py-2 bg-communicationSearch  rounded-full focus:ring-2 focus:border-transparent"
                             style="font-family: 'Sitka', Georgia, serif; focus:ring-color: #FDAF22;">
@@ -630,10 +630,10 @@
                 <div class="space-y-4">
                     <!-- Announcement 1 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col sm:flex-row items-start justify-between">
                             <div class="flex-1 flex flex-col gap-5">
                                 <div class="flex flex-col gap-2">
-                                    <div class="flex items-center">
+                                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
                                         <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
                                             Notice
                                         </h4>
@@ -647,7 +647,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex flex-wrap items-center text-xs text-primary space-x-3">
                                         <span>Published: All Users</span>
                                         <span>•</span>
                                         <span>Expired:20/06/2024</span>
@@ -690,10 +690,10 @@
 
                     <!-- Announcement 2 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col sm:flex-row items-start justify-between">
                             <div class="flex-1 flex flex-col gap-5">
                                 <div class="flex flex-col gap-2">
-                                    <div class="flex items-center">
+                                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
                                         <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
                                             Notice
                                         </h4>
@@ -707,7 +707,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex flex-wrap items-center text-xs text-primary space-x-3">
                                         <span>Published: All Users</span>
                                         <span>•</span>
                                         <span>Expired:20/06/2024</span>
@@ -750,10 +750,10 @@
 
                     <!-- Announcement 3 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col sm:flex-row items-start justify-between">
                             <div class="flex-1 flex flex-col gap-5">
                                 <div class="flex flex-col gap-2">
-                                    <div class="flex items-center">
+                                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
                                         <h4 class="font-semibold text-communicationText font-sitka">System Maintenance
                                             Notice
                                         </h4>
@@ -767,7 +767,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex flex-wrap items-center text-xs text-primary space-x-3">
                                         <span>Published: All Users</span>
                                         <span>•</span>
                                         <span>Expired:20/06/2024</span>

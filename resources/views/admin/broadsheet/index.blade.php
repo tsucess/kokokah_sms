@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-    <div class="mb-10 flex items-start gap-6">
+    <div class="mb-10 flex flex-col sm:flex-row items-start gap-4 sm:p-6">
         <div class="space-y-2">
             <h2 class="text-xl font-bold text-primary font-fredoka">Broadsheet Overview</h2>
             <p class="text-sm text-primary font-sitka">This is a random display of all classes and students with the expected time-line. You can choose to edit or make change</p>
         </div>
-        <div class="flex items-center justify-end space-x-3 w-full">
+        <div class="flex items-center flex-wrap gap-3 sm:justify-end space-x-3 w-full">
             <button class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                 <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
                 Export PDF
@@ -32,8 +32,8 @@
     </div>
 
     <!-- Filters -->
-    <div class="flex items-end gap-3 justify-between mb-8">
-        <div class="flex gap-2 items-center w-2/3">
+    <div class="flex flex-col sm:items-end gap-3 justify-between mb-8">
+        <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full ">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">School Session</label>
                 <select class="w-full outline-none text-primary text-sm">
@@ -59,33 +59,33 @@
                 </select>
             </div>
         </div>
-            <a href="{{ route('admin.broadsheet.individual-broadsheet') }}" class="px-6 py-2 bg-accent text-black text-sm font-semibold rounded-lg hover:bg-accent-hover transition-colors">
+            <a href="{{ route('admin.broadsheet.individual-broadsheet') }}" class="px-6 py-2 bg-accent text-black text-center text-sm font-semibold rounded-lg hover:bg-accent-hover transition-colors">
                 View Broadsheet
             </a>
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-4 gap-6 mb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:p-6 mb-10">
         <!-- Total Students -->
-        <div class="bg-white rounded-lg border-t-8 border-blue300 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-blue300 p-4 sm:p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">180</p>
             <p class="text-xs text-primary font-mulish">Total Students</p>
         </div>
 
         <!-- Average Class Score -->
-        <div class="bg-white rounded-lg border-t-8 border-green700 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-green700 p-4 sm:p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">72%</p>
             <p class="text-xs text-primary font-mulish">Average Class Score</p>
         </div>
 
         <!-- Top Performing Class -->
-        <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-red200 p-4 sm:p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">SS2A (83%)</p>
             <p class="text-xs text-primary font-mulish">Top Performing Class</p>
         </div>
 
         <!-- Lowest Performing Subject -->
-        <div class="bg-white rounded-lg border-t-8 border-red200 p-6 space-y-1.5 shadow-boardsheet">
+        <div class="bg-white rounded-lg border-t-8 border-red200 p-4 sm:p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">Mathematics</p>
             <p class="text-xs text-primary font-mulish">Lowest Performing Subject </p>
         </div>

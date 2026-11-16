@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8 flex flex-col gap-7">
+<div class="p-4 md:p-8 flex flex-col gap-7">
     <div class="flex flex-col gap-1">
         <h1 class="font-fredoka text-2xl text-primary font-bold">Timetable</h1>
         <p class="text-primary text-sm font-sitka">This is a rundown display of all classes and subjects with the approved time slot. You can choose to add or makes change</p>
