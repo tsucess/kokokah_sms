@@ -9,17 +9,17 @@
         display: none;
     }
 </style>
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
-        <div class="mb-7 flex items-center justify-between">
-            <div class="flex flex-col gap-1">
+        <div class="mb-7 flex flex-col gap-3 sm:flex-row sm:items-center justify-between">
+            <div class="flex flex-col gap-1 flex-2">
                 <h2 class="text-2xl font-bold text-primary font-fredoka">Inventory Management</h2>
                 <p class="text-sm text-primary font-sitka">This is a rundown display of all classes and subjects with the
                     approved time slot. You can choose to add or makes change</p>
             </div>
             <button
             onclick="openInventoryItemModal()"
-                class="px-4 py-2 bg-accent text-black font-semibold  rounded-lg hover:bg-accent-hover transition-colors flex items-center">
+                class="px-4 py-2 bg-accent text-black font-semibold  rounded-lg hover:bg-accent-hover transition-colors flex items-center justify-center flex-1">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
@@ -28,7 +28,7 @@
         </div>
 
         <!-- Statistics Cards -->
-        <div class="grid grid-cols-4 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-6">
             <!-- Total Items -->
             <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 <div class="h-2 bg-blue300"></div>
@@ -68,8 +68,7 @@
         </div>
 
         <!-- Filters -->
-        <div class="mb-10 flex flex-col gap-8">
-            <div class="flex items-center gap-3 w-2/3">
+        <div class="mb-10 flex flex-col sm:flex-row gap-8">
             <!-- Date Range -->
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                         <label
@@ -114,11 +113,11 @@
             <input type="text" placeholder="Search schools..."
                 class="w-full pl-10 pr-4 py-4 text-body5 text-search bg-white shadow-sm rounded-full focus:ring-2 focus:ring-rimary focus:border-transparent">
         </div>
-        </div>
+
 
         <!-- Inventory Table -->
-        <div class="bg-white rounded-lg shadow-lg">
-            <div class="overflow-x-auto">
+        <div class="bg-white rounded-lg shadow-lg mt-8">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>

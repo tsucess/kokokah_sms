@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
     <div class="mb-8 space-y-2">
         <h2 class="text-2xl font-bold text-primary font-fredoka">System Configuration</h2>
@@ -19,7 +19,7 @@
             <div class="w-40 border-t border-black"></div>
         </div>
 
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
             <!-- Academic Session & Term -->
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
@@ -75,7 +75,7 @@
             <div class="w-40 border-t border-black"></div>
         </div>
 
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
             <!-- Payment Settings -->
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
@@ -131,7 +131,7 @@
             <div class="w-40 border-t border-black"></div>
         </div>
 
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
             <!-- Subjects -->
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
@@ -178,7 +178,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-5 gap-4 mt-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
             <!-- ID Card -->
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>
@@ -207,7 +207,7 @@
             <div class="w-40 border-t border-black"></div>
         </div>
 
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4">
             <!-- Messaging -->
             <div class="bg-white rounded-lg flex flex-col border-4 border-orange50 p-4 hover:shadow-lg transition-shadow">
                 <p class="text-xs text-primary font-mulish mb-3">Primary 1</p>

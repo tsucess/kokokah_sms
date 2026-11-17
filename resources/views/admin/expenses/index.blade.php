@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-    <div class="mb-6 flex items-center justify-between">
+    <div class="mb-6 flex flex-col sm:flex-row gap-2 sm:items-center justify-between">
         <div class="space-y-2">
             <h2 class="text-2xl font-bold text-primary font-fredoka">Expenses</h2>
             <p class="text-sm text-primary font-sitka">This is a random display of all classes and subjects with the respective time limit.</p>
         </div>
-        <a href="{{ route('admin.expenses.create') }}" class="px-4 py-2 bg-accent text-black font-semibold rounded-lg hover:bg-accent-hover transition-colors flex items-center">
+        <a href="{{ route('admin.expenses.create') }}" class="px-4 py-2 bg-accent text-black font-semibold rounded-lg hover:bg-accent-hover transition-colors flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-4 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
         <!-- Total Expenses -->
         <div class="bg-white rounded-lg border border-gray-200 p-6 relative overflow-hidden">
             <div class="absolute top-0 left-0 right-0 h-2 bg-blue300"></div>
@@ -45,7 +45,7 @@
     </div>
 
     <!-- Filters -->
-    <div class="mb-6 flex items-center space-x-4">
+    <div class="mb-6 flex flex-col sm:items-center space-x-4">
         <!-- Date Range -->
         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
             <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Date Range</label>
@@ -98,7 +98,7 @@
 
     <!-- Expenses Table -->
     <div class="bg-white rounded-lg overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="border-b border-gray-200">
                     <tr>
