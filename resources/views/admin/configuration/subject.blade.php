@@ -4,9 +4,9 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
-    <div class="mb-6 flex items-center gap-1">
+    <div class="mb-6 flex items-center gap-1 text-sm sm:text-base">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -18,13 +18,13 @@
     </div>
 
     <!-- Header -->
-    <div class="mb-6 flex items-center justify-between gap-3">
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div class="space-y-2">
             <h2 class="text-2xl font-bold text-primary font-fredoka mb-1">Subjects</h2>
             <p class="text-sm text-primary font-sitka">This is a rundown display of all classes and subjects with the approved time slot. You can choose to add or makes change</p>
         </div>
 
-        <button onclick="openCreateSubjectModal()" class="px-4 py-2 bg-accent text-black font-semibold text-sm rounded-lg hover:bg-accent-hover transition-colors flex items-center">
+        <button onclick="openCreateSubjectModal()" class="px-4 py-2 bg-accent text-black font-semibold text-sm rounded-lg hover:bg-accent-hover transition-colors flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-4 gap-6 mb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-10">
         <!-- Total Students -->
         <div class="bg-white rounded-lg border-t-8 border-blue300 p-6 space-y-1.5 shadow-boardsheet">
             <p class="text-3xl font-bold text-primary font-mulish">10</p>
@@ -54,8 +54,8 @@
 
         <!-- Subject Table -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="overflow-x-auto">
-            <table class="w-full"> 
+        <div class="overflow-x-auto"  style="scrollbar-width: none; -ms-overflow-style: none;">
+            <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>
                         <th class="px-6 py-4  rounded flex items-center justify-center"><span class="border-2 border-gray100 w-4 h-4"></span></th>
@@ -134,7 +134,7 @@ Grade 2, Pry 1, SS 3, Pry 2, JS 2</td>
 <div id="createSubjectModal" class="fixed inset-0 bg-primary/50 hidden items-center justify-center z-50" >
     <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-[90vh] overflow-y-scroll mx-4">
         <!-- Modal Header -->
-        <div class="flex items-center justify-between px-6 py-4">
+        <div class="flex items-center justify-between px-3 sm:px-6 py-4">
             <h3 class="text-2xl font-bold text-primary font-fredoka">Create Subject</h3>
             <button onclick="closeCreateSubjectModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
                <i class="fa-regular fa-circle-xmark"></i>
@@ -142,7 +142,7 @@ Grade 2, Pry 1, SS 3, Pry 2, JS 2</td>
         </div>
 
         <!-- Modal Body -->
-        <div class="px-6 py-6 space-y-7">
+        <div class="px-3 sm:px-6 py-6 space-y-7">
             <!-- Name of Subject -->
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                 <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
@@ -174,7 +174,7 @@ Grade 2, Pry 1, SS 3, Pry 2, JS 2</td>
                 </label>
                 <input type="text" placeholder="ENG, MTH, AGR" class="w-full outline-none text-primary text-sm">
             </div>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <!-- Unit(Used in calculating grade score) -->
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                 <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
@@ -186,7 +186,7 @@ Grade 2, Pry 1, SS 3, Pry 2, JS 2</td>
             <!-- Order(Used in sorting subjects -->
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                 <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
-                    Order(Used in sorting subjects
+                    Order(Used in sorting subjects)
                 </label>
                 <input type="text" placeholder="ENG, MTH, AGR" class="w-full outline-none text-primary text-sm">
             </div>

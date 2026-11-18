@@ -4,9 +4,9 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Breadcrumb -->
-    <div class="mb-6">
+    <div class="mb-6 text-sm sm:text-base">
         <a href="{{ route('admin.configuration') }}" class="inline-flex items-center text-sm text-orange-500 hover:text-orange-600">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Header with Action Buttons -->
-    <div class="mb-6 flex justify-between items-center">
+    <div class="mb-6 flex flex-col sm:flex-row gap-3 justify-between sm:items-center">
         <h2 class="text-2xl font-bold text-primary font-fredoka">Class Arms</h2>
         <div class="flex items-center">
             <button onclick="openSelectClassArmsModal()" class="px-4 text-base font-sitka py-2 border border-primary text-primary rounded-l-lg hover:bg-primary hover:text-white transition-colors">
@@ -32,7 +32,7 @@
 
     <!-- Arms Table -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>

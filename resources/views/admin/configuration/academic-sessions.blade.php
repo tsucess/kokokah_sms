@@ -41,11 +41,11 @@
             position: relative;
         }
     </style>
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Breadcrumb -->
-        <div class="mb-6">
+        <div class="mb-6 text-sm sm:text-base">
             <a href="{{ route('admin.configuration') }}"
-                class="inline-flex items-center text-sm text-orange50 hover:text-orange100">
+                class="inline-flex items-center  text-orange50 hover:text-orange100">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -88,7 +88,7 @@
 
                 <!-- Sessions Table -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                         <table class="w-full">
                             <thead class=" border-b border-gray-200">
                                 <tr>
@@ -193,7 +193,7 @@
 
                 <!-- Sessions Table -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                         <table class="w-full">
                             <thead class=" border-b border-gray-200">
                                 <tr>
@@ -342,7 +342,7 @@
                 <!-- First Term Section -->
                 <div class="border border-gray-200 rounded-lg p-4">
                     <h4 class="text-base font-semibold text-primary font-sitka mb-4">First Term</h4>
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                                 Term Start Date
@@ -370,7 +370,7 @@
                 <!-- Second Term Section -->
                 <div class="border border-gray-200 rounded-lg p-4">
                     <h4 class="text-base font-semibold text-primary font-sitka mb-4">Second Term</h4>
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                                 Term Start Date
@@ -398,7 +398,7 @@
                 <!-- Third Term Section -->
                 <div class="border border-gray-200 rounded-lg p-4">
                     <h4 class="text-base font-semibold text-primary font-sitka mb-4">Third Term</h4>
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                             <label class="text-sm font-medium text-primary bg-white px-1 py-0.5 absolute left-5 -top-3">
                                 Term Start Date

@@ -4,17 +4,17 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
-    <div class="mb-6 flex items-center gap-1">
-        <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="mb-6 flex items-center gap-1 text-sm sm:text-base">
+        <a href="{{ route('admin.configuration') }}" class="flex items-center  text-orange-500 hover:text-orange-600">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
             System Configuration
         </a>
-        <span class="text-gray-400 mx-2">/</span>
-        <span class="text-gray-600">School Information</span>
+        <span class="text-gray-400 mx-1 ">/</span>
+        <span class="text-gray-600 ">School Information</span>
     </div>
 
     <!-- Tabs -->
@@ -31,15 +31,15 @@
 
     <!-- Form -->
     <div class="">
-        <form>
-            <div class="grid grid-cols-3 gap-10">
+        <form class="w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
                 <!-- Left Column - Logo Upload -->
-                <div class="">
-                    <div class="mb-6 space-y-4 flex flex-col">
+                <div class="flex flex-col w-full col-span-1">
+                    <div class="mb-6 space-y-4 flex flex-col w-full">
                         <label class="text-sm font-medium text-primary font-sitka">School Logo</label>
-                        <div class="bg-white shadow-auth rounded-lg p-6 text-center">
+                        <div class="bg-white shadow-auth rounded-lg p-6 text-center w-full">
                             <div class="mb-4">
-                                <img src="/images/bio-data-student.jpg" alt="School Logo" class="mx-auto" style="max-width: 150px;">
+                                <img src="/images/bio-data-student.jpg" alt="School Logo" class="mx-auto" style="">
                             </div>
                             <button type="button" class="px-6 py-3 text-sm bg-blue200 text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center gap-2 mx-auto">
                                 Browse File
@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- Right Column - Form Fields -->
-                <div class="col-span-2 space-y-8">
+                <div class="sm:col-span-2 space-y-8">
                     <!-- First Row -->
                     <div class="grid grid-cols-2 gap-6 mb-6">
                         <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">

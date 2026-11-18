@@ -4,9 +4,9 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
-    <div class="mb-6 flex items-center gap-1">
+    <div class="mb-6 flex items-center gap-1 text-sm sm:text-base">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -18,15 +18,15 @@
     </div>
 
     <!-- Action Buttons -->
-    <div class="mb-6 flex justify-end space-x-4">
-        <button onclick="openCreateLevelSectionModal()" class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
+    <div class="mb-6 flex flex-col gap-2 justify-end ">
+        <button onclick="openCreateLevelSectionModal()" class="px-4 py-2 border border-communicationBtn text-sm font-semibold justify-center text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
             Create New Level Section
         </button>
         <div class="flex items-center ">
-        <button class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
+        <button class="px-2 py-2 border font-semibold group border-primary text-primary gap-1 text-xs sm:text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
             Create New Level with Template
         </button>
-        <button onclick="openCreateClassLevelModal()" class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
+        <button onclick="openCreateClassLevelModal()" class="px-2 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-xs sm:text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
             Create New Level
         </button>
         </div>
@@ -34,7 +34,7 @@
 
     <!-- Levels Table -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>

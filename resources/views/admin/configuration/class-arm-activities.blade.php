@@ -4,16 +4,16 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
-    <div class="mb-6 flex items-center">
+    <div class="mb-6 flex items-center text-sm sm:text-base">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
             System Configuration
         </a>
-        <span class="text-gray-400 mx-2">/</span>
+        <span class="text-gray-400 mx-2 ">/</span>
         <span class="text-gray-600">School Calendar</span>
     </div>
 
@@ -24,8 +24,8 @@
     </div>
 
     <!-- Filters -->
-    <div class="mb-10 flex items-center justify-between">
-        <div class="flex items-center space-x-4 w-2/3">
+    <div class="mb-10 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
+        <div class="flex flex-col sm:flex-row gap-2 items-center ">
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3" >Select Class</label>
                 <select class="w-full outline-none text-primary text-sm">
@@ -64,7 +64,7 @@
 
     <!-- Activities Table -->
     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class=" border-b border-gray-200">
                     <tr>
@@ -270,7 +270,7 @@
             </div>
 
             <!-- Start Time and Stop Time -->
-            <div class=" py-4 flex items-center gap-10">
+            <div class=" py-4 flex flex-col sm:flex-row sm:items-center gap-10">
                 <div class="flex flex-col gap-2">
                     <h5 class="text-primary text-xl font-fredoka font-bold">Start Time</h5>
                     <div class="flex items-center">
@@ -312,10 +312,10 @@
 
         <!-- Modal Footer -->
         <div class="flex items-center justify-end gap-3 px-6 py-4">
-            <button onclick="closeEditActivityModal()" class="px-10 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+            <button onclick="closeEditActivityModal()" class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                 Cancel
             </button>
-            <button class="px-10 py-2 rounded-lg font-medium bg-accent text-black hover:bg-accent-hover transition-colors">
+            <button class="px-4 py-2 rounded-lg font-medium bg-accent text-black hover:bg-accent-hover transition-colors">
                 Update Activity
             </button>
         </div>
