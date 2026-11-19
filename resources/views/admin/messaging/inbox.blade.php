@@ -210,7 +210,7 @@
                                             <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
                                                 Academic
                                                 Year</h4>
-                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                            <span class="px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -261,7 +261,7 @@
                                                 Academic
                                                 Year</h4>
                                             <span
-                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                                class="px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -354,7 +354,7 @@
                                             <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
                                                 Academic
                                                 Year</h4>
-                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                            <span class="px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -405,7 +405,7 @@
                                                 Academic
                                                 Year</h4>
                                             <span
-                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                                class="px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -499,7 +499,7 @@
                                             <h4 class="font-semibold text-communicationText font-sitka">Welcome to New
                                                 Academic
                                                 Year</h4>
-                                            <span class="ml-3 px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
+                                            <span class="px-2 py-1 dark-btn text-xs rounded font-fredoka">Sent</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -550,7 +550,7 @@
                                                 Academic
                                                 Year</h4>
                                             <span
-                                                class="ml-3 px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
+                                                class="px-2 py-1 bordered-btn text-xs rounded font-fredoka">Published</span>
                                         </div>
                                         <div class="flex items-center text-xs text-primary space-x-3">
                                             <span>To: All Schools</span>
@@ -639,11 +639,11 @@
                                         </h4>
                                         <div class="flex items-center gap-2">
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
                                         </div>
 
                                     </div>
@@ -699,11 +699,11 @@
                                         </h4>
                                         <div class="flex items-center gap-2">
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
                                         </div>
 
                                     </div>
@@ -759,11 +759,11 @@
                                         </h4>
                                         <div class="flex items-center gap-2">
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka grayed-btn">Medium</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka bordered-btn">General</span>
                                             <span
-                                                class="ml-3 px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
+                                                class="px-2 py-1 text-xs rounded font-fredoka dark-btn">Published</span>
                                         </div>
 
                                     </div>
@@ -813,7 +813,7 @@
 
         <!-- Compose New Message Modal -->
         <div id="messageModal" class="modal-overlay bg-primary/50 mb-0">
-            <div class="modal-content p-8">
+            <div class="modal-content p-4 sm:p-8">
 
                 <div class="flex justify-between items-center mb-6">
                     <div class="flex flex-col gap-1">
@@ -876,11 +876,11 @@
                     <!-- Action Buttons -->
                     <div class="flex items-center justify-end gap-3 py-4">
                         <button type="button" onclick="closeMessageModal()"
-                            class="px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                            class="px-4 sm:px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                             Cancel
                         </button>
                         <button type="submit"
-                            class="px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
+                            class="px-4 sm:px-6 py-2 rounded-lg bg-accent text-black hover:bg-accent-hover font-medium transition-colors">
                             Send Message
                         </button>
                     </div>

@@ -15,12 +15,12 @@
             background-color: #feca6c;
         }
     </style>
-    <div class="p-8 flex flex-col gap-6">
+    <div class="p-4 md:p-8 flex flex-col gap-6">
         <div class="flex flex-col gap-4">
             <a href="{{ route('admin.timetable') }}" class="flex items-center gap-2 text-black font-sitka"><i
                     class="fa-solid fa-arrow-left"></i> <span> <span class="text-secondary">Timetable</span> | Primary
                     1</span></a>
-            <nav class="flex">
+            <nav class="flex overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <button
                     class="active-tab px-6 py-2 text-sm font-sitka border border-primary text-primary bg-white rounded-l-lg hover:bg-gray-200 transition-colors">
                     Primary 1A
@@ -43,8 +43,8 @@
                 </button>
             </nav>
         </div>
-        <div class="flex items-center gap-40">
-            <div class="flex items-center gap-3 w-full">
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-40">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3 w-full">
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-full">
                     <label
                         class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">School
@@ -75,7 +75,7 @@
                 class="text-black font-mulish font-semibold rounded bg-accent py-2 px-6 text-base shrink-0">Add
                 Period</button>
         </div>
-        <section class="bg-white shadow-xl rounded-2xl p-6">
+        <section class="bg-white shadow-xl rounded-2xl p-6 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="border-b border-gray-200">
 
@@ -164,7 +164,7 @@
 
             <!-- Modal Body -->
             <div class="px-6 py-6 space-y-4 flex flex-col gap-3 ">
-                <div class="flex items-center gap-2 justify-between pb-8 border-b border-b-primary/30">
+                <div class="flex items-center gap-2 flex-wrap justify-between pb-8 border-b border-b-primary/30">
                     <label for="" class="text-sm font-sitka flex items-center gap-2 text-primary"><input
                             type="checkbox" name="" id="">Monday</label>
                     <label for="" class="text-sm font-sitka flex items-center gap-2 text-primary"><input
@@ -223,7 +223,7 @@
                 </div>
 
             </div>
-            <div class="px-6 py-4 flex items-center gap-10">
+            <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-10">
                 <div class="flex flex-col gap-2">
                     <h5 class="text-primary text-xl font-fredoka font-bold">Start Time</h5>
                     <div class="flex items-center">
@@ -244,11 +244,11 @@
             </div>
             <div class="flex items-center justify-end gap-3 px-6 py-4 pt-8">
                 <button onclick="closeBadgeModal()"
-                    class="px-10 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
+                    class="px-4 py-2 border border-primary text-primary text-body3 rounded-lg hover:bg-primary hover:text-white transition-colors font-medium">
                     Cancel
                 </button>
                 <button
-                    class="px-10 py-2 rounded-lg font-medium bg-accent text-black hover:bg-accent-hover transition-colors">
+                    class="px-4 py-2 rounded-lg border border-accent font-medium text-body3 bg-accent text-black hover:bg-accent-hover transition-colors">
                     Add Period
                 </button>
             </div>

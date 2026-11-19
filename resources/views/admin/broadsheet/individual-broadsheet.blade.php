@@ -4,13 +4,13 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
-        <div class="mb-10 flex items-start gap-6">
+        <div class="mb-10 flex flex-col sm:flex-row items-start gap-6">
             <div class="space-y-2">
                 <h2 class="text-xl font-bold text-primary font-fredoka">Broadsheet: JSS1A - Second Term, 2024/2025</h2>
             </div>
-            <div class="flex items-center justify-end space-x-3 w-full">
+            <div class="flex flex-wrap items-center sm:justify-end gap-2 w-full">
                 <button
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Statistics Cards -->
-        <div class="grid grid-cols-4 gap-6 mb-10">
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-10">
             <!-- Total Students -->
             <div class="bg-white rounded-lg border-t-8 border-blue300 p-6 space-y-1.5 shadow-boardsheet">
                 <p class="text-3xl font-bold text-primary font-mulish">71%</p>

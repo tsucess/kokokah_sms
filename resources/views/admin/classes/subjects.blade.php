@@ -41,10 +41,10 @@
             position: relative;
         }
     </style>
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Back Button -->
         <div class="mb-6">
-            <div class="flex justify-between items-center gap-3">
+            <div class="flex justify-between flex-col sm:flex-row sm:items-center gap-3">
                 <a href="{{ route('admin.classes') }}"
                     class="inline-flex items-center gap-2 text-sm text-black hover:text-primary font-sitka">
                     <i class="fa-solid fa-arrow-left fa-black"></i>
@@ -52,11 +52,11 @@
                 </a>
                 <div class="flex align-items-center">
                     <button
-                        class="px-4 py-2 bg-white text-body3 border border-primary text-primary font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                        class="px-2 sm:px-4 py-2 bg-white text-xs sm:text-body3 border border-primary text-primary font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                         Bulk Upload Student
                     </button>
                     <button
-                        class="px-4 py-2 bg-accent text-body3 text-black rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors flex items-center">
+                        class="px-2 sm:px-4 py-2 bg-accent text-xs sm:text-body3 text-black rounded-r-lg font-semibold hover:bg-yellow-500 transition-colors flex items-center">
                         + Add New Class Member
                     </button>
                 </div>
@@ -184,13 +184,13 @@
                     </div>
                 </div>
             </section>
-            <div class="flex align-items-center justify-end">
+            <div class="flex align-items-center justify-end mt-5">
                 <button
-                    class="px-4 py-2 bg-white text-body3 border border-primary text-primary font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                    class="px-2 sm:px-4 py-2 bg-white text-xs sm:text-body3 border border-primary text-primary font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                     Delete all Students
                 </button>
                 <button
-                    class="px-4 py-2 bg-accent text-body3 text-black rounded-r-lg font-semibold hover:bg-accent-hover transition-colors flex items-center">
+                    class="px-2 sm:px-4 py-2 bg-accent text-xs sm:text-body3 text-black rounded-r-lg font-semibold hover:bg-accent-hover transition-colors flex items-center">
                     Transfer all Students
                 </button>
             </div>
@@ -200,7 +200,7 @@
         <!-- Subjects Content -->
         <div id="content-subjects" class=" tab-content hidden">
             <!-- Subjects Table -->
-            <div class="overflow-x-auto ">
+            <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full bg-white shadow rounded-2xl">
                     <thead class=" border-b border-gray-200">
                         <tr>
@@ -534,7 +534,7 @@
                 <h5 class="text-gray100 text-sm font-sitka">Student in class</h5>
                 <div class="flex flex-col gap-3">
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between flex-col sm:flex-row sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -544,7 +544,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -581,7 +581,7 @@
                     </div>
 
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between flex-col sm:flex-row sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -591,7 +591,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -628,7 +628,7 @@
                     </div>
 
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between flex-col sm:flex-row sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -638,7 +638,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -691,7 +691,7 @@
                     <input type="text" placeholder="Search schools..."
                         class="w-full pl-10 pr-4 py-4 text-body5 text-search bg-white shadow-sm rounded-full focus:ring-2 focus:ring-rimary focus:border-transparent">
                 </div>
-                <div class="overflow-x-auto ">
+                <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
                     <table class="w-full bg-white shadow rounded-2xl">
                         <thead class=" border-b border-gray-200">
                             <tr>
