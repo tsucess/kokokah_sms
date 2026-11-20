@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-        <div class="mb-10 flex items-start justify-between gap-6">
+        <div class="mb-10 flex flex-col sm:flex-row items-start justify-between gap-6">
             <div class="space-y-2">
                 <h2 class="text-xl font-bold text-primary font-fredoka">Parent Management</h2>
                 <p class="text-sm text-primary font-sitka">Manage parent information and enrollment</p>
             </div>
-            <div class="flex items-center justify-end space-x-3 ">
+            <div class="flex flex-wrap sm:flex-nowrap gap-2 items-center sm:justify-end space-x-3 ">
                 <select name="" id=""
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <option value="">Export PDF</option>
@@ -19,11 +19,11 @@
 
                 <div class="flex items-center ">
                     <button
-                        class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
+                        class="px-2 sm:px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
                         Bulk Upload Parent
                     </button>
                     <button
-                        class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
+                        class="px-2 sm:px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
                         <i class="fa-solid fa-plus text-black"></i>
                         Add New Parent
                     </button>
@@ -32,7 +32,7 @@
         </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-3 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
         <!-- Total Parents/Guardians -->
             <div class=" rounded-xl py-7 px-6 flex flex-col gap-4 justify-center shadow-boardsheet">
                 <h3 class="text-sm font-mulish text-primary">Total Parents/Guardians</h3>
@@ -187,7 +187,7 @@
             </div>
 
     <!-- Parent Cards Grid -->
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         @for($i = 1; $i <= 8; $i++)
         <div class="bg-white rounded-lg border-4 border-orange50 p-4">
                     <div class="flex items-start justify-between mb-3">
@@ -224,15 +224,14 @@
     </div>
 
     <!-- Pagination -->
-    <div class="mt-6 flex items-center justify-between">
+    <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
         <p class="text-sm text-gray-600">Showing 1 to 8 of 1,247 entries</p>
         <div class="flex items-center space-x-2">
-            <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">Previous</button>
+            <button class="px-2 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">Previous</button>
             <button class="px-3 py-1 bg-orange-400 text-white rounded text-sm">1</button>
             <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">2</button>
-            <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">3</button>
             <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">...</button>
-            <button class="px-3 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">Next</button>
+            <button class="px-2 py-1 border border-gray-300 rounded text-sm text-gray-600 hover:bg-gray-50">Next</button>
         </div>
     </div>
 </div>

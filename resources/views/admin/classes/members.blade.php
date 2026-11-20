@@ -4,10 +4,10 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
     <div class="mb-6">
-        <a href="{{ route('admin.classes') }}" class="flex items-center text-gray-600 hover:text-gray-800">
+        <a href="{{ route('admin.classes') }}" class="flex items-center text-sm sm:text-base text-gray-600 hover:text-gray-800">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
@@ -16,11 +16,11 @@
     </div>
 
     <!-- Action Buttons -->
-    <div class="mb-6 flex justify-end space-x-3">
-        <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+    <div class="mb-6 flex sm:justify-end space-x-3">
+        <button class="px-2 sm:px-4 py-2 border border-gray-300 text-xs sm:text-sm text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
             Bulk Upload Student
         </button>
-        <button class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <button class="px-2 sm:px-4 py-2 bg-orange-400 text-white rounded-lg text-xs sm:text-sm  hover:bg-orange-500 transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -36,7 +36,7 @@
                 <p class="text-sm text-gray-600 mb-1">Full Day | 2024/2025</p>
                 <p class="text-sm text-gray-600 mb-1">Teacher: -------</p>
                 <p class="text-sm text-gray-600 mb-4">Asst. Teacher: -------</p>
-                
+
                 <!-- Enrollment Progress -->
                 <div class="mb-2">
                     <p class="text-sm text-gray-600 mb-1">Enrollment</p>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Class Icon -->
             <div class="ml-6">
                 <div class="w-24 h-24 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Expand/Collapse Icon -->
         <div class="flex justify-end mt-4">
             <button class="text-gray-400 hover:text-gray-600">
@@ -67,7 +67,8 @@
     </div>
 
     <!-- Tabs and Action Buttons -->
-    <div class="mb-6 flex items-center justify-between">
+    <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
+    <div class="mb-6 flex items-center justify-between min-w-250 w-full">
         <!-- Tabs -->
         <div class="border-b border-gray-200">
             <nav class="flex space-x-8">
@@ -102,11 +103,12 @@
             </button>
         </div>
     </div>
+    </div>
 
     <!-- Content Area -->
-    <div class="grid grid-cols-12 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-12 gap-6">
         <!-- Left Sidebar - Student List -->
-        <div class="col-span-4 bg-white rounded-lg border border-gray-200 p-4">
+        <div class="sm:col-span-4 bg-white rounded-lg border border-gray-200 p-4">
             <!-- Search -->
             <div class="mb-4">
                 <div class="relative">
@@ -139,7 +141,7 @@
         </div>
 
         <!-- Right Content - Student Details -->
-        <div class="col-span-8 bg-white rounded-lg border border-gray-200 p-8">
+        <div class="sm:col-span-8 bg-white rounded-lg border border-gray-200 p-8">
             <div class="flex items-center justify-center h-full">
                 <div class="text-center">
                     <p class="text-xl font-semibold text-gray-900 mb-2">Emmanuel Sunday (00001)</p>

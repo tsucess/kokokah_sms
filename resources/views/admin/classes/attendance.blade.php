@@ -4,10 +4,10 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
     <div class="mb-6">
-        <a href="{{ route('admin.classes') }}" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-900">
+        <a href="{{ route('admin.classes') }}" class="inline-flex items-center text-sm sm:text-base text-gray-600 hover:text-gray-900">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
@@ -16,7 +16,7 @@
     </div>
 
     <!-- Class Info Card -->
-    <div class="bg-gradient-to-r from-orange-400 to-orange-500 rounded-lg p-6 mb-6 flex items-center justify-between">
+    <div class="bg-linear-to-r from-orange-400 to-orange-500 rounded-lg p-4 sm:p-6 mb-6 flex flex-col gap-4 sm:flex-row sm:items-center justify-between">
         <div class="flex items-center space-x-4">
             <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                 <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,10 +36,10 @@
             </div>
         </div>
         <div class="flex gap-3">
-            <button class="px-6 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            <button class="px-4 sm:px-6 py-2 text-xs sm:text-sm bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Bulk Upload Student
             </button>
-            <button class="px-6 py-2 bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 transition-colors">
+            <button class="px-4 sm:px-6 py-2 text-xs sm:text-sm bg-orange-600 text-white rounded-lg font-medium hover:bg-orange-700 transition-colors">
                 + Add New Class Member
             </button>
         </div>
@@ -48,7 +48,7 @@
     <!-- Tabs -->
     <div class="bg-white rounded-lg border border-gray-200">
         <!-- Tab Headers -->
-        <div class="border-b border-gray-200">
+        <div class="border-b border-gray-200 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <nav class="flex space-x-8 px-6" aria-label="Tabs">
                 <button class="py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 font-medium text-sm">
                     Class Members
@@ -82,8 +82,8 @@
             <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Attendance Summary</h3>
                 <p class="text-sm text-gray-600 mb-4">Today's attendance overview</p>
-                
-                <div class="grid grid-cols-4 gap-4">
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     <!-- Present -->
                     <div class="bg-green-50 border border-green-200 rounded-lg p-4">
                         <div class="flex items-center justify-between">
@@ -164,7 +164,7 @@
                 <div class="space-y-3">
                     <!-- Student 1 -->
                     <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="flex items-center justify-between">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
                             <div class="flex items-center space-x-4">
                                 <div class="w-10 h-10 bg-teal-900 rounded-full flex items-center justify-center">
                                     <span class="text-white font-semibold text-sm">T</span>
@@ -174,7 +174,7 @@
                                     <p class="text-sm text-gray-600">1A</p>
                                 </div>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex flex-wrap gap-2 items-center space-x-2">
                                 <!-- Present -->
                                 <button class="px-4 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium hover:bg-green-200 transition-colors flex items-center">
                                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,7 +204,7 @@
                                     Excused
                                 </button>
                                 <!-- Time -->
-                                <div class="flex items-center space-x-2 ml-4">
+                                <div class="flex items-center space-x-2">
                                     <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
                                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -231,7 +231,7 @@
 
                     <!-- Student 2 -->
                     <div class="border border-gray-200 rounded-lg p-4">
-                        <div class="flex items-center justify-between">
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
                             <div class="flex items-center space-x-4">
                                 <div class="w-10 h-10 bg-teal-900 rounded-full flex items-center justify-center">
                                     <span class="text-white font-semibold text-sm">T</span>
@@ -241,7 +241,7 @@
                                     <p class="text-sm text-gray-600">1A</p>
                                 </div>
                             </div>
-                            <div class="flex items-center space-x-2">
+                            <div class="flex flex-wrap gap-2 items-center space-x-2">
                                 <!-- Present -->
                                 <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors flex items-center">
                                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,7 +271,7 @@
                                     Excused
                                 </button>
                                 <!-- Time -->
-                                <div class="flex items-center space-x-2 ml-4">
+                                <div class="flex items-center space-x-2">
                                     <button class="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
                                         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -374,7 +374,7 @@
                 </div>
 
                 <!-- Pagination -->
-                <div class="mt-4 flex items-center justify-between border-t border-gray-200 pt-4">
+                <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-2 justify-between border-t border-gray-200 pt-4">
                     <p class="text-sm text-gray-600">Showing 1-5 of 1,247 messages</p>
                     <div class="flex items-center space-x-2">
                         <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 disabled:opacity-50" disabled>

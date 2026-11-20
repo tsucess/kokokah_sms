@@ -4,9 +4,9 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-4 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-6">
         <!-- Messages Sent -->
         <div class="bg-white rounded-lg border border-gray-200 p-6">
             <div class="flex items-start justify-between">
@@ -69,7 +69,7 @@
     </div>
 
     <!-- Tabs -->
-    <div class="mb-6 border-b border-gray-200">
+    <div class="mb-6 border-b border-gray-200 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
         <nav class="flex space-x-8">
             <a href="#" class="bg-orange-400 text-white py-2 px-4 rounded-t-lg font-medium text-sm">
                 Messages
@@ -93,8 +93,8 @@
     </div>
 
     <!-- Search and Filter Row -->
-    <div class="mb-6 flex items-center space-x-4">
-        <div class="flex-1">
+    <div class="mb-6 grid grid-cols-1 sm:grid-cols-3 gap-3 space-x-4">
+        <div class="w-full">
             <div class="relative">
                 <input type="text" placeholder="Search teachers..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
                 <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,15 +102,15 @@
                 </svg>
             </div>
         </div>
-        <div>
-            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
+        <div class="w-full">
+            <select class="px-4 py-2 border w-full border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-gray-700">
                 <option selected>All Messages</option>
                 <option>Sent</option>
                 <option>Scheduled</option>
             </select>
         </div>
-        <div>
-            <button onclick="openComposeMessageModal()" class="px-6 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <div class="w-full">
+            <button onclick="openComposeMessageModal()" class="px-6 py-2 w-full bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>

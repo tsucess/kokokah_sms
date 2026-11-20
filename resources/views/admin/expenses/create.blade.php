@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
     <div class="mb-6 space-y-2">
         <h2 class="text-2xl font-bold text-primary font-fredoka">Add New Expenses</h2>
@@ -94,14 +94,14 @@
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex justify-end">
-                <button type="button" class="px-6 py-2 rounded-l-lg font-semibold text-sm bg-accent text-black border border-accent hover:border-accent-hover hover:bg-accent-hover transition-colors">
+            <div class="flex justify-end max-w-120 ml-auto w-full">
+                <button type="button" class="px-2 sm:px-6 py-2 flex-1 rounded-l-lg font-semibold text-xs sm:text-sm bg-accent text-black border border-accent hover:border-accent-hover hover:bg-accent-hover transition-colors">
                     Cancel
                 </button>
-                <button type="button" class="px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition-colors font-semibold text-sm">
+                <button type="button" class="px-2 sm:px-6 py-2 flex-1 border border-primary text-primary hover:bg-primary hover:text-white transition-colors font-semibold text-xs sm:text-sm">
                     Save draft
                 </button>
-                <button type="submit" class="px-6 py-2 border border-primary text-primary rounded-r-lg hover:bg-primary hover:text-white transition-colors font-semibold text-sm">
+                <button type="submit" class="px-2 sm:px-6 py-2 flex-1 border border-primary text-primary rounded-r-lg hover:bg-primary hover:text-white transition-colors font-semibold text-xs sm:text-sm">
                     Save & Approve
                 </button>
             </div>
