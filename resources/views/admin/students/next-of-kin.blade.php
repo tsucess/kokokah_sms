@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
     <div class="mb-6">
         <a href="{{ route('admin.students') }}" class="flex items-center text-gray-600 hover:text-gray-800">
@@ -22,10 +22,10 @@
     </div>
 
     <!-- Form -->
-    <div class="bg-white rounded-lg border border-gray-200 p-8">
+    <div class="bg-white rounded-lg border border-gray-200 p-4 md:p-8">
         <form>
             <!-- First Row -->
-            <div class="grid grid-cols-3 gap-6 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Next of Kin First Name <span class="text-red-500">*</span>
@@ -47,7 +47,7 @@
             </div>
 
             <!-- Second Row -->
-            <div class="grid grid-cols-3 gap-6 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">
                         Next of Kin Phone Number <span class="text-red-500">*</span>

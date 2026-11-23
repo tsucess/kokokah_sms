@@ -19,14 +19,14 @@
             display: none;
         }
     </style>
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
-        <div class="mb-10 flex items-start justify-between gap-6">
+        <div class="mb-10 flex flex-col sm:flex-col items-start justify-between gap-6">
             <div class="space-y-2">
                 <h2 class="text-xl font-bold text-primary font-fredoka">Staff Management</h2>
                 <p class="text-sm text-primary font-sitka">Manage staff information and enrollment</p>
             </div>
-            <div class="flex items-center justify-end space-x-3 ">
+            <div class="flex flex-wrap items-center gap-2 sm:justify-end sm:flex-nowrap ">
                 <select name="" id=""
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <option value="">Export PDF</option>
@@ -47,7 +47,7 @@
         </div>
 
         <!-- Statistics Cards -->
-        <div class="grid grid-cols-4 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-6">
             <!-- Total Staff -->
             <div class=" rounded-xl py-7 px-6 flex flex-col gap-4 justify-center shadow-boardsheet">
                 <h3 class="text-sm font-mulish text-primary">Total Staff</h3>
@@ -247,7 +247,7 @@
             </div>
 
             <!-- Staff Role Cards Grid -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 @for ($i = 1; $i <= 9; $i++)
                     <div class="bg-white rounded-lg border-4 border-orange50 p-4">
                     <div class="flex items-start justify-between mb-3">
@@ -324,7 +324,7 @@
             </div>
 
             <!-- Staff Role Cards Grid -->
-            <div class="grid grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 @for ($i = 1; $i <= 9; $i++)
                     <div class="bg-white rounded-lg border-4 border-orange50 p-4">
                     <div class="flex items-start justify-between mb-3">

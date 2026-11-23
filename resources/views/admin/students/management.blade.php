@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
-        <div class="mb-10 flex items-start justify-between gap-6">
+        <div class="mb-10 flex flex-col sm:flex-col items-start justify-between gap-6">
             <div class="space-y-2">
                 <h2 class="text-xl font-bold text-primary font-fredoka">Student Management</h2>
                 <p class="text-sm text-primary font-sitka">Manage student information and enrollment</p>
             </div>
-            <div class="flex items-center justify-end space-x-3 ">
+            <div class="flex flex-wrap items-center sm:justify-end gap-2 ">
                 <select name="" id=""
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <option value="">Export PDF</option>
@@ -32,7 +32,7 @@
         </div>
 
         <!-- Statistics Card -->
-        <div class="grid grid-cols-3 mb-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 mb-10">
             <div
                 class="border-t-8 border-t-primary rounded-xl py-7 px-6 flex flex-col gap-2 justify-center shadow-boardsheet">
                 <div class="flex items-center justify-between">
@@ -71,7 +71,7 @@
         </div>
 
         <!-- Filters -->
-        <div class="mb-8 grid grid-cols-5 gap-4">
+        <div class="mb-8 grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 gap-4">
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-4 mt-3 w-full">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select Session</label>
                 <select
@@ -129,7 +129,7 @@
         </div>
 
         <!-- Student Cards Grid -->
-        <div class="grid grid-cols-3 gap-6 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             @for ($i = 1; $i <= 8; $i++)
                 <div class="bg-white rounded-lg border-4 border-orange50 p-4">
                     <div class="flex items-start justify-between mb-3">

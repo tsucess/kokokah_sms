@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
     <div class="mb-6">
         <h2 class="text-xl font-bold text-primary font-fredoka">Staff Management</h2>
@@ -13,7 +13,7 @@
 
     <!-- Back Navigation -->
     <div class="mb-6">
-        <a href="{{ route('admin.staff.management') }}" class="text-black hover:text-black100 flex gap-1 items-center">
+        <a href="{{ route('admin.staff.management') }}" class="text-black text-sm sm:text-base hover:text-black100 flex gap-1 items-center">
             <i class="fa-solid fa-arrow-left"></i>
             Back to Staff /
             <span class="text-communicationBtn">Emmanuel Sanusi Lamido</span>
@@ -22,10 +22,10 @@
 
     <!-- Staff Info Card -->
     <div class="bg-white rounded-lg border-4 border-orange50 p-6 mb-6">
-        <div class="flex items-start justify-between mb-6">
+        <div class="flex flex-col sm:flex-row items-start justify-between mb-6">
             <div class="flex items-start space-x-6">
                 <!-- Avatar -->
-                <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                <div class="w-20 h-20 bg-primary rounded-full shrink-0 flex items-center justify-center text-white text-2xl font-bold">
                     SM
                 </div>
 
@@ -71,7 +71,7 @@
                     </div>
 
         <!-- Staff Details Grid -->
-        <div class="grid grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
             <div>
                 <p class="text-sm font-semibold text-primary font-sitka">First Name</p>
                 <p class="text-xs text-primary font-sitka">Samuel</p>
@@ -155,7 +155,7 @@
         <h3 class="text-xl font-bold text-primary font-fredoka mb-2">Next of Kin</h3>
         <p class="text-sm text-primary font-mulish mb-6">Below is your next of kin's information</p>
 
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
             <div>
                 <p class="text-sm font-semibold text-primary font-sitka">Next of Kin's First Name</p>
                 <p class="text-xs text-primary font-sitka">Samuel</p>

@@ -19,7 +19,7 @@
             display: none;
         }
     </style>
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
         <div class="mb-6 space-y-2">
             <h2 class="text-xl font-bold text-primary font-fredoka">Student Management</h2>
@@ -27,21 +27,21 @@
         </div>
 
         <!-- Back Button -->
-        <div class="mb-6 flex items-center gap-1">
+        <div class="mb-6 flex items-center gap-1 text-sm sm:text-base">
             <a href="{{ route('admin.students.management') }}" class="flex gap-1 items-center text-black100 hover:text-black">
                 <i class="fa-solid fa-arrow-left"></i>
                 Back to Student
             </a>
-            <span class="text-black100 mx-2">/</span>
+            <span class="text-black100">/</span>
             <span class="text-communicationBtn">Emmanuel Sanusi Lamido</span>
         </div>
 
         <!-- Student Info Card -->
         <div class="bg-white rounded-lg border-4 border-orange50 p-6 mb-6">
-            <div class="flex items-start justify-between">
-                <div class="flex items-start space-x-4">
+            <div class="flex flex-col sm:flex-row gap-3 items-start justify-between">
+                <div class="flex gap-3 items-start ">
                     <div
-                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                        class="w-20 h-20 shrink-0 bg-primary rounded-full flex items-center justify-center text-white text-2xl font-bold">
                         SM
                     </div>
                     <div class="space-y-2">
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Student Details Grid -->
-            <div class="grid grid-cols-5 gap-6 mt-6">
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-6">
                 <div>
                     <p class="text-sm font-semibold text-primary font-sitka mb-1">First Name</p>
                     <p class="text-xs text-primary font-sitka">Samuel</p>
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-5 gap-6 mt-4">
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-4">
                 <div>
                     <p class="text-sm font-semibold text-primary font-sitka mb-1">Country</p>
                     <p class="text-xs text-primary font-sitka">Nigeria</p>
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-5 gap-6 mt-4">
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-4">
                 <div>
                     <p class="text-sm font-semibold text-primary font-sitka mb-1">Phone Number</p>
                     <p class="text-xs text-primary font-sitka">+234810 000 0000</p>
@@ -147,8 +147,8 @@
 
         <!-- Tabs and Term Selector -->
         <div class="mb-6 flex items-center justify-between">
-            <div class="">
-                <nav class="flex space-x-8">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <nav class="flex space-x-8 min-w-110">
                     <button onclick="showTab('fees')" id="tab-fees"
                         class="px-6 py-2 text-sm font-sitka border-b border-primary text-primary transition-colors">
                         Fees
@@ -177,7 +177,7 @@
                 </select>
             </div>
             <!-- Statistics Cards -->
-            <div class="grid grid-cols-4 gap-6 mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 mb-10">
                 <!-- Student Bill -->
                 <div class="bg-white rounded-lg border-t-8 border-blue300 p-4 space-y-1.5 shadow-boardsheet">
                     <p class="text-2xl font-bold text-primary font-mulish">N100,247</p>
@@ -229,7 +229,7 @@
             </div>
             <!-- Payment History Table -->
             <div class="bg-white rounded-lg  shadow-lg overflow-hidden">
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                     <table class="w-full">
                         <thead class=" border-b border-gray-200">
                             <tr>
@@ -273,7 +273,7 @@
         </div>
         <div id="content-documents" class="tab-content hidden">
             <div class="w-full min-h-60 h-full flex items-center justify-center flex-col gap-4">
-                <h3 class="text-primary text-2xl font-fredoka font-semibold">There are currently no documents.</h3>
+                <h3 class="text-primary text-2xl font-fredoka font-semibold text-center">There are currently no documents.</h3>
                 <button class="text-black bg-accent py-4 px-16 rounded-sm font-semibold font-sitka text-sm">Upload Document</button>
             </div>
         </div>

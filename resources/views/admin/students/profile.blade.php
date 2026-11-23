@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
     <div class="mb-6">
         <h2 class="text-xl font-bold text-teal-900 mb-2">Student Management</h2>
@@ -19,13 +19,13 @@
 
     <!-- Profile Card -->
     <div class="bg-white rounded-lg border-2 border-orange-400 p-8 mb-6">
-        <div class="flex items-start justify-between">
-            <div class="flex items-start space-x-6">
+        <div class="flex flex-col sm:flex-row gap-4 items-start justify-between">
+            <div class="flex flex-col sm:flex-row gap-3 items-start sm:space-x-6 w-full">
                 <!-- Profile Image -->
                 <div class="w-24 h-24 bg-teal-900 rounded-full shrink-0"></div>
 
                 <!-- Personal Information Grid -->
-                <div class="grid grid-cols-3 gap-x-12 gap-y-6 flex-1">
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gapx-5 sm:gap-x-12 gap-y-6 flex-1 w-full">
                     <!-- Row 1 -->
                     <div>
                         <p class="text-sm text-gray-600 mb-1">First Name</p>
@@ -116,7 +116,7 @@
         <h3 class="text-lg font-bold text-teal-900 mb-2">Next of Kin</h3>
         <p class="text-sm text-gray-600 mb-6">Below is your next of kin's information</p>
 
-        <div class="grid grid-cols-3 gap-x-12 gap-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-5 sm:gap-x-12 gap-y-6">
             <!-- Row 1 -->
             <div>
                 <p class="text-sm text-gray-600 mb-1">Next of Kin's First Name</p>
