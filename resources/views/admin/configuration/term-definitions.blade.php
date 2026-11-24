@@ -4,26 +4,26 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Back Button -->
-    <div class="mb-6">
+    <div class="mb-6 text-sm sm:text-base flex items-center">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
             System Configuration
         </a>
-        <span class="text-gray-400 mx-2">/</span>
+        <span class="text-gray-400 mx-1">/</span>
         <span class="text-gray-600">Sessions & Term</span>
     </div>
 
     <!-- Header -->
-    <div class="mb-6 flex items-center justify-between">
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center gap-2 justify-between">
         <div>
             <h2 class="text-2xl font-bold text-teal-900 mb-1">Current Academic Session</h2>
             <p class="text-sm text-teal-600">2025/2026 Session</p>
         </div>
-        <button onclick="openAddTermModal()" class="px-6 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <button onclick="openAddTermModal()" class="px-6 py-2 bg-orange-400 text-white rounded-lg justify-center hover:bg-orange-500 transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -45,7 +45,7 @@
 
     <!-- Term Definitions Table -->
     <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="bg-gray-50 border-b border-gray-200">
                     <tr>

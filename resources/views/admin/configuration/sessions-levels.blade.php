@@ -8,12 +8,12 @@
     <!-- Back Button -->
     <div class="mb-6 flex items-center gap-1 text-sm sm:text-base">
         <a href="{{ route('admin.configuration') }}" class="flex items-center text-orange-500 hover:text-orange-600">
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
             System Configuration
         </a>
-        <span class="text-gray-400 mx-2">/</span>
+        <span class="text-gray-400">/</span>
         <span class="text-gray-600">Sessions & Term</span>
     </div>
 

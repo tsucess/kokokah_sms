@@ -4,17 +4,17 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Back Button -->
-        <div class="mb-6 flex items-center">
+        <div class="mb-6 flex items-center text-xs sm:text-base gap-1">
             <a href="{{ route('admin.configuration.academic-sessions') }}"
                 class="flex items-center text-orange-500 hover:text-orange-600">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
                 Academic Sessions
             </a>
-            <span class="text-gray-400 mx-2">/</span>
+            <span class="text-gray-400">/</span>
             <span class="text-gray-600">First year 2025/2026 Session</span>
         </div>
 
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Term Date Inputs -->
-        <div class="grid grid-cols-5 gap-4 mb-6">
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-6">
             <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3">
                 <label class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Term
                     Start Date</label>
@@ -54,8 +54,8 @@
         </div>
 
         <!-- Tabs -->
-        <div class="mb-6 border-b border-gray-200">
-            <nav class="flex space-x-8">
+        <div class="mb-6 border-b border-gray-200 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <nav class="flex space-x-8 min-w-150">
                 <a href="#" class="text-teal-900 py-4 px-1 border-b-2 border-orange-400 font-medium text-sm">
                     Assign Classes
                 </a>
@@ -87,7 +87,7 @@
                         <span class="text-xs font-semibold text-gray100">Nur 1</span>
                         <span class="text-xs font-semibold text-gray100">Nursery 1</span>
                     </div>
-                    <div class="flex items-center gap-20">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-20">
                         <label class="relative inline-flex items-center cursor-pointer shrink-0">
                             <input type="checkbox" class="sr-only peer">
                             <div
@@ -96,7 +96,7 @@
                             <span class="ml-3 text-sm font-medium text-gray-700">No arm</span>
                         </label>
                         <!-- Checkboxes Grid -->
-                        <div class="grid grid-cols-8 gap-6 flex-1">
+                        <div class="grid grid-cols-8 gap-3 sm:gap-6 flex-1">
                             @foreach (['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'] as $arm)
                                 <label class="flex items-center space-x-2 cursor-pointer">
                                     <input type="checkbox" checked

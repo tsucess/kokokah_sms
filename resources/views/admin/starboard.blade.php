@@ -4,14 +4,14 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-<div class="p-8">
+<div class="p-4 md:p-8">
     <!-- Header -->
-    <div class="mb-6 flex items-center justify-between">
+    <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center justify-between">
         <div>
             <h2 class="text-2xl font-bold text-teal-900 mb-1">Kokokah Starboard Badges</h2>
             <p class="text-sm text-gray-600">Manage and oversee your school management platform</p>
         </div>
-        <button onclick="openAddBadgeModal()" class="px-4 py-2 bg-orange-400 text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
+        <button onclick="openAddBadgeModal()" class="px-4 py-2 bg-orange-400 justify-center text-white rounded-lg hover:bg-orange-500 transition-colors flex items-center">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
@@ -20,7 +20,7 @@
     </div>
 
     <!-- Statistics Cards -->
-    <div class="grid grid-cols-2 gap-6 mb-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
         <!-- Total Academic Badges -->
         <div class="bg-white rounded-lg border border-gray-200 p-6">
             <div class="flex items-start justify-between mb-4">
@@ -68,7 +68,7 @@
 
     <!-- Badges Table -->
     <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full">
                 <thead class="bg-gray-50 border-b border-gray-200">
                     <tr>
