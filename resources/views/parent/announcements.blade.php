@@ -137,7 +137,7 @@
         </div>
 
         <!-- Tab Navigation -->
-        <div class="mb-6">
+        <div class="mb-6 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <nav class="flex">
                 <div class="flex">
                     <button onclick="showTab('messages')" id="tab-messages"

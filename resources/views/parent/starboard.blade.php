@@ -84,7 +84,8 @@
         <section class="flex flex-col gap-4 p-4 md:p-6 bg-white rounded-2xl shadow">
             <div class="flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
                 <h3 class="text-black font-sitka text-base font-semibold">Achievements & Milestones</h3>
-                <div class="bg-gray950 rounded-full p-3 flex items-center gap-1 ">
+                <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+                <div class="bg-gray950 rounded-full p-3 flex items-center gap-1 min-w-90">
                     <button
                         class="py-1.5 px-5 bg-white text-black font-semibold font-sitka text-sm rounded-full">All</button>
                     <button
@@ -93,11 +94,12 @@
                         class="py-1.5 px-5 bg-transparent text-black font-semibold font-sitka text-sm  rounded-full">Non-Academic</button>
 
                 </div>
+                </div>
             </div>
 
             <div class="flex flex-col gap-4">
                 @for ($i = 1; $i <= 7; $i++)
-                    <div class="rounded-lg p-4 flex items-center gap-4 border border-bulkGreyText justify-between">
+                    <div class="rounded-lg p-4 flex flex-col sm:flex-row sm:items-center gap-4 border border-bulkGreyText justify-between">
                         <div class="flex items-center gap-4">
                             <div class="flex justify-center items-center w-15 h-15 rounded-full bg-green150 shrink-0"><i
                                     class="fa-solid fa-star text-yellow100 fa-lg"></i></div>

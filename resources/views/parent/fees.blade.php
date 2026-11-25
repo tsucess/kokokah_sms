@@ -77,8 +77,8 @@
 
         <div class=" flex flex-col sm:flex-row items-start justify-between gap-6 lg:items-center">
             {{-- filter --}}
-            <div class="flex gap-3 justify-end">
-                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40 ">
+            <div class="flex flex-col sm:flex-row gap-3 sm:justify-end w-full">
+                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40 ">
                     <label
                         class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select
                         Session</label>
@@ -86,7 +86,7 @@
                         <option>2025-2026</option>
                     </select>
                 </div>
-                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40">
+                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40">
                     <label
                         class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select
                         Term</label>
@@ -94,7 +94,7 @@
                         <option>First Term</option>
                     </select>
                 </div>
-                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 w-40">
+                <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40">
                     <label
                         class="text-sm font-medium text-primary bg-superadmin-bg px-1 py-0.5 absolute left-5 -top-3">Select
                         Term</label>
@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-end space-x-3">
+            <div class="flex flex-wrap  items-center sm:justify-end gap-3 ">
                 <button
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
@@ -191,7 +191,7 @@
                     class="px-4 py-2 bg-accent text-black rounded-lg text-sm font-semibold hover:bg-accent-hover transition-all">Make
                     Payment</button>
                 <a href="{{ route('parent.payment-history') }}"
-                    class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
+                    class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg justify-center hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     View Payment History
                 </a>
             </div>
@@ -200,7 +200,7 @@
 
         <!-- Fees Table -->
         <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="border-b border-gray-200">
                         <tr>

@@ -4,7 +4,7 @@
 @section('page-title', 'Welcome to Kokokah')
 
 @section('content')
-    <div class="p-8">
+    <div class="p-4 md:p-8">
         <!-- Header -->
         <div class="mb-6">
             <h2 class="text-2xl font-bold text-primary font-fredoka">Payment History</h2>
@@ -21,7 +21,7 @@
 
         <!-- Login History Table -->
         <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="border-b border-gray-200">
                         <tr>

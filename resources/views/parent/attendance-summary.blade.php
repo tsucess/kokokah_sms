@@ -15,7 +15,7 @@
             <img src="/images/parent-child-info-illustration.png" alt=""
                 class="absolute right-0 sm:right-20 w-20 sm:w-40 top-8 sm:top-0">
         </header>
-        <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
                 <div class="border-[1.5px] border-primary rounded-xl relative px-4 py-3 mt-3 min-w-40">
                     <label
@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-end space-x-3 lg:shrink-0">
+            <div class="flex flex-wrap items-center sm:justify-end gap-3 sm:flex-nowrap lg:shrink-0">
                 <button
                     class="px-2 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
@@ -94,10 +94,10 @@
 
         <div class="flex flex-col gap-4 p-4 md:p-6 bg-white rounded-2xl shadow">
             <h3 class="text-black font-inter text-base font-semibold">Attendance Overview</h3>
-            <canvas id="attendanceChart" class="max-h-60"></canvas>
+            <canvas id="attendanceChart" class=""></canvas>
         </div>
 
-        <section class="bg-white shadow-xl rounded-2xl p-2 md:p-6 overflow-x-auto">
+        <section class="bg-white shadow-xl rounded-2xl p-2 md:p-6 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full ">
                 <thead class="border-b border-gray-200">
 
