@@ -60,7 +60,7 @@
                 <h5 class="text-gray100 text-sm font-sitka">Student in class</h5>
                 <div class="flex flex-col gap-3">
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -70,7 +70,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -107,7 +107,7 @@
                     </div>
 
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -117,7 +117,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -154,7 +154,7 @@
                     </div>
 
                     <div
-                        class="border border-communicationBtn rounded-md py-4 px-2 flex justify-between items-center gap-5">
+                        class="border border-communicationBtn rounded-md py-4 px-2 flex flex-col sm:flex-row justify-between sm:items-center gap-5">
                         <div class="flex items-center gap-2">
                             <div
                                 class="text-white w-8 h-8 rounded-full flex items-center justify-center bg-primary font-sitka">
@@ -164,7 +164,7 @@
                                 <p class="text-gray100 text-xs font-sitka font-semibold">1A</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center flex-wrap gap-2">
                             <div
                                 class="border border-communicationBtn rounded px-1.5 py-2 flex items-center gap-1 text-primary text-xs">
                                 <i class="fa-solid fa-check"></i>Present
@@ -217,7 +217,7 @@
                     <input type="text" placeholder="Search schools..."
                         class="w-full pl-10 pr-4 py-4 text-body5 text-search bg-white shadow-sm rounded-full focus:ring-2 focus:ring-rimary focus:border-transparent">
                 </div>
-                <div class="overflow-x-auto ">
+                <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
                     <table class="w-full bg-white shadow rounded-2xl">
                         <thead class=" border-b border-gray-200">
                             <tr>

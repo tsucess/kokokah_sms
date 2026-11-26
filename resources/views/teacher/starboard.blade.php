@@ -33,7 +33,7 @@
     </style>
     <div class="p-4 md:px-8 space-y-6">
         <header
-            class="w-full rounded-2xl h-44 bg-linear-to-r from-purple600 to-purple700 shadow-headerBox flex items-center justify-between gap-2 px-4 md:px-8">
+            class="w-full rounded-2xl min-h-44  bg-linear-to-r from-purple600 to-purple700 shadow-headerBox flex items-center justify-between gap-2 px-4 md:px-8">
             <div class="flex flex-col gap-1">
                 <h2 class="text-white font-poppins font-semibold text-lg md:text-xl">Teacher Badge Awards</h2>
                 <p class="text-white/75 font-poppins text-xs">Recognize and celebrate student achievements</p>
@@ -173,7 +173,7 @@
                     <textarea class="w-full outline-none text-primary text-sm resize-none" placeholder="Type...">
                 </textarea>
                 </div>
-                <div class="flex items-center gap-3 justify-between">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
                     <p class="text-primary font-sitka text-sm font-medium">Awarding <span class="text-secondary">Subject
                             Pro</span> to <span class="text-secondary">1</span> student(s)</p>
                     <button onclick="openBadgeModal()"

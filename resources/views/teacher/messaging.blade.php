@@ -137,7 +137,7 @@
         </div>
 
         <!-- Tab Navigation -->
-        <div class="mb-6">
+        <div class="mb-6 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <nav class="flex">
                 <div class="flex">
                     <button onclick="showTab('messages')" id="tab-messages"
@@ -237,7 +237,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -289,7 +289,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -384,7 +384,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -436,7 +436,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -532,7 +532,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -584,7 +584,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="flex items-center text-xs text-primary space-x-3">
+                                    <div class="flex items-center text-xs text-primary flex-wrap gap-2">
                                         <span>To: All Schools</span>
                                         <span>•</span>
                                         <span>20/06/2024</span>
@@ -682,7 +682,7 @@
                                 </div>
 
                             </div>
-                            <div class="flex items-center text-[10px] md:text-xs text-primary space-x-1 md:space-x-3">
+                            <div class="flex items-center text-[10px] md:text-xs text-primary flex-wrap gap-2">
                                 <span>Published: All Users</span>
                                 <span>•</span>
                                 <span>Expired:20/06/2024</span>
@@ -743,7 +743,7 @@
                                 </div>
 
                             </div>
-                            <div class="flex items-center text-[10px] md:text-xs text-primary space-x-1 md:space-x-3">
+                            <div class="flex items-center text-[10px] md:text-xs text-primary flex-wrap gap-2">
                                 <span>Published: All Users</span>
                                 <span>•</span>
                                 <span>Expired:20/06/2024</span>
@@ -804,7 +804,7 @@
                                 </div>
 
                             </div>
-                            <div class="flex items-center text-[10px] md:text-xs text-primary space-x-1 md:space-x-3">
+                            <div class="flex items-center text-[10px] md:text-xs text-primary flex-wrap gap-2">
                                 <span>Published: All Users</span>
                                 <span>•</span>
                                 <span>Expired:20/06/2024</span>

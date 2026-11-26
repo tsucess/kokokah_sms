@@ -6,10 +6,10 @@
 @section('content')
     <div class="p-4 md:px-8 space-y-6">
         <header
-            class="bg-blue700 rounded-2xl px-6 py-6 md:py-12 md:px-8 lg:px-12 flex flex-col gap-10 md:gap-15 lg:gap-9 lg:py-10 relative">
+            class="bg-blue700 rounded-2xl px-6 py-3 sm:py-6 md:py-12 md:px-8 lg:px-12 flex flex-col gap-20 md:gap-15 lg:gap-9 lg:py-10 relative">
             <span class="text-xs text-white/75 font-poppins">September 4, 2023</span>
             <h2 class="text-white font-poppins text-base md:text-2xl font-semibold">Welcome back, Mrs. Ayodele Irepodun!</h2>
-            <img src="/images/teacher-illustration.png" alt="" class="absolute -top-2 md:-top-4 -right-3 w-50 md:w-80">
+            <img src="/images/teacher-illustration.png" alt="" class="absolute top-0 md:-top-4 -right-3 w-50 md:w-80">
         </header>
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             <div class="border border-school-btn rounded-2xl p-4 md:p-6 flex flex-col gap-8">
@@ -86,10 +86,10 @@
                     <p class="text-black font-mulish text-xs">Attendance: 90%</p>
                     <div class="flex items-center gap-4 justify-end">
                         <button
-                            class="px-6 py-2 rounded-lg font-sitka bg-accent text-black text-sm hover:bg-accent-hover font-semibold transition-colors">Take
+                            class="px-3 sm:px-6 py-2 rounded-lg font-sitka bg-accent text-black text-sm hover:bg-accent-hover font-semibold transition-colors">Take
                             Attendance</button>
                         <button
-                            class="px-6 py-2 border border-primary text-primary text-sm rounded-lg font-sitka hover:bg-primary hover:text-white transition-colors font-semibold">View
+                            class="px-3 sm:px-6 py-2 border border-primary text-primary text-sm rounded-lg font-sitka hover:bg-primary hover:text-white transition-colors font-semibold">View
                             Class</button>
                     </div>
                 </div>
@@ -117,10 +117,10 @@
                     <p class="text-black font-mulish text-xs">Attendance: 90%</p>
                     <div class="flex items-center gap-4 justify-end">
                         <button
-                            class="px-6 py-2 rounded-lg font-sitka bg-accent text-black text-sm hover:bg-accent-hover font-semibold transition-colors">Take
+                            class="px-3 sm:px-6 py-2 rounded-lg font-sitka bg-accent text-black text-sm hover:bg-accent-hover font-semibold transition-colors">Take
                             Attendance</button>
                         <button
-                            class="px-6 py-2 border border-primary text-primary text-sm rounded-lg font-sitka hover:bg-primary hover:text-white transition-colors font-semibold">View
+                            class="px-3 sm:px-6 py-2 border border-primary text-primary text-sm rounded-lg font-sitka hover:bg-primary hover:text-white transition-colors font-semibold">View
                             Class</button>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                 <div class="space-y-4">
                     <!-- Message 1 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex flex-col gap-4 sm:flex-row  items-start justify-between">
                             <div class="flex-1 flex flex-col gap-4">
                                 <div class="flex flex-col gap-2">
                                     <div class="flex items-center">
@@ -261,7 +261,7 @@
 
                     <!-- Message 2 -->
                     <div class="border border-school-btn rounded-lg p-4 hover:bg-gray-50 cursor-pointer">
-                        <div class="flex items-start justify-between">
+                        <div class="flex  flex-col gap-4 sm:flex-rowitems-start justify-between">
                             <div class="flex-1 flex flex-col gap-4">
                                 <div class="flex flex-col gap-2">
                                     <div class="flex items-center">

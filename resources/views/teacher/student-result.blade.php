@@ -64,7 +64,7 @@
 
         <!-- Broadsheet Table -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="border-b border-gray-200">
                         <tr>
@@ -204,7 +204,7 @@
 
     <!-- Edit result -->
     <div id="editResultModal" class="modal-overlay bg-primary/50 mb-0">
-        <div class="modal-content p-8">
+        <div class="modal-content p-5 sm:p-8">
 
             <div class="flex justify-end items-center mb-6">
                 <button onclick="closeEditResultModal()" class="text-gray-700 hover:text-gray-900 transition-colors">

@@ -14,7 +14,7 @@
     <div class="p-4 md:px-8 space-y-6">
         <!-- Back Button -->
         <div class="mb-6">
-            <div class="flex justify-between items-center gap-3">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
                 <a href="{{ route('teacher.class') }}"
                     class="inline-flex items-center gap-2 text-sm text-black hover:text-primary font-sitka">
                     <i class="fa-solid fa-arrow-left fa-black"></i>
@@ -22,11 +22,11 @@
                 </a>
                 <div class="flex align-items-center">
                     <button
-                        class="px-4 py-2 bg-white text-body3 border border-primary text-primary font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                        class="px-4 py-2 bg-white text-xs sm:text-body3 border border-primary text-primary  font-sitka rounded-l-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                         Bulk Upload Student
                     </button>
                     <button
-                        class="px-4 py-2 bg-accent text-body3 border border-accent text-black rounded-r-lg font-semibold hover:bg-accent-hover transition-colors flex items-center">
+                        class="px-4 py-2 bg-accent text-xs sm:text-body3 border border-accent text-black  rounded-r-lg font-semibold hover:bg-accent-hover transition-colors flex items-center">
                         + Add New Class Member
                     </button>
                 </div>
@@ -65,7 +65,8 @@
         </div>
 
         <!-- Tabs -->
-        <nav class="flex space-x-8 mb-10" aria-label="Tabs">
+        <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <nav class="flex space-x-8 mb-10 min-w-170" aria-label="Tabs">
             <button onclick="showTab('class-members')" id="tab-class-members"
                 class="active-tab py-4 px-1 border-b-2 border-transparent text-black hover:text-primary font-sitka hover:border-primary font-medium text-sm">
                 Class Members
@@ -91,6 +92,7 @@
                 Timetable
             </button>
         </nav>
+        </div>
         {{-- Class member --}}
         <div id="content-class-members" class="tab-content hidden space-y-7 ">
             <div class="flex items-center justify-end">

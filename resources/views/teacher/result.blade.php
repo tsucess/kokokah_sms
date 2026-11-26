@@ -145,8 +145,8 @@
             </div>
         </div>
 
-        <div class="bg-white shadow-md rounded-2xl">
-            <div class="overflow-x-auto">
+        <div class="bg-white shadow-md rounded-2xl flex flex-col h-full">
+            <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class=" border-b border-gray-200">
                         <tr>
@@ -174,7 +174,7 @@
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         @for ($i = 1; $i <= 7; $i++)
-                            <tr class="hover:bg-gray-50">
+                            <tr class="hover:bg-gray-50 relative">
 
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-sitka">93001</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">John
@@ -193,7 +193,7 @@
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-primary font-sitka">
                                     Excellent</td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="relative">
+                                    <div class="">
                                         <button
                                             class="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 more-btn">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -204,7 +204,8 @@
 
                                         {{-- dropdown menu --}}
                                         <div
-                                            class="action-menu opacity-0 scale-95 pointer-events-none absolute right-2 top-8 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50 transition-all duration-200 ease-out">
+                                        style="position: absolute"
+                                            class="action-menu hidden flex-col gap-2 scale-95 absolute right-2 top-8 w-40 h-auto bg-white border border-gray-200 rounded-lg shadow-lg z-100 transition-all duration-200 ease-out">
                                             <button onclick="openInputResultModal()"
                                                 class=" w-full text-left px-4 py-2 text-body5 font-sitka text-primary flex items-center gap-2 hover:bg-gray-100">
                                                 <i class="fa-solid fa-pen text-primary"></i>Input results</button>
@@ -333,8 +334,8 @@
 
                 function closeAllMenus() {
                     document.querySelectorAll(".action-menu").forEach(menu => {
-                        menu.classList.add("opacity-0", "scale-95", "pointer-events-none");
-                        menu.classList.remove("opacity-100", "scale-100");
+                        menu.classList.add('hidden');
+                        menu.classList.remove('flex');
                     });
                 }
 
@@ -344,12 +345,12 @@
                     btn.addEventListener("click", (e) => {
                         e.stopPropagation();
 
-                        const isOpen = menu.classList.contains("opacity-100");
+                        const isOpen = menu.classList.contains('flex');
                         closeAllMenus();
 
                         if (!isOpen) {
-                            menu.classList.remove("opacity-0", "scale-95", "pointer-events-none");
-                            menu.classList.add("opacity-100", "scale-100");
+                            menu.classList.remove('hidden');
+                            menu.classList.add('flex');
                         }
                     });
                 });
