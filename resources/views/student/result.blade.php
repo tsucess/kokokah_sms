@@ -10,7 +10,7 @@
         <div class="space-y-2">
             <h2 class="text-xl font-bold text-primary font-fredoka">My Results</h2>
         </div>
-        <div class="flex items-center justify-end space-x-3">
+        <div class="flex flex-wrap gap-3 sm:flex-nowrap items-center sm:justify-end ">
             <button class="px-4 py-2 border border-communicationBtn text-xs md:text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                 <i class="fa-solid fa-download text-black group-hover:text-primary hidden sm:inline"></i>
                 Export PDF
@@ -79,7 +79,7 @@
 
         <!-- Broadsheet Table -->
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="border-b border-gray-200">
                         <tr>

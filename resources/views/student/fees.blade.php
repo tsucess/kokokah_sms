@@ -37,15 +37,15 @@
             <div class="space-y-2">
                 <h2 class="text-xl font-bold text-primary font-fredoka">Fees</h2>
             </div>
-            <div class="flex items-center justify-end space-x-3">
+            <div class="flex items-center sm:justify-end flex-wrap sm:flex-nowrap gap-3">
                 <button
                     class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                     <i class="fa-solid fa-download text-black group-hover:text-primary"></i>
                     Export PDF
                 </button>
-                <div class="flex items-center ">
+                <div class="flex">
                     <button
-                        class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-sm rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
+                        class="px-4 py-2 border font-semibold group border-primary text-primary gap-1 text-xs sm:text-base rounded-l-lg hover:bg-primary hover:text-white transition-colors flex items-center">
                         <svg class="w-5 h-5 text-black group-hover:text-white" fill="none" stroke="currentColor"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -54,7 +54,7 @@
                         Export Excel
                     </button>
                     <button
-                        class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-sm rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
+                        class="px-4 py-2 bg-accent font-semibold gap-1 border border-accent text-black text-xs sm:text-base rounded-r-lg hover:border-accent-hover hover:bg-accent-hover transition-colors flex items-center">
                         <i class="fa-solid fa-print text-black"></i>
                         Print Broadsheet
                     </button>
@@ -88,14 +88,14 @@
                 </div>
             </div>
             <a href="{{ route('student.payment-history') }}"
-                class="px-4 py-2 border border-communicationBtn text-sm font-semibold text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
+                class="px-4 py-2 border border-communicationBtn text-sm font-semibold justify-center text-primary group rounded-lg hover:bg-communicationBtn transition-colors gap-1 flex items-center">
                 View Payment History
             </a>
         </section>
 
         <!-- Fees Table -->
         <div class="bg-white rounded-lg shadow-xl overflow-hidden">
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
                 <table class="w-full">
                     <thead class="border-b border-gray-200">
                         <tr>

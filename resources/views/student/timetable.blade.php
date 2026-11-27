@@ -16,7 +16,7 @@
             <img src="/images/image_timetable_page.png" alt="" class="absolute right-2 md:right-20 w-35 md:w-50 top-6 md:top-2">
         </header>
 
-        <section class="bg-white shadow-xl rounded-2xl p-2 md:p-6 overflow-x-auto">
+        <section class="bg-white shadow-xl rounded-2xl p-2 md:p-6 overflow-x-auto" style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full ">
                 <thead class="border-b border-gray-200">
 

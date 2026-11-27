@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <div class="overflow-x-auto ">
+        <div class="overflow-x-auto " style="scrollbar-width: none; -ms-overflow-style: none;">
             <table class="w-full bg-white shadow rounded-2xl">
                 <thead class=" border-b border-gray-200">
                     <tr>
